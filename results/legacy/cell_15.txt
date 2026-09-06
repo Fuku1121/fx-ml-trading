@@ -1,0 +1,116 @@
+使用可能データ: 16653
+
+
+======================================
+FOLD 1
+======================================
+Quality学習データ: 1329
+Quality勝率: 46.35 %
+BASE設定を選べず
+
+
+======================================
+FOLD 2
+======================================
+Quality学習データ: 2661
+Quality勝率: 47.28 %
+BASE設定: {'move_t': 0.6, 'direction_t': 0.55, 'tp': 0.001, 'sl': 0.0005}
+Quality閾値: 0.55
+BASE: {'trades': 32, 'win_rate': np.float64(0.375), 'avg_return': np.float64(-9.483209437927907e-05), 'profit_factor': np.float64(0.5694878800930804), 'max_dd': np.float64(-0.003498405453183695)}
+QUALITY: {'trades': 13, 'win_rate': np.float64(0.46153846153846156), 'avg_return': np.float64(-0.0001428354693373819), 'profit_factor': np.float64(0.30373247771853235), 'max_dd': np.float64(-0.0016559076544657714)}
+
+
+======================================
+FOLD 3
+======================================
+Quality学習データ: 3993
+Quality勝率: 48.74 %
+BASE設定: {'move_t': 0.55, 'direction_t': 0.6, 'tp': 0.001, 'sl': 0.001}
+Quality閾値: 0.5
+BASE: {'trades': 200, 'win_rate': np.float64(0.515), 'avg_return': np.float64(-4.39463111902632e-05), 'profit_factor': np.float64(0.8724132098754982), 'max_dd': np.float64(-0.014710351425560653)}
+QUALITY: {'trades': 183, 'win_rate': np.float64(0.5191256830601093), 'avg_return': np.float64(-2.1089517018326366e-05), 'profit_factor': np.float64(0.9359185281375665), 'max_dd': np.float64(-0.010354226893885543)}
+
+
+======================================
+FOLD 4
+======================================
+Quality学習データ: 5325
+Quality勝率: 47.19 %
+BASE設定: {'move_t': 0.7, 'direction_t': 0.55, 'tp': 0.001, 'sl': 0.001}
+Quality閾値: 0.6
+BASE: {'trades': 43, 'win_rate': np.float64(0.4883720930232558), 'avg_return': np.float64(1.014243972780853e-05), 'profit_factor': np.float64(1.0342561703471236), 'max_dd': np.float64(-0.005299405830848203)}
+QUALITY: {'trades': 12, 'win_rate': np.float64(0.5833333333333334), 'avg_return': np.float64(0.00020581672088413076), 'profit_factor': np.float64(1.869237813156222), 'max_dd': np.float64(-0.0022160517243261513)}
+
+
+======================================
+FOLD 5
+======================================
+Quality学習データ: 6657
+Quality勝率: 48.36 %
+BASE設定: {'move_t': 0.55, 'direction_t': 0.55, 'tp': 0.0008, 'sl': 0.001}
+Quality閾値: 0.55
+BASE: {'trades': 129, 'win_rate': np.float64(0.5193798449612403), 'avg_return': np.float64(-1.238088783966674e-05), 'profit_factor': np.float64(0.9582251884560516), 'max_dd': np.float64(-0.014704313783364564)}
+QUALITY: {'trades': 67, 'win_rate': np.float64(0.5074626865671642), 'avg_return': np.float64(-0.00010200731026991656), 'profit_factor': np.float64(0.6849608351494192), 'max_dd': np.float64(-0.011551456004701088)}
+
+
+======================================
+BASE vs QUALITY Fold比較
+======================================
+   fold  quality_threshold  base_trades  base_win_rate  base_avg_return  \
+0     2               0.55           32      37.500000        -0.009483
+1     3               0.50          200      51.500000        -0.004395
+2     4               0.60           43      48.837209         0.001014
+3     5               0.55          129      51.937984        -0.001238
+
+    base_pf  base_max_dd  quality_trades  quality_win_rate  \
+0  0.569488    -0.349841              13         46.153846
+1  0.872413    -1.471035             183         51.912568
+2  1.034256    -0.529941              12         58.333333
+3  0.958225    -1.470431              67         50.746269
+
+   quality_avg_return  quality_pf  quality_max_dd
+0           -0.014284    0.303732       -0.165591
+1           -0.002109    0.935919       -1.035423
+2            0.020582    1.869238       -0.221605
+3           -0.010201    0.684961       -1.155146
+
+
+======================================
+最終結果
+======================================
+         strategy  trades   win_rate  average_return  profit_factor  \
+0            BASE     404  50.247525       -0.003214       0.897677
+1  QUALITY FILTER     275  51.636364       -0.003666       0.884695
+
+   max_drawdown
+0     -1.520048
+1     -1.155146
+
+Quality AIによる取引削減率: 31.93 %
+
+<Figure size 1300x600 with 1 Axes>
+
+======================================
+Quality AI 特徴量重要度
+======================================
+p_down                  0.051450
+MA50_slope              0.050994
+volatility_2h           0.050988
+p_up                    0.048840
+volatility_4h           0.045928
+ADX14                   0.043168
+ATR14_pct               0.040448
+MA50_distance           0.038462
+direction_confidence    0.038396
+return_2h               0.038328
+RSI                     0.037270
+hour_sin                0.036608
+volatility_1h           0.035820
+MA20_slope              0.034934
+hour_cos                0.033874
+p_move                  0.033342
+MA20_distance           0.030347
+return_1h               0.030278
+distance_low_1h         0.030119
+MA5_slope               0.026498
+dtype: float64

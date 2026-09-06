@@ -1,0 +1,2 @@
+# Supported dependency ranges, not a reconstruction of the original environment.
+-e .

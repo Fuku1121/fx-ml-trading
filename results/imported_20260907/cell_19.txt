@@ -1,0 +1,87 @@
+USD/JPY 5分足を取得しています...
+固定保存したデータ: [USER_HOME]\fx_experiment_runs\20260907_103617_e49045\usdjpy_5m.csv
+5 foldの学習を開始します。
+Validation探索中は数分表示が止まる場合があります。
+取得した5分足: 11595
+機械学習使用可能: 11482
+
+==============================
+Fold 1
+==============================
+内部OOFとQuality学習中...
+Validationで閾値・TP/SLを選択中...
+Base設定を選べません
+
+==============================
+Fold 2
+==============================
+内部OOFとQuality学習中...
+Validationで閾値・TP/SLを選択中...
+Base設定: {'move_threshold': 0.55, 'direction_threshold': 0.6, 'tp': 0.0005, 'sl': 0.001}
+Quality閾値: 0.0
+設定を固定して再学習 → Test評価中...
+Fold 2: BASE 180 trades, QUALITY 180 trades
+
+==============================
+Fold 3
+==============================
+内部OOFとQuality学習中...
+Validationで閾値・TP/SLを選択中...
+Base設定: {'move_threshold': 0.7, 'direction_threshold': 0.6, 'tp': 0.001, 'sl': 0.0007}
+Quality閾値: 0.0
+設定を固定して再学習 → Test評価中...
+Fold 3: BASE 16 trades, QUALITY 16 trades
+
+==============================
+Fold 4
+==============================
+内部OOFとQuality学習中...
+Validationで閾値・TP/SLを選択中...
+Base設定: {'move_threshold': 0.55, 'direction_threshold': 0.6, 'tp': 0.001, 'sl': 0.0005}
+Quality閾値: 0.0
+設定を固定して再学習 → Test評価中...
+Fold 4: BASE 44 trades, QUALITY 44 trades
+
+==============================
+Fold 5
+==============================
+内部OOFとQuality学習中...
+Validationで閾値・TP/SLを選択中...
+Base設定: {'move_threshold': 0.7, 'direction_threshold': 0.55, 'tp': 0.0008, 'sl': 0.0007}
+Quality閾値: 0.5
+設定を固定して再学習 → Test評価中...
+Fold 5: BASE 85 trades, QUALITY 82 trades
+
+==============================
+最終結果
+==============================
+strategy side  trades  win_rate_pct  avg_return_pct  profit_factor  max_dd_pct  total_growth_pct
+    BASE  ALL     325     58.461538        0.001858       1.070438   -0.975186          0.599469
+    BASE  BUY     304     58.223684        0.001341       1.049791   -1.053028          0.402709
+    BASE SELL      21     61.904762        0.009339       1.509610   -0.194136          0.195970
+ QUALITY  ALL     322     57.453416        0.000461       1.016943   -1.402371          0.142477
+ QUALITY  BUY     304     57.236842        0.000226       1.008156   -1.402371          0.062909
+ QUALITY SELL      18     61.111111        0.004431       1.231951   -0.194136          0.079518
+
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\2765260807.py:3710: Pandas4Warning: Sorting by default when concatenating all DatetimeIndex is deprecated.  In the future, pandas will respect the default of `sort=False`. Specify `sort=True` or `sort=False` to silence this message. If you see this warnings when not directly calling concat, report a bug to pandas.
+  pd.concat(
+
+
+==============================
+Quality評価
+==============================
+平均純損益は改善していません。
+改善Fold: 0 / 4
+QUALITY PF: 1.0169431144906107
+取引削減率: 0.92 %
+
+==============================
+完了
+==============================
+送ってほしいファイル:
+[USER_HOME]\fx_experiment_runs\20260907_103617_e49045\SEND_ME_results.zip
+
+価格CSV:
+[USER_HOME]\fx_experiment_runs\20260907_103617_e49045\usdjpy_5m.csv
+
+WindowsPath('[USER_HOME]/fx_experiment_runs/20260907_103617_e49045/SEND_ME_results.zip')

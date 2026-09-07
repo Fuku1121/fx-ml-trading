@@ -1,0 +1,6 @@
+usage: ipykernel_launcher.py [-h] [--csv CSV] [--out-root OUT_ROOT]
+ipykernel_launcher.py: error: unrecognized arguments: -f [USER_HOME]\AppData\Roaming\jupyter\runtime\kernel-583535bb-6b2d-467a-8b4d-d1fa50bf45c7.json
+
+SystemExit: 2
+[USER_HOME]\miniconda3\Lib\site-packages\IPython\core\interactiveshell.py:3755: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)

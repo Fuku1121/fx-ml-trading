@@ -1,0 +1,8 @@
+dukascopy_python:
+['INTERVAL_DAY_1', 'INTERVAL_HOUR_1', 'INTERVAL_HOUR_4', 'INTERVAL_MIN_1', 'INTERVAL_MIN_10', 'INTERVAL_MIN_15', 'INTERVAL_MIN_30', 'INTERVAL_MIN_5', 'INTERVAL_MONTH_1', 'INTERVAL_SEC_1', 'INTERVAL_SEC_10', 'INTERVAL_SEC_30', 'INTERVAL_TICK', 'INTERVAL_WEEK_1', 'OFFER_SIDE_ASK', 'OFFER_SIDE_BID', 'TIME_UNIT_DAY', 'TIME_UNIT_HOUR', 'TIME_UNIT_MIN', 'TIME_UNIT_MONTH', 'TIME_UNIT_SEC', 'TIME_UNIT_TICK', 'TIME_UNIT_WEEK', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '_fetch', '_get_custom_logger', '_get_dataframe_columns_for_timeunit', '_interval_units', '_resample_to_nearest', '_stream', 'datetime', 'fetch', 'json', 'live_fetch', 'logging', 'pd', 'random', 'requests', 'sleep', 'string', 'timedelta']
+
+バージョン情報:
+version属性なし
+
+fetch:
+(instrument: str, interval: str, offer_side: str, start: datetime.datetime, end: datetime.datetime, max_retries: int = 7, limit: int = 30000, debug=False)

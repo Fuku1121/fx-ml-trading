@@ -1,5 +1,17 @@
 # Verification record
 
+## 2026-09-07: current 15-minute Confidence implementation
+
+- Python 3.13.9 / Windows; numpy 2.4.4, pandas 3.0.3, scikit-learn 1.9.0.
+- 30 unittest cases passed: 23 existing checks plus 7 new Confidence checks.
+- New checks cover future-independent features, year-boundary label availability, missing-bar exclusion, actual non-overlap, costs, validation selection, CSV validation, and a synthetic annual Random Forest run.
+- Synthetic data confirms execution and output contracts, not market performance.
+- Saved outputs and original/archived code hashes are recorded in `results/imported_20260907/provenance.json`.
+- The real-price 250-tree annual study has not been rerun. Published performance is imported from the supplied notebook and predates the boundary corrections.
+- Current CI status will be available in GitHub Actions after publication.
+
+## Previous 5-minute baseline checks
+
 ## Local checks
 
 - Python 3.12.14 / Windows; exact core dependencies are in `requirements-verified.txt`.

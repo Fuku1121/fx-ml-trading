@@ -1,0 +1,117 @@
+使用CSV:
+[USER_HOME]\fx_experiment_runs\20260907_103617_e49045\usdjpy_5m.csv
+
+5分足: 11595
+使用可能データ: 11482
+
+====================================
+Fold 1
+====================================
+
+BUY設定:
+None
+SELL設定:
+None
+
+====================================
+Fold 2
+====================================
+
+BUY設定:
+{'move_threshold': 0.55, 'buy_threshold': 0.55, 'tp': 0.001, 'sl': 0.001, 'validation_trades': 16, 'validation_avg_return': np.float64(3.355555764597642e-05), 'validation_pf': 1.1738790771103371, 'score': np.float64(0.00013422223058390568)}
+SELL設定:
+None
+
+====================================
+Fold 3
+====================================
+
+BUY設定:
+{'move_threshold': 0.6, 'buy_threshold': 0.6, 'tp': 0.001, 'sl': 0.0007, 'validation_trades': 24, 'validation_avg_return': np.float64(0.00018937787292338008), 'validation_pf': 2.0401553573095637, 'score': np.float64(0.0009277583144718313)}
+SELL設定:
+{'move_threshold': 0.55, 'sell_threshold': 0.56, 'tp': 0.001, 'sl': 0.0007, 'validation_trades': 22, 'validation_avg_return': np.float64(2.8445402739939488e-05), 'validation_pf': 1.1067245643223336, 'score': np.float64(0.00013342076530593674)}
+
+====================================
+Fold 4
+====================================
+
+BUY設定:
+None
+SELL設定:
+{'move_threshold': 0.6, 'sell_threshold': 0.6, 'tp': 0.0005, 'sl': 0.0005, 'validation_trades': 10, 'validation_avg_return': np.float64(1.3712945456161822e-05), 'validation_pf': 1.0638351535026975, 'score': np.float64(4.336414107112802e-05)}
+
+====================================
+Fold 5
+====================================
+
+BUY設定:
+{'move_threshold': 0.6, 'buy_threshold': 0.55, 'tp': 0.0008, 'sl': 0.0007, 'validation_trades': 51, 'validation_avg_return': np.float64(0.00016881210434852115), 'validation_pf': 1.9704188963289146, 'score': np.float64(0.0012055595610766712)}
+SELL設定:
+{'move_threshold': 0.55, 'sell_threshold': 0.58, 'tp': 0.0008, 'sl': 0.0007, 'validation_trades': 17, 'validation_avg_return': np.float64(2.9597578231164774e-05), 'validation_pf': 1.1442274680834328, 'score': np.float64(0.00012203394130957429)}
+
+====================================
+BUY / SELL 別閾値 最終結果
+====================================
+side  trades  win_rate  avg_return  profit_factor    max_dd  total_growth
+ BUY     325 49.538462   -0.003073       0.905953 -1.599423     -1.001879
+SELL      48 45.833333   -0.003997       0.845818 -0.642160     -0.192405
+
+====================================
+SELL閾値別 Validation平均
+====================================
+ sell_threshold  folds  avg_trades  total_trades  avg_win_rate  avg_return   avg_pf  avg_max_dd
+           0.50      5        26.6           133     35.225000   -0.014943 0.440110   -0.496055
+           0.52      5        22.0           110     34.952586   -0.015230 0.425326   -0.398270
+           0.54      5        18.8            94     36.805875   -0.012899 0.499718   -0.345975
+           0.56      5        14.4            72     36.000000   -0.009264 0.584771   -0.217777
+           0.58      5        10.4            52     42.873950   -0.009679 0.880320   -0.186799
+           0.60      5         7.4            37     47.515152   -0.005948 1.679753   -0.148048
+           0.62      5         3.6            18     38.000000   -0.001460 0.915677   -0.071203
+           0.65      5         1.6             8     58.333333    0.010363      inf   -0.029142
+
+====================================
+Fold別SELL
+====================================
+ fold  sell_move_threshold  sell_direction_threshold  sell_trades  sell_win_rate  sell_avg_return  sell_profit_factor  sell_max_dd
+    1                  NaN                       NaN          NaN            NaN              NaN                 NaN          NaN
+    2                  NaN                       NaN          NaN            NaN              NaN                 NaN          NaN
+    3                 0.55                      0.56         22.0      22.727273        -0.024491            0.354410    -0.642160
+    4                 0.60                      0.60          5.0      80.000000         0.005705            1.555739    -0.051330
+    5                 0.55                      0.58         21.0      61.904762         0.015163            1.888306    -0.099538
+
+====================================
+SELL件数評価
+====================================
+Test SELL総取引数: 48
+まだ少ないです。
+現状ではSELL edgeの信頼性は低いです。
+
+SELL評価Fold: 3
+平均リターンプラスFold: 2 / 3
+PF > 1 Fold: 2 / 3
+
+====================================
+SELL Bootstrap
+====================================
+N: 48
+平均リターン: -0.003997081855821607 %
+95%CI: -0.019290654969379477 % ～ 0.012026255595995575 %
+平均>0確率: 31.16 %
+
+====================================
+実験完了
+====================================
+保存先:
+[USER_HOME]\sell_threshold_experiment
+
+次に確認する項目
+1. SELL総取引数が21件からどれだけ増えたか
+2. SELL閾値を下げても平均リターンがプラスか
+3. SELL PFが1より上を維持するか
+4. 複数Foldでプラスか
+5. Bootstrap 95%CIが0をまたぐか
+
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\1716304102.py:1523: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\1716304102.py:1572: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()

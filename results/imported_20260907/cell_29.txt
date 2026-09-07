@@ -1,0 +1,18 @@
+Found existing installation: dukascopy-python 4.0.1
+Uninstalling dukascopy-python-4.0.1:
+  Successfully uninstalled dukascopy-python-4.0.1
+Collecting dukascopy-python
+  Using cached dukascopy_python-4.0.1-py3-none-any.whl.metadata (6.8 kB)
+Requirement already satisfied: pandas in [USER_HOME]\miniconda3\lib\site-packages (from dukascopy-python) (3.0.3)
+Requirement already satisfied: requests in [USER_HOME]\miniconda3\lib\site-packages (from dukascopy-python) (2.32.5)
+Requirement already satisfied: numpy>=1.26.0 in [USER_HOME]\miniconda3\lib\site-packages (from pandas->dukascopy-python) (2.4.4)
+Requirement already satisfied: python-dateutil>=2.8.2 in [USER_HOME]\miniconda3\lib\site-packages (from pandas->dukascopy-python) (2.9.0.post0)
+Requirement already satisfied: tzdata in [USER_HOME]\miniconda3\lib\site-packages (from pandas->dukascopy-python) (2026.1)
+Requirement already satisfied: six>=1.5 in [USER_HOME]\miniconda3\lib\site-packages (from python-dateutil>=2.8.2->pandas->dukascopy-python) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in [USER_HOME]\miniconda3\lib\site-packages (from requests->dukascopy-python) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in [USER_HOME]\miniconda3\lib\site-packages (from requests->dukascopy-python) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in [USER_HOME]\miniconda3\lib\site-packages (from requests->dukascopy-python) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in [USER_HOME]\miniconda3\lib\site-packages (from requests->dukascopy-python) (2026.2.25)
+Using cached dukascopy_python-4.0.1-py3-none-any.whl (17 kB)
+Installing collected packages: dukascopy-python
+Successfully installed dukascopy-python-4.0.1

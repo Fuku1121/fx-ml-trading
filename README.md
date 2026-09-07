@@ -1,120 +1,111 @@
 # USD/JPY Machine Learning Research
 
-**短期為替取引の候補選別を、時系列検証と取引コストを含めて評価するPython研究プロジェクト。**
+**予測をすべて取引するのではなく、選別した取引にコスト控除後の優位性があるかを検証する時系列機械学習プロジェクト。**
 
-`Python` · `Random Forest` · `Time Series` · `Walk-Forward Validation` · `Backtesting`
+Python · pandas · scikit-learn · Random Forest · Nested Walk-Forward · Backtesting
 
-> **研究段階：有効性は未確認。** 保存済みのTrade Quality実験では、取引数と最大ドローダウンは減少した一方、平均純損益とProfit Factorは改善しませんでした。本リポジトリは、その結果と検証上の課題を含めて記録しています。
+[研究の経緯](docs/RESEARCH.md) · [検証方法](docs/METHODOLOGY.md) · [コード監査](docs/CONFIDENCE_AUDIT.md) · [実行方法](docs/REPRODUCIBILITY.md)
 
-## この研究で取り組むこと
+## まず知ってほしいこと
 
-ドル円の5分足から、30分間の売買候補を選びます。中心の問いは「上がるか下がるか」だけでなく、**未見の期間でも、コスト控除後の期待値がプラスになる取引を十分に選べるか**です。
+- **目的**：USD/JPYの短期売買について、予測精度だけでなく取引コスト・取引数・期間ごとの安定性を評価する。
+- **現在の手法**：15分足から30分先の方向をRandom Forestで予測し、Confidenceが基準以上の候補だけを採用する。
+- **検証設計**：前年までのValidationでConfidenceの閾値を決め、翌年のTestへ固定する。年ごとに過去データで再学習する。
+- **現在地**：元Notebookには2020〜2026年の集計で4,153取引・PF 1.238の保存結果がある。ただし年境界と欠測の処理に修正が必要で、**修正後の実価格データによる再評価は未実施**。
+
+このリポジトリでは、良かった数字だけでなく、採用しなかった仮説と計算上の問題も記録しています。
+
+## 現在の処理
 
 ```mermaid
 flowchart LR
-    A[USD/JPY 5分足] --> B[MOVE: 大きく動くか]
-    B --> C[Direction: 上か下か]
-    C --> D[Quality: 候補を採用するか]
-    D --> E[BUY / SELL / WAIT]
+    A[USD/JPY 15分足・UTC] --> B[過去の値動き・変動性・ローソク足・時刻]
+    B --> C[Random Forest: P_UP]
+    C --> D[Confidence = max P_UP, P_DOWN]
+    D --> E{前年Validationで決めた閾値以上?}
+    E -->|Yes| F[次足OpenでBUY / SELL]
+    E -->|No| G[WAIT]
+    F --> H[2本目Closeで決済・コスト控除]
 ```
 
-- **MOVE**：次足始値から6本目終値までの絶対リターンが0.05%を超えるか。
-- **Direction**：MOVEを満たす学習サンプルから、上昇・下落を予測。
-- **Quality**：過去のモデルによる将来区間への予測を使い、方向付きリターンからコストを引いてプラスになるかを学習。
+Confidenceはモデルの予測スコアであり、校正された実勝率ではありません。現在の年別実験にはMOVEモデル・Qualityモデル・TP/SL・可変取引量を含めません。
 
-## 主な取り組み
+## 保存されていた年別結果
 
-| 課題 | 実装・検証 |
-|---|---|
-| 相場によって予測性能が変わる | 過去から未来へ進むWalk-Forward、20日半減期の学習重み |
-| 高い勝率でも損益がマイナスになる | 平均純損益、PF、ドローダウン、MFE/MAEによる診断 |
-| 学習済みデータへの予測でQualityが過大評価される | 内部のforward / out-of-fold予測からQualityを学習 |
-| Notebookの状態に依存する | ローカルCSVを入力にするパッケージ、設定・データハッシュの保存 |
-| バックテストの計算が結論を左右する | 売買タイミング、売り損益、コスト、境界、初期損失のテスト |
+出典：`FX (1).ipynb` **セルindex 35**の保存出力。以下は整理時に再実行した数値ではありません。修正前の結果として掲載しています。
 
-## 保存されていた最新結果
+| Test年 | 前年に選んだ閾値 | 取引数 | 純利益の出た割合 | PF |
+|---|---:|---:|---:|---:|
+| 2020 | 55% | 1,628 | 51.84% | 1.058 |
+| 2021 | 58% | 166 | 63.25% | 1.663 |
+| 2022 | 56% | 885 | 56.27% | 1.245 |
+| 2023 | 58% | 194 | 59.28% | 1.578 |
+| 2024 | 58% | 166 | 68.07% | 1.896 |
+| 2025 | 56% | 456 | 58.99% | 1.410 |
+| 2026（途中） | 55% | 658 | 56.08% | 1.372 |
 
-出典：提供された `FX.ipynb` のセルindex 15。**再実行値ではありません。修正後のコードの成績でもありません。** 全5foldのうちfold 1はValidationで設定を選べず、以下はfold 2〜5の集計です。
+**保存集計**：平均純損益 **+0.005452% / 取引**、統合PF **1.237896**、決済ベース最大DD **−3.045907%**。7評価区間で平均純損益・PFともにプラス側ですが、2026年は9月1日までの部分期間です。原本の「Accuracy」はここでは純利益の出た割合を表します。
 
-| 指標 | BASE | QUALITY FILTER |
-|---|---:|---:|
-| 取引数 | 404 | 275 |
-| 勝率 | 50.247525% | 51.636364% |
-| 平均純損益 / 取引 | −0.003214% | −0.003666% |
-| Profit Factor | 0.897677 | 0.884695 |
-| 最大ドローダウン（旧計算） | −1.520048% | −1.155146% |
+![Saved annual profit factor and trade count](results/figures/nested_annual_saved.svg)
 
-**解釈：現在のQuality仮説は、集計期待値の改善を支持していません。** foldごとの改善も一様ではありません。下記の監査で旧計算の問題も判明しており、元の期間・価格データを確保した再評価が必要です。
+[年別表のCSV](results/published/nested_annual_saved.csv) · [元の保存出力](results/imported_20260907/cell_35.txt)
 
-→ [実験の流れと考察](docs/RESEARCH.md) · [コード監査と修正点](docs/AUDIT.md) · [出典ログ](results/legacy/cell_15.txt)
+PFは利益合計÷損失合計です。年別PFの平均1.460と、全取引を統合したPF 1.238は異なる集計です。資産の成長率を将来の予想収益には使いません。
 
-## 実行方法
+## 何を試し、なぜ現在の設計になったか
 
-Python 3.11以上を対象とします。以下はリポジトリ直下で実行します。依存関係の範囲は `pyproject.toml` に定義しています。元Notebookの環境を復元したロックファイルではありません。
+| 見つかった課題 | 試した方法 | 保存結果から得た判断 |
+|---|---|---|
+| 方向予測だけでは弱い | MOVEとDirectionを分け、Qualityで選別 | Quality再検証でも平均純損益の改善なし |
+| BUYに偏り、SELLの好成績は少数 | 売買方向の診断、別々の閾値 | SELLを48件まで増やすと平均純損益はマイナス |
+| 高Confidenceほど取引量を増やせるか | Confidence sizingと確率校正 | 未校正はPF 0.962、校正版は1.163。小標本の探索に留まる |
+| 30分という設定は妥当か | 5〜120分のhorizon比較 | この比較では全候補で平均純損益がマイナス |
+| 短期データだけでは判断しにくい | Dukascopyの長期15分足へ移行 | 約26.6万行で検証対象を拡大 |
+| モデルが覚えただけではないか | RF・Logistic Regression・Shuffle比較 | RF平均Test AUC約0.530、Shuffle約0.501。全件売買ではコストに負ける |
+| 高Confidenceの成績は後付けではないか | 年別Nested検証で閾値選択も過去へ限定 | 保存結果は前向き。ただし境界修正後の再評価が必要 |
 
-```bash
-python -m venv .venv
-```
+各行は異なる条件の実験です。単純な性能ランキングにはできません。[研究報告と出典一覧](docs/RESEARCH.md)
 
-Windows PowerShell：`.venv\Scripts\Activate.ps1`
-macOS / Linux：`source .venv/bin/activate`
+## 実装として確認できること
+
+- **時系列処理**：過去だけで特徴量を作り、正解ラベルが判明する時刻を管理する。
+- **検証設計**：モデル学習・閾値選択・Test評価を分離する。
+- **バックテスト**：次足約定、コスト、非重複、初期資産を含むDDを明示する。
+- **再現性**：入力データとソースのSHA-256、設定、依存関係、スキップ理由を保存する。
+- **テスト**：未来価格を変えても過去特徴量が変わらないこと、年境界のラベル除外、手計算できる損益を検証する。
+
+## 実行する
+
+Python 3.11以上。リポジトリ直下で実行します。生データは同梱していません。
 
 ```bash
 python -m pip install -e .
 python -m unittest discover -s tests -v
-python -m fx_research.pipeline --csv data/raw/usdjpy_5m.csv --out results/runs/quality-001
+python -m fx_research.confidence --csv data/raw/usdjpy_15m_2016_2026.csv --out results/runs/confidence-001
 ```
 
-実価格データは同梱していません。[データ形式](data/README.md)に沿った固定CSVが必要です。出力先には未作成のディレクトリを指定してください。全foldで複数回RandomForestを学習するため、実行時間はデータ量とCPUに依存します。
+CSVはUTC offset付きの足開始時刻と、小文字の `open, high, low, close` 列が必要です。[データ仕様と手順](docs/REPRODUCIBILITY.md)
 
-Notebookから使う場合：
+Notebookで読む場合は [09_confidence_nested.ipynb](notebooks/09_confidence_nested.ipynb) が現在の入口です。GitHubから結果表まで読むだけなら、Python環境の準備は不要です。
 
-```bash
-python -m pip install -e ".[notebook]"
-jupyter lab notebooks/08_trade_quality.ipynb
-```
+## リポジトリの案内
 
-## 出力と再現性
-
-| 出力 | 内容 |
+| 場所 | 内容 |
 |---|---|
-| `run.json` | 入力SHA-256、データ期間、設定、Python・依存関係のバージョン、ソースハッシュ、完了状態 |
-| `folds.csv` | 全foldの実行／スキップ理由、Validationで選んだ設定、Test成績 |
-| `trades.csv` | 売買方向、時刻、価格、決済理由、コスト、純損益 |
-| `summary.csv` | BASE / QUALITYの全体・BUY・SELL別成績 |
-| `test_scores.csv` | 評価済みfoldの各モデルの予測スコア |
-| `quality_importance.csv` | 評価済みfoldごとのRandomForest不純度ベース重要度 |
+| `src/fx_research/confidence.py` | 現行15分足・年別検証。年境界と時刻処理を修正 |
+| `src/fx_research/confidence_features.py` | 元の最新実験から抽出した特徴量 |
+| `docs/` | 研究の経緯、方法、監査、再現手順、コード解説 |
+| `notebooks/archive/` | 16段階の履歴。元コードの出典とハッシュを保持 |
+| `results/imported_20260907/` | 新Notebookの保存出力。再実行結果とは区別 |
+| `results/published/`・`results/figures/` | 読みやすく再構成した保存結果表と図 |
+| `tests/` | 人工データによる計算・境界・統合テスト |
 
-損益と勝率はCSVでは小数単位です（`0.001 = 0.1%`）。重要度は因果関係や安定した説明力を意味しません。実行結果と生データはGitの追跡対象から除外し、レビューした結果だけを別途掲載します。
+以前の5分足Quality系は [旧ベースライン](docs/QUALITY_BASELINE.md) に説明を残し、`fx_research.pipeline` から引き続き実行できます。
 
-## 構成
+## 次に確認すること
 
-```text
-├── README.md                     # プロジェクト概要・実行方法
-├── PROJECT_CONTEXT.md            # 更新済みの引き継ぎ
-├── docs/                         # 研究報告・監査・コード解説
-├── src/fx_research/               # 再利用可能な検証コード
-├── notebooks/08_trade_quality.ipynb
-├── notebooks/archive/            # 7段階の研究履歴（元コード保持）
-├── results/legacy/               # 保存出力・出典ハッシュ
-├── data/README.md                # 入力データの契約
-└── tests/                        # 人工データによる回帰テスト
-```
+1. 元の長期CSVを固定し、年境界・欠測を修正したコードで再評価する。
+2. BUY／SELL・年・時間帯に分解し、損益が一部の条件へ集中していないか確認する。
+3. 時系列依存を考慮した信頼区間、コスト感度、新しい未使用期間を検証する。
 
-## 検証の前提と限界
-
-- シグナルは足の確定後、エントリーは次足Open、時間決済は6本目Close。早期決済後も6本分のシグナル抑制を維持します。
-- TP・SLが同一足で成立する場合はSLを先行。ストップを飛び越える始値は、その始値で損失を計上します。
-- コストは1取引につき小数 `0.0000133`（0.00133%）の暫定的な往復コスト。実ブローカーの約定は未検証です。
-- Train→Validation→Testを分離し、6行の間隔を設けます。評価区間の終了後の価格を使う取引は除外します。
-- 過去のTestを何度も研究に使っています。統計的な確認には、新しい将来holdoutも必要です。
-- 品質ラベルは時間決済損益、実際の評価はTP/SL込みであり、目的のずれが残っています。
-- 実データの再実行、コスト耐性、運用システム、発注機能は未完了です。
-
-## 次の検証
-
-1. 固定データと実行環境を保存し、修正後のBASE / QUALITYを比較する。
-2. Qualityスコア帯と実損益の関係、期間・売買方向ごとの安定性を診断する。
-3. 独立した将来期間と厳しいコスト条件で仮説を再評価する。
-
-[Pythonコードの読み方](docs/CODE_GUIDE.md) · [変更履歴](CHANGELOG.md)
+現在は研究コードです。元データはBID系列で、一定コストを引く近似評価です。実際のbid/ask約定、スリッページ、運用・発注機能はまだ検証していません。

@@ -1,28 +1,21 @@
-# Project context — current handoff
+# Current project context — September 2026
 
-USD/JPY 5-minute ML research, 6-bar holding horizon, RandomForest MOVE → Direction → Quality.
-The supplied handoff is preserved in [docs/PROJECT_CONTEXT.original.md](docs/PROJECT_CONTEXT.original.md).
+Current research: USD/JPY 15-minute BID prices, 30-minute hold, RandomForest direction prediction with Confidence selection.
+Source: FX (1).ipynb cells 0–35. The newest saved experiment is cell 35 (annual nested selection).
+It differs from the older 5-minute MOVE → Direction → Quality architecture, which remains historical.
 
-## Correction based on the supplied notebook
+Saved data: 265,905 rows, 2016-01-03 through 2026-09-01 UTC. Source CSV not included in the notebook.
+Saved aggregate: 4,153 trades, net mean 0.0054519338%, PF 1.23789594, closed-trade max DD −3.04590698%.
+All seven evaluation periods reported net mean >0 and PF>1; 2026 is partial.
+These are imported outputs, not independently rerun or verified corrected results.
 
-Trade Quality was already executed in FX.ipynb cell index 15. Saved results show BASE 404 trades,
-average net return −0.003214%, PF 0.897677; QUALITY 275 trades, −0.003666%, PF 0.884695.
-This does not support an improved aggregate expectancy. It is historical, unrerun evidence.
-See [the research report](docs/RESEARCH.md) and [audit](docs/AUDIT.md).
+Current code: fx_research.confidence. It extracts the feature/model/threshold baseline and fixes label availability
+at annual boundaries, discontinuous 30-minute paths, input validation and misleading Accuracy naming.
+It has no MOVE, Quality, time decay, TP/SL, variable sizing or live execution.
 
-## Current implementation
+Next: fixed-data replay of corrected code; side/session/year decomposition; time-dependent uncertainty;
+realistic costs and a new untouched holdout. Do not promote recorded PF as a verified live edge.
+Explain substantial Python changes to the learner and retain failed experiments.
 
-Historical source is archived without rewriting experiments. The current CSV-driven package
-extracts the latest feature/model/Quality logic and explicitly corrects documented accounting
-and evaluation-boundary issues. New results must not be described as reproducing old metrics.
-The original market-data snapshot and environment lock are unavailable.
-
-## Next work
-
-1. Obtain an immutable, timezone-aware OHLC snapshot and record its provenance.
-2. Run the corrected BASE / QUALITY experiment with fixed configuration.
-3. Diagnose Quality score vs realized return and fold/side stability before changing labels.
-4. Evaluate a fresh future holdout; repeated research has already inspected historical tests.
-
-Preserve chronological validation, forward-only OOF and negative findings. Explain substantial
-Python changes to the learner. No live trading, leverage optimization or cloud deployment yet.
+Read README.md, docs/RESEARCH.md, docs/METHODOLOGY.md, docs/CONFIDENCE_AUDIT.md and docs/REPRODUCIBILITY.md.
+Older handoff: docs/PROJECT_CONTEXT.original.md. Older Quality baseline: docs/QUALITY_BASELINE.md.

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fx-ml-research"
-version = "0.1.0"
+version = "0.2.0"
 description = "Chronological machine-learning research for short-horizon USD/JPY trading"
 readme = "README.md"
 requires-python = ">=3.11"

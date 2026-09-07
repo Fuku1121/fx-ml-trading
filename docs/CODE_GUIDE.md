@@ -1,3 +1,11 @@
+# 現在のコードを読む順序
+
+`confidence_features.py`で過去特徴を作り、`confidence.py`のprepare_pricesでラベルの判明時刻を付けます。annual_splitsは年の境界、choose_thresholdは前年の候補比較、runは再学習・Test・保存を担当します。
+
+Settingsは実験条件を固定するdataclassです。label_endによる比較は「いつ正解を知ることができたか」をコードで表します。net_win_rateとdirection_accuracyの違いはMETHODOLOGY.mdで説明しています。
+
+以下は以前の5分足Quality系の読み方です。
+
 # Pythonコードの読み方
 
 ## まず読む順序

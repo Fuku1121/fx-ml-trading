@@ -1,0 +1,130 @@
+使用する固定CSV:
+[USER_HOME]\fx_experiment_runs\20260907_103617_e49045\usdjpy_5m.csv
+
+5分足: 11595
+使用可能データ: 11482
+
+==================================
+Fold 1
+==================================
+Validationで設定を選べませんでした
+
+==================================
+Fold 2
+==================================
+選択設定: {'move_threshold': 0.55, 'direction_threshold': 0.6, 'tp': 0.0005, 'sl': 0.001, 'validation_score': np.float64(2.628509342947669e-05), 'validation_trades': 16}
+BUY: 176 平均: 3.681832252473346e-05 PF: 1.1458818367698844
+SELL: 4 平均: -0.00039953636009313395 PF: 0.01126736409510835
+
+==================================
+Fold 3
+==================================
+選択設定: {'move_threshold': 0.7, 'direction_threshold': 0.6, 'tp': 0.001, 'sl': 0.0007, 'validation_score': np.float64(0.0006391738652982736), 'validation_trades': 16}
+BUY: 12 平均: 0.00011445510540613545 PF: 1.5805761513186904
+SELL: 4 平均: 0.00016062649548655936 PF: 1.9007514116729385
+
+==================================
+Fold 4
+==================================
+選択設定: {'move_threshold': 0.55, 'direction_threshold': 0.6, 'tp': 0.001, 'sl': 0.0005, 'validation_score': np.float64(0.0002556926809971804), 'validation_trades': 16}
+BUY: 34 平均: 8.387115828192073e-05 PF: 1.411782680326218
+SELL: 10 平均: 0.0001753256429288858 PF: 2.5808307972076965
+
+==================================
+Fold 5
+==================================
+選択設定: {'move_threshold': 0.7, 'direction_threshold': 0.55, 'tp': 0.0008, 'sl': 0.0007, 'validation_score': np.float64(0.0007662610955583329), 'validation_trades': 30}
+BUY: 82 平均: -8.084298528724242e-05 PF: 0.7645166971981902
+SELL: 3 平均: 0.00038787402226099347 PF: 3.839640625954821
+
+==================================
+BUY / SELL 総合
+==================================
+side  trades  win_rate  avg_return  profit_factor    max_dd  total_growth
+ ALL     325 58.461538    0.001858       1.070438 -0.975186      0.599469
+ BUY     304 58.223684    0.001341       1.049791 -1.053028      0.402709
+SELL      21 61.904762    0.009339       1.509610 -0.194136      0.195970
+
+==================================
+シグナル偏り診断
+==================================
+BUY候補: 1379
+SELL候補: 36
+WAIT: 6235
+
+平均p_up: 0.49478003939490606
+平均p_down: 0.5052199606050939
+
+実際の上昇率: 0.5240522875816993
+
+==================================
+Fold別 BUY / SELL
+==================================
+ fold  buy_trades  buy_win_rate  buy_avg_return  buy_profit_factor  sell_trades  sell_win_rate  sell_avg_return  sell_profit_factor
+    2         176     65.340909        0.003682           1.145882            4      25.000000        -0.039954            0.011267
+    3          12     58.333333        0.011446           1.580576            4      75.000000         0.016063            1.900751
+    4          34     58.823529        0.008387           1.411783           10      70.000000         0.017533            2.580831
+    5          82     42.682927       -0.008084           0.764517            3      66.666667         0.038787            3.839641
+
+==================================
+Regime別 BUY / SELL
+==================================
+    regime_type     regime side  trades  win_rate  avg_return  profit_factor
+     vol_regime   HIGH_VOL  BUY     304 58.223684    0.001341       1.049791
+     vol_regime   HIGH_VOL SELL      17 70.588235    0.021606       2.733681
+     vol_regime    LOW_VOL  BUY       0       NaN         NaN            NaN
+     vol_regime    LOW_VOL SELL       4 25.000000   -0.042793       0.010528
+   trend_regime      TREND  BUY     220 55.454545   -0.001000       0.965716
+   trend_regime      TREND SELL      16 62.500000    0.005295       1.237778
+   trend_regime      RANGE  BUY      84 65.476190    0.007471       1.354263
+   trend_regime      RANGE SELL       5 60.000000    0.022282       4.898255
+trend_direction DOWN_TREND  BUY     193 54.922280   -0.001398       0.952622
+trend_direction DOWN_TREND SELL      16 68.750000    0.017734       2.042354
+trend_direction   UP_TREND  BUY     111 63.963964    0.006103       1.272003
+trend_direction   UP_TREND SELL       5 40.000000   -0.017523       0.222159
+        session   NY_OTHER  BUY      95 58.947368    0.002627       1.114164
+        session   NY_OTHER SELL       1  0.000000   -0.101330       0.000000
+        session      TOKYO  BUY      79 53.164557   -0.002205       0.919978
+        session      TOKYO SELL       3 66.666667    0.013171       1.964264
+        session     LONDON  BUY     130 60.769231    0.002555       1.086878
+        session     LONDON SELL      17 64.705882    0.015173       2.063483
+
+==================================
+Bootstrap 平均リターン95%区間
+==================================
+side   n     mean    ci_2_5    ci_50  ci_97_5  prob_mean_positive
+ BUY 304 0.001341 -0.005557 0.001399 0.008253               65.57
+SELL  21 0.009339 -0.014742 0.009584 0.033617               77.38
+
+==================================
+Fold安定性
+==================================
+
+BUY
+評価Fold数: 4
+平均リターンプラスFold: 3 / 4
+PF > 1 Fold: 3 / 4
+
+SELL
+評価Fold数: 4
+平均リターンプラスFold: 3 / 4
+PF > 1 Fold: 3 / 4
+
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\1321012231.py:1339: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\1321012231.py:1388: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+
+
+==================================
+今回の診断完了
+==================================
+保存先:
+[USER_HOME]\buy_sell_diagnostics
+
+特に次の数字を確認:
+1. SELLが何Foldでプラスか
+2. SELL Bootstrap 95%区間
+3. BUY/SELLシグナル数の偏り
+4. SELLが強いRegime
+5. 実際の市場上昇率と平均p_up

@@ -1,0 +1,67 @@
+[*********************100%***********************]  1 of 1 completed
+
+取得データ数: 16711
+学習対象データ数: 3056
+学習データ数: 2444
+テストデータ数: 612
+
+[USER_HOME]\miniconda3\Lib\site-packages\sklearn\utils\parallel.py:161: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x00000160A7C68130>
+  for k, v in zip(warning_filter_keys, filter_args)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+
+
+========================
+モデル評価
+========================
+Accuracy: 0.5294
+ROC-AUC: 0.5799
+
+
+              precision    recall  f1-score   support
+
+           0       0.58      0.45      0.51       329
+           1       0.49      0.63      0.55       283
+
+    accuracy                           0.53       612
+   macro avg       0.54      0.54      0.53       612
+weighted avg       0.54      0.53      0.53       612
+
+========================
+高確率シグナル
+========================
+BUY候補数: 91
+SELL候補数: 84
+BUYシグナル勝率: 72.53 %
+SELLシグナル勝率: 46.43 %
+========================
+最新予測
+========================
+30分後の上昇確率: 71.8 %
+
+<Figure size 1400x600 with 1 Axes>
+========================
+特徴量重要度
+========================
+volatility_2h            0.115077
+hour                     0.086317
+volatility_1h            0.083256
+MA50_distance            0.077184
+MA20_slope               0.062938
+distance_from_low_1h     0.061320
+RSI                      0.057151
+return_30m               0.051218
+MA20_distance            0.046999
+distance_from_high_1h    0.045974
+range                    0.042790
+return_1h                0.042003
+MA5_distance             0.038868
+upper_wick               0.038823
+return_15m               0.038693
+lower_wick               0.028783
+body                     0.027892
+weekday                  0.026390
+return_5m                0.025361
+bullish                  0.002964
+dtype: float64
+
+<Figure size 1200x600 with 1 Axes>

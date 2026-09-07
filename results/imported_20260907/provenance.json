@@ -1,0 +1,224 @@
+{
+  "source_filename": "FX (1).ipynb",
+  "source_sha256": "f07b8366eeb15fa83f1af7d12031ee66f53710b4f581d650bd9292bfeb60c453",
+  "status": "Saved notebook outputs, not independently rerun. Text output only; images/HTML/metadata omitted. Home paths redacted. Trailing spaces normalized.",
+  "cells": [
+    {
+      "source_cell_index": 0,
+      "archive": "notebooks/archive/01_data_and_direction.ipynb",
+      "source_sha256": "2d6b0c33846a9937412fd908db0fea9f38005ab68cb017e39834ce46d6ff3d84",
+      "archive_sha256": "2d6b0c33846a9937412fd908db0fea9f38005ab68cb017e39834ce46d6ff3d84"
+    },
+    {
+      "source_cell_index": 1,
+      "archive": "notebooks/archive/01_data_and_direction.ipynb",
+      "source_sha256": "34880f65a0624d69ae0e720441d0b20f5391c98f340a32a4f2e0ca4ef4623654",
+      "archive_sha256": "34880f65a0624d69ae0e720441d0b20f5391c98f340a32a4f2e0ca4ef4623654"
+    },
+    {
+      "source_cell_index": 2,
+      "archive": "notebooks/archive/01_data_and_direction.ipynb",
+      "source_sha256": "e79c6bac6ec5db9c7805aaa59620ec8414f36de7abd9eca6029822903daefbf0",
+      "archive_sha256": "e79c6bac6ec5db9c7805aaa59620ec8414f36de7abd9eca6029822903daefbf0"
+    },
+    {
+      "source_cell_index": 3,
+      "archive": "notebooks/archive/01_data_and_direction.ipynb",
+      "source_sha256": "b3b108742b093bf487d00c9902e95837f15e3b01b36801ee8e71b8d561084696",
+      "archive_sha256": "b3b108742b093bf487d00c9902e95837f15e3b01b36801ee8e71b8d561084696"
+    },
+    {
+      "source_cell_index": 4,
+      "archive": "notebooks/archive/01_data_and_direction.ipynb",
+      "source_sha256": "7b5252e716067b0fe265f1a598dbc59d7e9a17f83a4e69b32c6dce0eaa958143",
+      "archive_sha256": "7b5252e716067b0fe265f1a598dbc59d7e9a17f83a4e69b32c6dce0eaa958143"
+    },
+    {
+      "source_cell_index": 5,
+      "archive": "notebooks/archive/02_move_direction.ipynb",
+      "source_sha256": "c35725e26ec7f28bcf6169b514398d6f3856f153d66582db210d2d0a651e20b2",
+      "archive_sha256": "c35725e26ec7f28bcf6169b514398d6f3856f153d66582db210d2d0a651e20b2"
+    },
+    {
+      "source_cell_index": 6,
+      "archive": "notebooks/archive/02_move_direction.ipynb",
+      "source_sha256": "8341ca42a4afbd460a3edc599cee2c3cea00b745d989e5e1ea971071c410a8a6",
+      "archive_sha256": "8341ca42a4afbd460a3edc599cee2c3cea00b745d989e5e1ea971071c410a8a6"
+    },
+    {
+      "source_cell_index": 7,
+      "archive": "notebooks/archive/02_move_direction.ipynb",
+      "source_sha256": "14a5a03b1f475c80889d8b7f512a8b44ae2f704740eb7f448a5bec09f217320b",
+      "archive_sha256": "14a5a03b1f475c80889d8b7f512a8b44ae2f704740eb7f448a5bec09f217320b"
+    },
+    {
+      "source_cell_index": 8,
+      "archive": "notebooks/archive/02_move_direction.ipynb",
+      "source_sha256": "11b7adda336917221ac4874c223fff169e7a23633ffeab5b94c67633ed39529b",
+      "archive_sha256": "11b7adda336917221ac4874c223fff169e7a23633ffeab5b94c67633ed39529b"
+    },
+    {
+      "source_cell_index": 9,
+      "archive": "notebooks/archive/03_direction_and_regime_diagnostics.ipynb",
+      "source_sha256": "52005138b8708bc7bf87f84a62b81a70b8d14826d45ac40bac8c898c9de4eaeb",
+      "archive_sha256": "52005138b8708bc7bf87f84a62b81a70b8d14826d45ac40bac8c898c9de4eaeb"
+    },
+    {
+      "source_cell_index": 10,
+      "archive": "notebooks/archive/03_direction_and_regime_diagnostics.ipynb",
+      "source_sha256": "4d9d007a9a1a1f6ed661ad2bfd5a6cd32650c247d5aa4114cba1bc36abca7850",
+      "archive_sha256": "4d9d007a9a1a1f6ed661ad2bfd5a6cd32650c247d5aa4114cba1bc36abca7850"
+    },
+    {
+      "source_cell_index": 11,
+      "archive": "notebooks/archive/04_expectancy_and_excursions.ipynb",
+      "source_sha256": "fcff88a797119b015b453334f53771cd0fee76f2a2a2788070ae119dd1e5fc64",
+      "archive_sha256": "fcff88a797119b015b453334f53771cd0fee76f2a2a2788070ae119dd1e5fc64"
+    },
+    {
+      "source_cell_index": 12,
+      "archive": "notebooks/archive/04_expectancy_and_excursions.ipynb",
+      "source_sha256": "5e4cabef57969d6605477f51bc29ba72fad170055e596f5434d6788261e9ea5a",
+      "archive_sha256": "5e4cabef57969d6605477f51bc29ba72fad170055e596f5434d6788261e9ea5a"
+    },
+    {
+      "source_cell_index": 13,
+      "archive": "notebooks/archive/05_horizon_comparison.ipynb",
+      "source_sha256": "fcec0c41653e3d2e7ce82cd91e6472d7b7562a3c9333c8f6ccc35cc454a7f74f",
+      "archive_sha256": "fcec0c41653e3d2e7ce82cd91e6472d7b7562a3c9333c8f6ccc35cc454a7f74f"
+    },
+    {
+      "source_cell_index": 14,
+      "archive": "notebooks/archive/06_regime_filter.ipynb",
+      "source_sha256": "f12131a2f8836218de9254d554bb46c7aba7c7240aef1a1c68664f79f51209a5",
+      "archive_sha256": "f12131a2f8836218de9254d554bb46c7aba7c7240aef1a1c68664f79f51209a5"
+    },
+    {
+      "source_cell_index": 15,
+      "archive": "notebooks/archive/07_trade_quality_legacy.ipynb",
+      "source_sha256": "53effc74418c65eadd3f3048e0c09b3afebde114318ea3e47774f9174924633a",
+      "archive_sha256": "53effc74418c65eadd3f3048e0c09b3afebde114318ea3e47774f9174924633a"
+    },
+    {
+      "source_cell_index": 16,
+      "archive": "notebooks/archive/08_quality_retest.ipynb",
+      "source_sha256": "0ce15ab2c264a8219ce0057f026b23b7367e02220d03c76e1f0c223ecc0919e9",
+      "archive_sha256": "0ce15ab2c264a8219ce0057f026b23b7367e02220d03c76e1f0c223ecc0919e9"
+    },
+    {
+      "source_cell_index": 17,
+      "archive": "notebooks/archive/08_quality_retest.ipynb",
+      "source_sha256": "202b9772a33962d4a3149297b8a35880cd4a1449ae9cd45234e82a330480eaa6",
+      "archive_sha256": "202b9772a33962d4a3149297b8a35880cd4a1449ae9cd45234e82a330480eaa6"
+    },
+    {
+      "source_cell_index": 18,
+      "archive": "notebooks/archive/08_quality_retest.ipynb",
+      "source_sha256": "cd030441069f44864775882a32a9130f4407c69a99a6af92bdab875d2f79ad21",
+      "archive_sha256": "cd030441069f44864775882a32a9130f4407c69a99a6af92bdab875d2f79ad21"
+    },
+    {
+      "source_cell_index": 19,
+      "archive": "notebooks/archive/08_quality_retest.ipynb",
+      "source_sha256": "02fcae88bd120f599563734dc51f95daea3e96193a44c16bcad5a646de82ac94",
+      "archive_sha256": "02fcae88bd120f599563734dc51f95daea3e96193a44c16bcad5a646de82ac94"
+    },
+    {
+      "source_cell_index": 20,
+      "archive": "notebooks/archive/09_buy_sell_asymmetry.ipynb",
+      "source_sha256": "a7917350707100cc566f27868fd5833bfa598c821e3a9e6cfdb4db502ebb94cd",
+      "archive_sha256": "a7917350707100cc566f27868fd5833bfa598c821e3a9e6cfdb4db502ebb94cd"
+    },
+    {
+      "source_cell_index": 21,
+      "archive": "notebooks/archive/09_buy_sell_asymmetry.ipynb",
+      "source_sha256": "0276afe0f056902897e7ea95749f11d5a52ff9cdb56d00e7aca62e6488ecdbc8",
+      "archive_sha256": "0276afe0f056902897e7ea95749f11d5a52ff9cdb56d00e7aca62e6488ecdbc8"
+    },
+    {
+      "source_cell_index": 22,
+      "archive": "notebooks/archive/10_confidence_sizing.ipynb",
+      "source_sha256": "6cd3bb1b44e3b6a7a072701b223cd369470b1097a9c3c3d154e302854aa8518f",
+      "archive_sha256": "6cd3bb1b44e3b6a7a072701b223cd369470b1097a9c3c3d154e302854aa8518f"
+    },
+    {
+      "source_cell_index": 23,
+      "archive": "notebooks/archive/10_confidence_sizing.ipynb",
+      "source_sha256": "00d5039a8cf9cd52b269954689da3c11adfc645117d8345a703e1fe6629a2320",
+      "archive_sha256": "00d5039a8cf9cd52b269954689da3c11adfc645117d8345a703e1fe6629a2320"
+    },
+    {
+      "source_cell_index": 24,
+      "archive": "notebooks/archive/11_horizon_sweep.ipynb",
+      "source_sha256": "7a4541e71e0b7362976209d3bb853aacf96602f7930a71a10b41ed199e2b7d18",
+      "archive_sha256": "7a4541e71e0b7362976209d3bb853aacf96602f7930a71a10b41ed199e2b7d18"
+    },
+    {
+      "source_cell_index": 25,
+      "archive": "notebooks/archive/12_long_history_data.ipynb",
+      "source_sha256": "abf20136721900de04b9c2bb9da5e45126f00c3c909ab2ff2866a43183694ec8",
+      "archive_sha256": "abf20136721900de04b9c2bb9da5e45126f00c3c909ab2ff2866a43183694ec8"
+    },
+    {
+      "source_cell_index": 26,
+      "archive": "notebooks/archive/12_long_history_data.ipynb",
+      "source_sha256": "d17859c2052b41f996e8c7d6505e12af9a1ea1e4e3df1da1df6c6cc4b7f4d52f",
+      "archive_sha256": "d17859c2052b41f996e8c7d6505e12af9a1ea1e4e3df1da1df6c6cc4b7f4d52f"
+    },
+    {
+      "source_cell_index": 27,
+      "archive": "notebooks/archive/12_long_history_data.ipynb",
+      "source_sha256": "3dc02ffa1d34714c34ca3d1d025ab67e2caccbdec2b67b7bd8fda1b23a2d80f7",
+      "archive_sha256": "3dc02ffa1d34714c34ca3d1d025ab67e2caccbdec2b67b7bd8fda1b23a2d80f7"
+    },
+    {
+      "source_cell_index": 28,
+      "archive": "notebooks/archive/12_long_history_data.ipynb",
+      "source_sha256": "32895bedf5870d669a5ed7cd98340857ac68d4ce7e2ceb8afe276919d7ebd1a0",
+      "archive_sha256": "32895bedf5870d669a5ed7cd98340857ac68d4ce7e2ceb8afe276919d7ebd1a0"
+    },
+    {
+      "source_cell_index": 29,
+      "archive": "notebooks/archive/12_long_history_data.ipynb",
+      "source_sha256": "4e48a2a1112e88ac2f1e032e6e7ef8008a093fc9ae5a11e1455b143e537c67e6",
+      "archive_sha256": "4e48a2a1112e88ac2f1e032e6e7ef8008a093fc9ae5a11e1455b143e537c67e6"
+    },
+    {
+      "source_cell_index": 30,
+      "archive": "notebooks/archive/12_long_history_data.ipynb",
+      "source_sha256": "43a86eae0e045e4cc2302630aa87b5ddad758dab445b9027cdcddba4b50636fd",
+      "archive_sha256": "43a86eae0e045e4cc2302630aa87b5ddad758dab445b9027cdcddba4b50636fd"
+    },
+    {
+      "source_cell_index": 31,
+      "archive": "notebooks/archive/12_long_history_data.ipynb",
+      "source_sha256": "441d48acb31c90701252c202229d94ca8cb9ab34077d1f161bba4ab1e933ecec",
+      "archive_sha256": "441d48acb31c90701252c202229d94ca8cb9ab34077d1f161bba4ab1e933ecec"
+    },
+    {
+      "source_cell_index": 32,
+      "archive": "notebooks/archive/13_model_health.ipynb",
+      "source_sha256": "19fbd9de2ed3b5f7bb3e1041f7e4c993956fcdeb44bf0f782059fcf96654856f",
+      "archive_sha256": "19fbd9de2ed3b5f7bb3e1041f7e4c993956fcdeb44bf0f782059fcf96654856f"
+    },
+    {
+      "source_cell_index": 33,
+      "archive": "notebooks/archive/14_confidence_profitability.ipynb",
+      "source_sha256": "243814b1ecc135c1537e1cae2b7ae2c2939ac67b0bf810d4801c5e956ee3a3b1",
+      "archive_sha256": "243814b1ecc135c1537e1cae2b7ae2c2939ac67b0bf810d4801c5e956ee3a3b1"
+    },
+    {
+      "source_cell_index": 34,
+      "archive": "notebooks/archive/15_annual_robustness.ipynb",
+      "source_sha256": "0328980a0aa8133835ee92438448f6f352f060904d755ecf783f2d3003465010",
+      "archive_sha256": "0328980a0aa8133835ee92438448f6f352f060904d755ecf783f2d3003465010"
+    },
+    {
+      "source_cell_index": 35,
+      "archive": "notebooks/archive/16_nested_confidence.ipynb",
+      "source_sha256": "abea4f796a04af009560ba99432c610d593330a46e55534d8753e6ff742f3212",
+      "archive_sha256": "abea4f796a04af009560ba99432c610d593330a46e55534d8753e6ff742f3212"
+    }
+  ],
+  "omitted_empty_cell": 36
+}

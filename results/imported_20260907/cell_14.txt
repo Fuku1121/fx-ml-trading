@@ -1,0 +1,83 @@
+使用可能データ: 16653
+
+
+================================
+Fold 1
+================================
+Base設定を選べません
+
+
+================================
+Fold 2
+================================
+Base設定: {'move_threshold': 0.6, 'direction_threshold': 0.55, 'tp': 0.001, 'sl': 0.0005}
+Regime設定: {'vol_q_low': 0.0, 'vol_q_high': 1.0, 'vol_low': np.float64(2.5307258335905968e-05), 'vol_high': np.float64(0.0015470136965857774), 'adx_min': 30, 'slope_q': 0.5, 'slope_min': np.float64(2.843674536806562e-05)}
+
+BASE: {'trades': 50, 'win_rate': np.float64(0.42), 'avg_return': np.float64(-2.582904705151822e-05), 'profit_factor': np.float64(0.8421041132127767)}
+REGIME: {'trades': 32, 'win_rate': np.float64(0.46875), 'avg_return': np.float64(2.5300130943592522e-05), 'profit_factor': np.float64(1.1447101022442785)}
+
+
+================================
+Fold 3
+================================
+Base設定: {'move_threshold': 0.55, 'direction_threshold': 0.55, 'tp': 0.0005, 'sl': 0.001}
+Regime設定: {'vol_q_low': 0.0, 'vol_q_high': 1.0, 'vol_low': np.float64(2.5307258335905968e-05), 'vol_high': np.float64(0.0015470136965857774), 'adx_min': 20, 'slope_q': 0.0, 'slope_min': np.float64(0.0)}
+
+BASE: {'trades': 226, 'win_rate': np.float64(0.5752212389380531), 'avg_return': np.float64(-2.7426710598622948e-05), 'profit_factor': np.float64(0.8995088796702457)}
+REGIME: {'trades': 189, 'win_rate': np.float64(0.5714285714285714), 'avg_return': np.float64(-3.347677187899949e-05), 'profit_factor': np.float64(0.8776932893406836)}
+
+
+================================
+Fold 4
+================================
+Base設定: {'move_threshold': 0.7, 'direction_threshold': 0.7, 'tp': 0.001, 'sl': 0.0005}
+Regime設定: {'vol_q_low': 0.0, 'vol_q_high': 1.0, 'vol_low': np.float64(2.5307258335905968e-05), 'vol_high': np.float64(0.0015470136965857774), 'adx_min': 0, 'slope_q': 0.0, 'slope_min': np.float64(0.0)}
+
+BASE: {'trades': 20, 'win_rate': np.float64(0.6), 'avg_return': np.float64(0.00013642516867935713), 'profit_factor': np.float64(1.7500321956456404)}
+REGIME: {'trades': 20, 'win_rate': np.float64(0.6), 'avg_return': np.float64(0.00013642516867935713), 'profit_factor': np.float64(1.7500321956456404)}
+
+
+================================
+Fold 5
+================================
+Base設定: {'move_threshold': 0.55, 'direction_threshold': 0.6, 'tp': 0.0008, 'sl': 0.0007}
+Regime設定: {'vol_q_low': 0.0, 'vol_q_high': 1.0, 'vol_low': np.float64(2.5307258335905968e-05), 'vol_high': np.float64(0.003796527945604416), 'adx_min': 0, 'slope_q': 0.0, 'slope_min': np.float64(0.0)}
+
+BASE: {'trades': 58, 'win_rate': np.float64(0.46551724137931033), 'avg_return': np.float64(-2.7154468324689272e-05), 'profit_factor': np.float64(0.9135547965089208)}
+REGIME: {'trades': 58, 'win_rate': np.float64(0.46551724137931033), 'avg_return': np.float64(-2.7154468324689272e-05), 'profit_factor': np.float64(0.9135547965089208)}
+
+
+====================================
+Regimeなし vs Regimeあり Fold比較
+====================================
+   fold  base_trades  base_win_rate  base_avg_return   base_pf  regime_trades  \
+0     2           50      42.000000        -0.002583  0.842104             32
+1     3          226      57.522124        -0.002743  0.899509            189
+2     4           20      60.000000         0.013643  1.750032             20
+3     5           58      46.551724        -0.002715  0.913555             58
+
+   regime_win_rate  regime_avg_return  regime_pf  vol_low_quantile  \
+0        46.875000           0.002530   1.144710               0.0
+1        57.142857          -0.003348   0.877693               0.0
+2        60.000000           0.013643   1.750032               0.0
+3        46.551724          -0.002715   0.913555               0.0
+
+   vol_high_quantile  adx_min  slope_quantile
+0                1.0       30             0.5
+1                1.0       20             0.0
+2                1.0        0             0.0
+3                1.0        0             0.0
+
+
+====================================
+最終比較
+====================================
+        strategy  trades   win_rate  average_return  profit_factor  \
+0           BASE     354  53.672316        -0.00179       0.930915
+1  REGIME FILTER     299  54.180602        -0.00146       0.944888
+
+   max_drawdown  total_growth
+0     -1.080436     -0.637585
+1     -0.964717     -0.440715
+
+<Figure size 1300x600 with 1 Axes>

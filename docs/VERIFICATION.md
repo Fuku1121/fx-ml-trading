@@ -8,7 +8,7 @@
 - Synthetic data confirms execution and output contracts, not market performance.
 - Saved outputs and original/archived code hashes are recorded in `results/imported_20260907/provenance.json`.
 - The real-price 250-tree annual study has not been rerun. Published performance is imported from the supplied notebook and predates the boundary corrections.
-- Current CI status will be available in GitHub Actions after publication.
+- GitHub Actions [run #2](https://github.com/Fuku1121/fx-ml-trading/actions/runs/34121250306) passed all 30 tests and syntax compilation on Python 3.11 and 3.12 (Ubuntu), source commit `f23c88e5530051f001d477dc15975ff1410b5eac`.
 
 ## Previous 5-minute baseline checks
 

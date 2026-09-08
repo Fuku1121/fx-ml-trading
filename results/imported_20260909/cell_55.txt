@@ -1,0 +1,129 @@
+================================================================================
+DATA CHECK
+================================================================================
+Rows: 275,704
+Period: 2016-01-03 22:00:00+00:00 -> 2026-09-07 01:30:00+00:00
+[BASE] 明示的なChampion feature listが見つかりません。
+       固定BASE特徴量を作成して比較します。
+BASE features: 21
+Volatility features: 13
+Regime features: 11
+[MODEL] Existing HGB not found.
+[MODEL] Using fallback HGB.
+
+================================================================================
+BASE
+================================================================================
+2020 | ISOTONIC Threshold=0.56 UTC_13_24     AUC=0.5326 Trades= 887 PF=1.154 Avg=0.00368% DD=-4.789%
+2021 | ISOTONIC Threshold=0.65 UTC_13_24     AUC=0.5339 Trades= 152 PF=3.152 Avg=0.01859% DD=-0.226%
+2022 | PLATT    Threshold=0.58 UTC_13_24     AUC=0.5296 Trades= 225 PF=3.474 Avg=0.02417% DD=-0.284%
+2023 | PLATT    Threshold=0.58 UTC_21_24     AUC=0.5261 Trades= 316 PF=1.441 Avg=0.00750% DD=-1.465%
+2024 | RAW      Threshold=0.65 ALL           AUC=0.5236 Trades= 177 PF=3.252 Avg=0.02160% DD=-0.282%
+2025 | RAW      Threshold=0.62 UTC_13_24     AUC=0.5284 Trades= 555 PF=5.739 Avg=0.20068% DD=-10.024%
+2026 | ISOTONIC Threshold=0.55 UTC_21_24     AUC=0.5338 Trades= 423 PF=1.344 Avg=0.00581% DD=-1.376%
+
+================================================================================
+BASE_PLUS_VOL
+================================================================================
+2020 | PLATT    Threshold=0.55 UTC_21_24     AUC=0.5302 Trades= 385 PF=1.665 Avg=0.01186% DD=-1.608%
+2021 | RAW      Threshold=0.60 UTC_13_24     AUC=0.5330 Trades= 276 PF=2.233 Avg=0.01205% DD=-0.240%
+2022 | PLATT    Threshold=0.58 UTC_13_24     AUC=0.5290 Trades= 146 PF=3.908 Avg=0.02871% DD=-0.282%
+2023 | PLATT    Threshold=0.58 UTC_21_24     AUC=0.5270 Trades= 318 PF=1.732 Avg=0.01034% DD=-0.957%
+2024 | PLATT    Threshold=0.60 ALL           AUC=0.5221 Trades= 143 PF=2.891 Avg=0.02088% DD=-0.289%
+2025 | RAW      Threshold=0.65 UTC_13_24     AUC=0.5305 Trades= 304 PF=1.261 Avg=0.00747% DD=-1.825%
+2026 | PLATT    Threshold=0.56 UTC_21_24     AUC=0.5357 Trades=  94 PF=1.797 Avg=0.01625% DD=-0.489%
+
+================================================================================
+BASE_PLUS_REGIME
+================================================================================
+2020 | PLATT    Threshold=0.56 UTC_21_24     AUC=0.5294 Trades= 254 PF=1.739 Avg=0.01546% DD=-2.010%
+2021 | RAW      Threshold=0.60 UTC_13_24     AUC=0.5333 Trades= 193 PF=2.310 Avg=0.01362% DD=-0.299%
+2022 | PLATT    Threshold=0.58 UTC_21_24     AUC=0.5291 Trades= 145 PF=6.401 Avg=0.04970% DD=-0.355%
+2023 | ISOTONIC Threshold=0.65 UTC_21_24     AUC=0.5279 Trades= 307 PF=1.437 Avg=0.00793% DD=-1.393%
+2024 | RAW      Threshold=0.65 ALL           AUC=0.5226 Trades= 156 PF=2.832 Avg=0.02031% DD=-0.282%
+2025 | RAW      Threshold=0.62 ALL           AUC=0.5348 Trades= 436 PF=7.212 Avg=0.16608% DD=-2.228%
+2026 | RAW      Threshold=0.58 UTC_21_24     AUC=0.5350 Trades= 248 PF=1.351 Avg=0.00711% DD=-1.288%
+
+================================================================================
+BASE_PLUS_VOL_REGIME
+================================================================================
+2020 | PLATT    Threshold=0.55 UTC_13_24     AUC=0.5227 Trades= 601 PF=1.194 Avg=0.00467% DD=-3.430%
+2021 | RAW      Threshold=0.60 UTC_21_24     AUC=0.5298 Trades= 183 PF=2.080 Avg=0.01081% DD=-0.170%
+2022 | PLATT    Threshold=0.58 ALL           AUC=0.5283 Trades= 198 PF=1.961 Avg=0.01576% DD=-0.600%
+2023 | PLATT    Threshold=0.58 ALL           AUC=0.5269 Trades= 319 PF=1.395 Avg=0.00756% DD=-1.243%
+2024 | PLATT    Threshold=0.60 ALL           AUC=0.5231 Trades= 188 PF=3.069 Avg=0.02157% DD=-0.242%
+2025 | RAW      Threshold=0.62 UTC_13_24     AUC=0.5376 Trades= 477 PF=13.965 Avg=0.34689% DD=-1.758%
+2026 | PLATT    Threshold=0.62 ALL           AUC=0.5360 Trades= 248 PF=2.955 Avg=0.01390% DD=-0.461%
+
+================================================================================
+DEVELOPMENT SUMMARY 2020-2025
+================================================================================
+         feature_set  years  mean_auc  positive_years  pf_above_1_years  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+                BASE      6  0.529013               6                 6    2312  0.600779    0.000558       3.335539 2.436196 -0.100242     24.303143
+       BASE_PLUS_VOL      6  0.528628               6                 6    1572  0.622137    0.000131       1.800728 0.228483 -0.018510     12.344006
+    BASE_PLUS_REGIME      6  0.529538               6                 6    1491  0.620389    0.000616       4.324543 1.428934 -0.022283     64.127195
+BASE_PLUS_VOL_REGIME      6  0.528079               6                 6    1966  0.592065    0.000915       5.452699 4.622421 -0.034299    134.767412
+
+================================================================================
+FINAL CONFIRMATION 2026
+================================================================================
+         feature_set  test_year  validation_year calibration  threshold   session      auc  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+                BASE       2026             2025    ISOTONIC       0.55 UTC_21_24 0.533790     423  0.600473    0.000058       1.343707 0.024786 -0.013756      1.801774
+       BASE_PLUS_VOL       2026             2025       PLATT       0.56 UTC_21_24 0.535670      94  0.648936    0.000162       1.797014 0.015355 -0.004887      3.141987
+    BASE_PLUS_REGIME       2026             2025         RAW       0.58 UTC_21_24 0.534967     248  0.600806    0.000071       1.350539 0.017717 -0.012881      1.375409
+BASE_PLUS_VOL_REGIME       2026             2025       PLATT       0.62       ALL 0.536017     248  0.580645    0.000139       2.955443 0.035031 -0.004608      7.602843
+
+================================================================================
+COST STRESS
+================================================================================
+         feature_set  cost_x  cost_pct  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+                BASE     1.0     0.004    2312  0.600779    0.000558       3.335539 2.436196 -0.100242     24.303143
+                BASE     1.5     0.006    2312  0.578287    0.000538       3.176994 2.280999 -0.100316     22.738147
+                BASE     2.0     0.008    2312  0.559689    0.000518       3.025460 2.132810 -0.100390     21.245253
+       BASE_PLUS_VOL     1.0     0.004    1572  0.622137    0.000131       1.800728 0.228483 -0.018510     12.344006
+       BASE_PLUS_VOL     1.5     0.006    1572  0.602417    0.000111       1.648011 0.190465 -0.022135      8.604751
+       BASE_PLUS_VOL     2.0     0.008    1572  0.581425    0.000091       1.507298 0.153622 -0.025747      5.966677
+    BASE_PLUS_REGIME     1.0     0.004    1491  0.620389    0.000616       4.324543 1.428934 -0.022283     64.127195
+    BASE_PLUS_REGIME     1.5     0.006    1491  0.604292    0.000596       4.086743 1.357612 -0.023163     58.611732
+    BASE_PLUS_REGIME     2.0     0.008    1491  0.584172    0.000576       3.862555 1.288383 -0.024042     53.588790
+BASE_PLUS_VOL_REGIME     1.0     0.004    1966  0.592065    0.000915       5.452699 4.622421 -0.034299    134.767412
+BASE_PLUS_VOL_REGIME     1.5     0.006    1966  0.570702    0.000895       5.184980 4.405814 -0.034744    126.807745
+BASE_PLUS_VOL_REGIME     2.0     0.008    1966  0.550356    0.000875       4.929354 4.197548 -0.035189    119.286998
+
+================================================================================
+AUTOMATIC FEATURE DECISION
+================================================================================
+
+BASE_PLUS_VOL
+Development: {'AUC': np.False_, 'PF': np.False_, 'AVG_RETURN': np.False_, 'RETURN_DD': np.False_, 'POSITIVE_YEARS': np.True_} => 1/5
+2026 Holdout: {'AUC': np.True_, 'PF': np.True_, 'AVG_RETURN': np.True_, 'RETURN_DD': np.True_} => 4/4
+2x Cost PF: 1.507
+PASS: False
+
+BASE_PLUS_REGIME
+Development: {'AUC': np.True_, 'PF': np.True_, 'AVG_RETURN': np.True_, 'RETURN_DD': np.True_, 'POSITIVE_YEARS': np.True_} => 5/5
+2026 Holdout: {'AUC': np.True_, 'PF': np.True_, 'AVG_RETURN': np.True_, 'RETURN_DD': np.False_} => 3/4
+2x Cost PF: 3.863
+PASS: True
+
+BASE_PLUS_VOL_REGIME
+Development: {'AUC': np.False_, 'PF': np.True_, 'AVG_RETURN': np.True_, 'RETURN_DD': np.True_, 'POSITIVE_YEARS': np.True_} => 4/5
+2026 Holdout: {'AUC': np.True_, 'PF': np.True_, 'AVG_RETURN': np.True_, 'RETURN_DD': np.True_} => 4/4
+2x Cost PF: 4.929
+PASS: True
+
+--------------------------------------------------------------------------------
+RESULT:
+BASE_PLUS_VOL_REGIME HAS CLEAR INCREMENTAL OOS VALUE
+次はこのwinnerをChampion Pipelineへ戻して正式確認します。
+
+================================================================================
+検証終了
+================================================================================
+保存されたNotebook変数:
+FEATURE_TOURNAMENT_2_ANNUAL
+FEATURE_TOURNAMENT_2_SUMMARY
+FEATURE_TOURNAMENT_2_CONFIRMATION
+FEATURE_TOURNAMENT_2_COST
+FEATURE_TOURNAMENT_2_DECISION
+FEATURE_TOURNAMENT_2_TRADES

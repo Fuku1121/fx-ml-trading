@@ -1,0 +1,281 @@
+================================================================================
+DATA CHECK
+================================================================================
+Rows: 266,510
+Period: 2016-01-03 22:00:00+00:00 -> 2026-09-07 01:30:00+00:00
+Bad 15m timestamps: 0
+
+Feature configuration
+BASE: 30
+Regime additions: 11
+Volatility additions: 13
+FORMAL CHAMPION: 50
+
+
+================================================================================
+BASE
+================================================================================
+Usable rows: 265,233
+
+TEST YEAR 2020
+Calibration: PLATT
+Threshold: 0.56
+Session: EXCLUDE_08_13
+Sizing: STRONG
+AUC: 0.5316
+Trades: 394
+Win: 58.63%
+Avg Return: 0.01631%
+PF: 1.933
+Growth: 6.621%
+Max DD: -0.784%
+
+TEST YEAR 2021
+Calibration: ISOTONIC
+Threshold: 0.6
+Session: ALL
+Sizing: STRONG
+AUC: 0.5316
+Trades: 271
+Win: 56.09%
+Avg Return: 0.00605%
+PF: 1.446
+Growth: 1.650%
+Max DD: -0.834%
+
+TEST YEAR 2022
+Calibration: RAW
+Threshold: 0.65
+Session: UTC_13_24
+Sizing: STRONG
+AUC: 0.5308
+Trades: 81
+Win: 71.60%
+Avg Return: 0.08342%
+PF: 10.463
+Growth: 6.944%
+Max DD: -0.328%
+
+TEST YEAR 2023
+Calibration: PLATT
+Threshold: 0.6
+Session: UTC_13_24
+Sizing: FIXED
+AUC: 0.5270
+Trades: 72
+Win: 68.06%
+Avg Return: 0.02571%
+PF: 2.474
+Growth: 1.863%
+Max DD: -0.662%
+
+TEST YEAR 2024
+Calibration: ISOTONIC
+Threshold: 0.55
+Session: UTC_13_24
+Sizing: FIXED
+AUC: 0.5209
+Trades: 615
+Win: 56.91%
+Avg Return: 0.00237%
+PF: 1.108
+Growth: 1.452%
+Max DD: -2.167%
+
+TEST YEAR 2025
+Calibration: ISOTONIC
+Threshold: 0.62
+Session: EXCLUDE_08_13
+Sizing: GENTLE
+AUC: 0.5245
+Trades: 132
+Win: 62.12%
+Avg Return: 0.28594%
+PF: 15.197
+Growth: 43.630%
+Max DD: -0.973%
+
+TEST YEAR 2026
+Calibration: ISOTONIC
+Threshold: 0.6
+Session: ALL
+Sizing: FIXED
+AUC: 0.5266
+Trades: 171
+Win: 68.42%
+Avg Return: 0.01617%
+PF: 2.322
+Growth: 2.796%
+Max DD: -0.493%
+
+
+================================================================================
+CHAMPION
+================================================================================
+Usable rows: 265,233
+
+TEST YEAR 2020
+Calibration: PLATT
+Threshold: 0.58
+Session: EXCLUDE_08_13
+Sizing: STRONG
+AUC: 0.5280
+Trades: 134
+Win: 54.48%
+Avg Return: 0.02637%
+PF: 1.967
+Growth: 3.582%
+Max DD: -0.881%
+
+TEST YEAR 2021
+Calibration: PLATT
+Threshold: 0.58
+Session: EXCLUDE_08_13
+Sizing: FIXED
+AUC: 0.5356
+Trades: 136
+Win: 50.74%
+Avg Return: 0.00210%
+PF: 1.145
+Growth: 0.284%
+Max DD: -0.596%
+
+TEST YEAR 2022
+Calibration: RAW
+Threshold: 0.65
+Session: UTC_13_24
+Sizing: FIXED
+AUC: 0.5277
+Trades: 109
+Win: 64.22%
+Avg Return: 0.02356%
+PF: 1.790
+Growth: 2.586%
+Max DD: -1.325%
+
+TEST YEAR 2023
+Calibration: PLATT
+Threshold: 0.55
+Session: UTC_21_24
+Sizing: STRONG
+AUC: 0.5256
+Trades: 353
+Win: 54.96%
+Avg Return: 0.00012%
+PF: 1.005
+Growth: 0.028%
+Max DD: -1.326%
+
+TEST YEAR 2024
+Calibration: ISOTONIC
+Threshold: 0.58
+Session: UTC_13_24
+Sizing: MODERATE
+AUC: 0.5198
+Trades: 248
+Win: 64.52%
+Avg Return: 0.00677%
+PF: 1.317
+Growth: 1.683%
+Max DD: -1.950%
+
+TEST YEAR 2025
+Calibration: ISOTONIC
+Threshold: 0.55
+Session: UTC_21_24
+Sizing: FIXED
+AUC: 0.5284
+Trades: 342
+Win: 60.82%
+Avg Return: 0.05982%
+PF: 4.413
+Growth: 21.892%
+Max DD: -1.416%
+
+TEST YEAR 2026
+Calibration: ISOTONIC
+Threshold: 0.58
+Session: ALL
+Sizing: FIXED
+AUC: 0.5319
+Trades: 201
+Win: 69.15%
+Avg Return: 0.01376%
+PF: 2.034
+Growth: 2.800%
+Max DD: -0.415%
+
+
+==========================================================================================
+ANNUAL RESULTS
+==========================================================================================
+feature_set  test_year  validation_year calibration  threshold       session sizing_policy      auc  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+       BASE       2020             2019       PLATT       0.56 EXCLUDE_08_13        STRONG 0.531559     394  0.586294    0.000163       1.932628 0.066208 -0.007837      8.447838
+       BASE       2021             2020    ISOTONIC       0.60           ALL        STRONG 0.531594     271  0.560886    0.000060       1.446254 0.016496 -0.008340      1.977922
+       BASE       2022             2021         RAW       0.65     UTC_13_24        STRONG 0.530835      81  0.716049    0.000834      10.462803 0.069440 -0.003276     21.195140
+       BASE       2023             2022       PLATT       0.60     UTC_13_24         FIXED 0.527034      72  0.680556    0.000257       2.473979 0.018631 -0.006621      2.814088
+       BASE       2024             2023    ISOTONIC       0.55     UTC_13_24         FIXED 0.520900     615  0.569106    0.000024       1.108227 0.014522 -0.021667      0.670234
+       BASE       2025             2024    ISOTONIC       0.62 EXCLUDE_08_13        GENTLE 0.524496     132  0.621212    0.002859      15.196683 0.436299 -0.009727     44.854364
+       BASE       2026             2025    ISOTONIC       0.60           ALL         FIXED 0.526579     171  0.684211    0.000162       2.322168 0.027958 -0.004929      5.672163
+   CHAMPION       2020             2019       PLATT       0.58 EXCLUDE_08_13        STRONG 0.527962     134  0.544776    0.000264       1.967423 0.035816 -0.008805      4.067700
+   CHAMPION       2021             2020       PLATT       0.58 EXCLUDE_08_13         FIXED 0.535612     136  0.507353    0.000021       1.144665 0.002842 -0.005964      0.476601
+   CHAMPION       2022             2021         RAW       0.65     UTC_13_24         FIXED 0.527691     109  0.642202    0.000236       1.790246 0.025857 -0.013250      1.951564
+   CHAMPION       2023             2022       PLATT       0.55     UTC_21_24        STRONG 0.525596     353  0.549575    0.000001       1.005165 0.000278 -0.013262      0.020954
+   CHAMPION       2024             2023    ISOTONIC       0.58     UTC_13_24      MODERATE 0.519833     248  0.645161    0.000068       1.316641 0.016834 -0.019503      0.863158
+   CHAMPION       2025             2024    ISOTONIC       0.55     UTC_21_24         FIXED 0.528445     342  0.608187    0.000598       4.412625 0.218922 -0.014158     15.462922
+   CHAMPION       2026             2025    ISOTONIC       0.58           ALL         FIXED 0.531930     201  0.691542    0.000138       2.033613 0.027996 -0.004154      6.739238
+
+
+==========================================================================================
+DEVELOPMENT OOS 2020-2025
+==========================================================================================
+feature_set  years  positive_years  pf_above_1_years  mean_auc  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+       BASE      6               6                 6  0.527736    1565  0.589137    0.000357       2.949785 0.720391 -0.021667     33.247731
+   CHAMPION      6               6                 6  0.527523    1322  0.585477    0.000216       2.017441 0.321141 -0.019503     16.465987
+
+
+==========================================================================================
+CONFIRMATION 2026
+==========================================================================================
+feature_set  test_year  validation_year calibration  threshold session sizing_policy      auc  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+       BASE       2026             2025    ISOTONIC       0.60     ALL         FIXED 0.526579     171  0.684211    0.000162       2.322168 0.027958 -0.004929      5.672163
+   CHAMPION       2026             2025    ISOTONIC       0.58     ALL         FIXED 0.531930     201  0.691542    0.000138       2.033613 0.027996 -0.004154      6.739238
+
+
+==========================================================================================
+COST STRESS
+==========================================================================================
+feature_set  cost_x  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+       BASE     1.0    1565  0.589137    0.000357       2.949785 0.720391 -0.021667     33.247731
+       BASE     1.5    1565  0.561022    0.000337       2.755086 0.666275 -0.022333     29.833851
+       BASE     2.0    1565  0.539936    0.000316       2.573339 0.613860 -0.024594     24.960186
+   CHAMPION     1.0    1322  0.585477    0.000216       2.017441 0.321141 -0.019503     16.465987
+   CHAMPION     1.5    1322  0.560514    0.000196       1.886752 0.286378 -0.020881     13.714983
+   CHAMPION     2.0    1322  0.541604    0.000176       1.764193 0.252529 -0.028439      8.879601
+
+
+==========================================================================================
+AUTOMATIC DIAGNOSTIC
+==========================================================================================
+Development positive years: 6 / 6
+Development PF > 1 years: 6 / 6
+Champion > BASE Avg Return: False
+Champion > BASE PF: False
+Champion > BASE Return/DD: False
+2026 confirmation: True
+2x cost survives: True
+
+
+==========================================================================================
+FINAL DECISION
+==========================================================================================
+CHAMPION PIPELINE REMAINS ROBUST, BUT INCREMENTAL VALUE IS NOT FULLY CLEAR
+
+検証終了
+保存Notebook変数:
+CHAMPION_REINTEGRATION_ANNUAL
+CHAMPION_REINTEGRATION_TRADES
+CHAMPION_REINTEGRATION_SUMMARY
+CHAMPION_REINTEGRATION_CONFIRMATION
+CHAMPION_REINTEGRATION_COST
+CHAMPION_REINTEGRATION_DECISION

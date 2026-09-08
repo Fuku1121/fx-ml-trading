@@ -1,0 +1,17 @@
+
+============================================================
+CALIBRATION TEST YEAR 2020
+============================================================
+Train OOF rows: 49574
+
+Calibration comparison:
+  method  brier_score      ece      auc  test_year
+     RAW     0.248771 0.001375 0.540397       2020
+   PLATT     0.248876 0.006936 0.540397       2020
+ISOTONIC     0.248906 0.007277 0.539620       2020
+
+Selected Calibration: RAW
+Threshold: 0.55
+Session: UTC_13_24
+
+KeyError: 'actual_accuracy'

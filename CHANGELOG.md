@@ -1,3 +1,11 @@
+# 2026-09-09 — HGB research update
+
+- Import 23 additional code cells as archive stages17–27, retaining failed experiments and sanitized saved outputs.
+- Explain Session, Exit, Calibration, Sizing, Risk Engine, Model and Feature comparisons.
+- Publish latest HGB BASE30 / expanded50 tables with provenance; flag mixed-frequency resampling, repeated holdout inspection and outlier years.
+- Add a results-reading notebook and preserve the previous RF overview.
+- Existing executable model modules are unchanged; HGB remains a research prototype.
+
 # Changelog
 
 ## 0.2.0 — Annual Confidence research

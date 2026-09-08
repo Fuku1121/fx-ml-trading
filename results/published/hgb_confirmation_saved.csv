@@ -1,0 +1,3 @@
+feature_set,test_year,validation_year,calibration,threshold,session,sizing_policy,auc,trades,win_rate,avg_return,profit_factor,growth,max_dd,return_to_dd
+BASE,2026,2025,ISOTONIC,0.6,ALL,FIXED,0.526579,171,0.684211,0.000162,2.322168,0.027958,-0.004929,5.672163
+CHAMPION,2026,2025,ISOTONIC,0.58,ALL,FIXED,0.53193,201,0.691542,0.000138,2.033613,0.027996,-0.004154,6.739238

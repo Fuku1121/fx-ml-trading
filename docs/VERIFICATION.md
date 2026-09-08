@@ -1,3 +1,7 @@
+# 2026-09-09 更新の検証範囲
+
+今回追加したのは研究履歴・保存結果・説明・閲覧Notebookです。最新HGBの実価格再実行・全処理の自動テストは行っていません。既存30件のテストの対象はRF・Quality系です。取り込み時に前回36セルのコード一致、新規23セルのPython構文、出典ハッシュ、14行の年別表を確認しました。
+
 # Verification record
 
 ## 2026-09-07: current 15-minute Confidence implementation

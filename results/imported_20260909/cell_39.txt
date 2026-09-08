@@ -1,0 +1,21 @@
+指定した5分足CSVがありません:
+[USER_HOME]\dukascopy_usdjpy\usdjpy_5m_2016_2026.csv
+
+見つかった5分足候補:
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2016.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2016_2026.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2017.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2018.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2019.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2020.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2021.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2022.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2023.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2024.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2025.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2026.csv
+  [USER_HOME]\fx_experiment_runs\20260907_103617_e49045\usdjpy_5m.csv
+  [USER_HOME]\Documents\Codex\2026-09-06\new-chat\work\single_smoke\runs\20260906_214043_9bc235\usdjpy_5m.csv
+
+FileNotFoundError:
+FIVE_MIN_CSV を実際の5分足CSVのPathへ変更してください。

@@ -1,3 +1,9 @@
+# 最新研究の閲覧（2026-09-09）
+
+最新HGBコードは [履歴27](../notebooks/archive/27_hgb_reintegration.ipynb) にあります。元セル58は `bars` 変数に依存します。セル57の自動再集約を正しい価格データの保証とはみなしません。
+
+保存結果だけを見る場合は `python -m pip install -e ".[notebook]"` の後、`jupyter lab notebooks/10_research_review.ipynb` を実行します。以下のCLI手順は以前のRF比較基準用で、最新HGBを実行するものではありません。
+
 # 再現手順
 
 ## 1. 環境

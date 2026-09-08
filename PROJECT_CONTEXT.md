@@ -1,21 +1,15 @@
-# Current project context — September 2026
+# Project context — 2026-09-09
 
-Current research: USD/JPY 15-minute BID prices, 30-minute hold, RandomForest direction prediction with Confidence selection.
-Source: FX (1).ipynb cells 0–35. The newest saved experiment is cell 35 (annual nested selection).
-It differs from the older 5-minute MOVE → Direction → Quality architecture, which remains historical.
+Purpose: explain USD/JPY ML research clearly to technical and recruiting readers, with traceable results and honest limitations.
 
-Saved data: 265,905 rows, 2016-01-03 through 2026-09-01 UTC. Source CSV not included in the notebook.
-Saved aggregate: 4,153 trades, net mean 0.0054519338%, PF 1.23789594, closed-trade max DD −3.04590698%.
-All seven evaluation periods reported net mean >0 and PF>1; 2026 is partial.
-These are imported outputs, not independently rerun or verified corrected results.
-
-Current code: fx_research.confidence. It extracts the feature/model/threshold baseline and fixes label availability
-at annual boundaries, discontinuous 30-minute paths, input validation and misleading Accuracy naming.
-It has no MOVE, Quality, time decay, TP/SL, variable sizing or live execution.
-
-Next: fixed-data replay of corrected code; side/session/year decomposition; time-dependent uncertainty;
-realistic costs and a new untouched holdout. Do not promote recorded PF as a verified live edge.
-Explain substantial Python changes to the learner and retain failed experiments.
-
-Read README.md, docs/RESEARCH.md, docs/METHODOLOGY.md, docs/CONFIDENCE_AUDIT.md and docs/REPRODUCIBILITY.md.
-Older handoff: docs/PROJECT_CONTEXT.original.md. Older Quality baseline: docs/QUALITY_BASELINE.md.
+- Latest supplied source: FX (2).ipynb, 60 cells; cells0–35 unchanged, new code36–58, empty59.
+- Latest research: HGB / calibration / threshold-session / sizing / 30-minute exit. Compare BASE30 versus expanded50 features.
+- Latest imported output: cell58, 266,510 resampled rows. BASE development PF2.949785 versus expanded2.017441. These are not independently rerun or audited performance.
+- Mixed bar frequencies were detected in cells51/56. Cell57 resampling does not itself prove complete or consistent source bars.
+- Priorities: raw-data provenance and 2022/2025 outlier-trade audit, matched-sample feature comparison, untouched future evaluation.
+- 2026 has been repeatedly inspected; do not describe it as an untouched holdout.
+- Current tested package remains the RF Confidence baseline and older Quality code. Latest HGB lives in research archives, not a production module.
+- Read docs/RESEARCH_20260909.md and docs/HGB_METHODOLOGY.md; latest code is notebooks/archive/27_hgb_reintegration.ipynb.
+- 27 archive stages; imported logs and hashes preserve errors and rejected experiments.
+- GitHub is private. Do not change visibility or publish raw data, personal paths, account details or chat history without authorization.
+- No broker execution or live trading is implemented.

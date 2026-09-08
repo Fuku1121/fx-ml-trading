@@ -1,0 +1,17 @@
+trade_id 修正完了
+Trades: 2354
+Columns check: True
+
+==========================================================================================
+SIMULATOR SANITY TEST
+==========================================================================================
+Simulation succeeded.
+Trade records: 2354
+Equity records: 2354
+Ending Capital: 1.2192572390536458
+Growth: 21.92572390536458 %
+Max Gross Exposure: 1.722042139384117
+
+HOTFIX COMPLETE
+ここまでエラーが出なければ、
+前回コードの STATIC POLICY COMPARISON 以降を実行してください。

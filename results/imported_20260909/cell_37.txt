@@ -1,0 +1,180 @@
+====================================
+DATA
+====================================
+Rows: 265905
+Period: 2016-01-03 22:00:00+00:00 -> 2026-09-01 00:00:00+00:00
+
+Usable rows: 264629
+
+====================================
+TEST YEAR 2020
+====================================
+BASE choice: 0.58 ALL
+SESSION choice: 0.54 UTC_21_24
+Test AUC: 0.5284
+BASE: 112 trades | PF 0.972 | Avg -0.0009 %
+SESSION: 428 trades | PF 1.025 | Avg 0.00045 %
+
+====================================
+TEST YEAR 2021
+====================================
+BASE choice: 0.56 ALL
+SESSION choice: 0.55 UTC_13_24
+Test AUC: 0.532
+BASE: 568 trades | PF 1.193 | Avg 0.00255 %
+SESSION: 743 trades | PF 1.344 | Avg 0.00405 %
+
+====================================
+TEST YEAR 2022
+====================================
+BASE choice: 0.58 ALL
+SESSION choice: 0.55 UTC_13_24
+Test AUC: 0.5253
+BASE: 207 trades | PF 1.134 | Avg 0.00433 %
+SESSION: 830 trades | PF 1.189 | Avg 0.0047 %
+
+====================================
+TEST YEAR 2023
+====================================
+BASE choice: 0.56 ALL
+SESSION choice: 0.56 UTC_21_24
+Test AUC: 0.5224
+BASE: 583 trades | PF 1.095 | Avg 0.00244 %
+SESSION: 203 trades | PF 1.382 | Avg 0.00535 %
+
+====================================
+TEST YEAR 2024
+====================================
+BASE choice: 0.58 ALL
+SESSION choice: 0.58 EXCLUDE_08_13
+Test AUC: 0.5212
+BASE: 143 trades | PF 1.41 | Avg 0.0085 %
+SESSION: 143 trades | PF 1.41 | Avg 0.0085 %
+
+====================================
+TEST YEAR 2025
+====================================
+BASE choice: 0.56 ALL
+SESSION choice: 0.58 UTC_13_24
+Test AUC: 0.5217
+BASE: 316 trades | PF 1.67 | Avg 0.01296 %
+SESSION: 94 trades | PF 1.401 | Avg 0.00696 %
+
+====================================
+TEST YEAR 2026
+====================================
+BASE choice: 0.56 ALL
+SESSION choice: 0.56 ALL
+Test AUC: 0.5369
+BASE: 289 trades | PF 1.748 | Avg 0.01099 %
+SESSION: 289 trades | PF 1.748 | Avg 0.01099 %
+
+====================================
+ANNUAL BASELINE vs SESSION
+====================================
+ test_year  test_auc  base_threshold  base_trades  base_avg_return  base_pf  base_max_dd  session_threshold session_policy  session_trades  session_avg_return  session_pf  session_max_dd
+      2020  0.528396            58.0          112        -0.000896 0.971864    -0.947691               54.0      UTC_21_24             428            0.000452    1.024972       -1.239994
+      2021  0.531984            56.0          568         0.002553 1.192967    -0.832998               55.0      UTC_13_24             743            0.004046    1.344142       -0.527460
+      2022  0.525257            58.0          207         0.004325 1.134095    -1.592714               55.0      UTC_13_24             830            0.004703    1.189327       -2.132099
+      2023  0.522440            56.0          583         0.002439 1.095188    -1.644785               56.0      UTC_21_24             203            0.005350    1.381952       -0.473337
+      2024  0.521192            58.0          143         0.008502 1.410150    -1.072182               58.0  EXCLUDE_08_13             143            0.008502    1.410150       -1.072182
+      2025  0.521673            56.0          316         0.012960 1.669924    -0.856338               58.0      UTC_13_24              94            0.006956    1.400692       -0.387893
+      2026  0.536853            56.0          289         0.010991 1.748242    -0.524200               56.0            ALL             289            0.010991    1.748242       -0.524200
+
+====================================
+OVERALL OOS
+====================================
+BASELINE
+{'trades': 2218, 'win_rate': np.float64(0.5631199278629396), 'avg_return': np.float64(5.480107783481564e-05), 'median_return': np.float64(5.094989142999221e-05), 'profit_factor': np.float64(1.2641064103441548), 'max_dd': np.float64(-0.01644785341272237), 'growth': np.float64(0.12844244590138687)}
+
+SESSION
+{'trades': 2730, 'win_rate': np.float64(0.5490842490842491), 'avg_return': np.float64(4.8479755408228206e-05), 'median_return': np.float64(3.766702614225851e-05), 'profit_factor': np.float64(1.2712610717862511), 'max_dd': np.float64(-0.023031510338636596), 'growth': np.float64(0.14052042155116284)}
+
+====================================
+SESSION POLICY SELECTION
+====================================
+session_policy
+UTC_13_24        3
+UTC_21_24        2
+EXCLUDE_08_13    1
+ALL              1
+Name: count, dtype: int64
+
+Threshold
+session_threshold
+0.54    1
+0.55    2
+0.56    2
+0.58    2
+Name: count, dtype: int64
+
+====================================
+SESSION vs BASE STABILITY
+====================================
+Avg Return better: 4 / 7
+PF better: 4 / 7
+Session positive years: 7 / 7
+Session PF > 1 years: 7 / 7
+
+====================================
+COST STRESS TEST
+====================================
+strategy  cost_pct  trades  win_rate  avg_return  median_return  profit_factor    max_dd    growth
+BASELINE     0.004    2218 56.311993    0.005480       0.005095       1.264106 -1.644785 12.844245
+BASELINE     0.006    2218 53.967538    0.003480       0.003095       1.160793 -1.764739  7.948090
+BASELINE     0.008    2218 51.442741    0.001480       0.001095       1.065518 -2.999943  3.264281
+BASELINE     0.010    2218 49.053201   -0.000520      -0.000905       0.977958 -5.733058 -1.216388
+ SESSION     0.004    2730 54.908425    0.004848       0.003767       1.271261 -2.303151 14.052042
+ SESSION     0.006    2730 52.454212    0.002848       0.001767       1.151517 -2.558012  7.991975
+ SESSION     0.008    2730 49.670330    0.000848      -0.000233       1.042881 -2.970346  2.253794
+ SESSION     0.010    2730 47.655678   -0.001152      -0.002233       0.944624 -5.255379 -3.179594
+
+====================================
+COST YEAR STABILITY
+====================================
+strategy  cost_pct  years  positive_years  pf_above_1_years  median_year_pf  minimum_year_pf
+BASELINE     0.004      7               6                 6        1.192967         0.971864
+BASELINE     0.006      7               6                 6        1.070348         0.911899
+BASELINE     0.008      7               4                 4        1.009594         0.855661
+BASELINE     0.010      7               3                 3        0.951814         0.787831
+ SESSION     0.004      7               7                 7        1.381952         1.024972
+ SESSION     0.006      7               6                 6        1.224760         0.919004
+ SESSION     0.008      7               6                 6        1.085245         0.823913
+ SESSION     0.010      7               3                 3        0.961297         0.738615
+
+====================================
+APPROX BREAK-EVEN COST
+====================================
+BASELINE gross mean: 0.009480107783481568 %
+SESSION gross mean: 0.008847975540822823 %
+
+粗い解釈:
+この数値付近まで総コストが上がると、
+平均expectancyは概ね0へ近づきます。
+
+====================================
+AUTOMATIC DIAGNOSTIC
+====================================
+Session selection appears to add OOS value.
+
+SESSION PF at 0.008% cost: 1.042881080824546
+Edge survives the 0.008% cost stress.
+
+====================================
+FINISHED
+====================================
+[USER_HOME]\session_nested_cost_20260908_143348
+
+特に確認するところ:
+1. ANNUAL BASELINE vs SESSION
+2. OVERALL OOS
+3. SESSION POLICY SELECTION
+4. SESSION vs BASE STABILITY
+5. COST STRESS TEST
+6. COST YEAR STABILITY
+7. APPROX BREAK-EVEN COST
+
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\560420232.py:3648: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\560420232.py:3730: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()

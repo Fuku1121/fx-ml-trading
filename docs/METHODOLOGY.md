@@ -1,3 +1,5 @@
+> これは前回までのRF Confidence比較基準の方法です。最新HGB研究は [HGB_METHODOLOGY.md](HGB_METHODOLOGY.md) を参照してください。
+
 # 現行Confidence戦略の検証方法
 
 ## 入力と特徴量

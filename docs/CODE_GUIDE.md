@@ -1,3 +1,7 @@
+# 最新HGB研究のコード案内
+
+[履歴27](../notebooks/archive/27_hgb_reintegration.ipynb) が最新です。[処理と実装上の注意](HGB_METHODOLOGY.md)に関数ごとの役割と監査項目をまとめています。以下は既存RF・Qualityパッケージの案内です。
+
 # 現在のコードを読む順序
 
 `confidence_features.py`で過去特徴を作り、`confidence.py`のprepare_pricesでラベルの判明時刻を付けます。annual_splitsは年の境界、choose_thresholdは前年の候補比較、runは再学習・Test・保存を担当します。

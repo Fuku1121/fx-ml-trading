@@ -1,0 +1,279 @@
+
+============================================================
+5分足データを自動検索します
+============================================================
+候補数: 14
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2016.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2016_2026.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2017.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2018.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2019.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2020.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2021.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2022.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2023.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2024.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2025.csv
+  [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2026.csv
+  [USER_HOME]\fx_experiment_runs\20260907_103617_e49045\usdjpy_5m.csv
+  [USER_HOME]\Documents\Codex\2026-09-06\new-chat\work\single_smoke\runs\20260906_214043_9bc235\usdjpy_5m.csv
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2016.csv
+Rows: 24969
+Period: 2016-01-03 22:00:00+00:00 -> 2016-12-30 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2016_2026.csv
+Rows: 265905
+Period: 2016-01-03 22:00:00+00:00 -> 2026-09-01 00:00:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2017.csv
+Rows: 24895
+Period: 2017-01-01 22:00:00+00:00 -> 2017-12-29 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2018.csv
+Rows: 24904
+Period: 2018-01-01 22:00:00+00:00 -> 2018-12-31 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2019.csv
+Rows: 24900
+Period: 2019-01-01 22:00:00+00:00 -> 2019-12-31 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2020.csv
+Rows: 25000
+Period: 2020-01-01 22:00:00+00:00 -> 2020-12-31 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2021.csv
+Rows: 24960
+Period: 2021-01-03 22:00:00+00:00 -> 2021-12-31 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2022.csv
+Rows: 24958
+Period: 2022-01-02 22:00:00+00:00 -> 2022-12-30 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2023.csv
+Rows: 24898
+Period: 2023-01-01 22:00:00+00:00 -> 2023-12-29 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2024.csv
+Rows: 24993
+Period: 2024-01-01 22:00:00+00:00 -> 2024-12-31 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2025.csv
+Rows: 24903
+Period: 2025-01-01 22:00:00+00:00 -> 2025-12-31 21:45:00+00:00
+
+OK: [USER_HOME]\dukascopy_usdjpy\usdjpy_15m_2026.csv
+Rows: 16525
+Period: 2026-01-01 22:00:00+00:00 -> 2026-09-01 00:00:00+00:00
+
+OK: [USER_HOME]\fx_experiment_runs\20260907_103617_e49045\usdjpy_5m.csv
+Rows: 11595
+Period: 2026-07-10 01:35:00+00:00 -> 2026-09-07 01:30:00+00:00
+
+OK: [USER_HOME]\Documents\Codex\2026-09-06\new-chat\work\single_smoke\runs\20260906_214043_9bc235\usdjpy_5m.csv
+Rows: 2200
+Period: 2025-01-05 15:00:00+00:00 -> 2025-01-13 06:15:00+00:00
+
+============================================================
+5分足を結合しました
+============================================================
+Rows: 275704
+Period: 2016-01-03 22:00:00+00:00 -> 2026-09-07 01:30:00+00:00
+
+Execution mode: HYBRID_5M_15M
+
+============================================================
+TEST YEAR 2020
+============================================================
+Threshold: 0.55
+Session: UTC_13_24
+Exit: TP15_SL10
+Fixed PF: 1.315
+Exit PF: 1.212
+Fixed Avg: 0.00674 %
+Exit Avg: 0.00439 %
+5m trades: 0
+15m fallback: 801
+
+============================================================
+TEST YEAR 2021
+============================================================
+Threshold: 0.56
+Session: UTC_21_24
+Exit: BASE_30M
+Fixed PF: 1.415
+Exit PF: 1.415
+Fixed Avg: 0.00437 %
+Exit Avg: 0.00437 %
+5m trades: 0
+15m fallback: 231
+
+============================================================
+TEST YEAR 2022
+============================================================
+Threshold: 0.58
+Session: EXCLUDE_08_13
+Exit: BASE_30M
+Fixed PF: 1.6
+Exit PF: 1.6
+Fixed Avg: 0.0141 %
+Exit Avg: 0.0141 %
+5m trades: 0
+15m fallback: 219
+
+============================================================
+TEST YEAR 2023
+============================================================
+Threshold: 0.56
+Session: UTC_21_24
+Exit: BASE_30M
+Fixed PF: 1.409
+Exit PF: 1.409
+Fixed Avg: 0.00633 %
+Exit Avg: 0.00633 %
+5m trades: 0
+15m fallback: 230
+
+============================================================
+TEST YEAR 2024
+============================================================
+Threshold: 0.58
+Session: EXCLUDE_08_13
+Exit: BASE_30M
+Fixed PF: 1.419
+Exit PF: 1.419
+Fixed Avg: 0.00842 %
+Exit Avg: 0.00842 %
+5m trades: 0
+15m fallback: 158
+
+============================================================
+TEST YEAR 2025
+============================================================
+Threshold: 0.56
+Session: ALL
+Exit: BASE_30M
+Fixed PF: 3.768
+Exit PF: 3.768
+Fixed Avg: 0.16575 %
+Exit Avg: 0.16575 %
+5m trades: 10
+15m fallback: 352
+
+============================================================
+TEST YEAR 2026
+============================================================
+Threshold: 0.56
+Session: ALL
+Exit: BASE_30M
+Fixed PF: 1.511
+Exit PF: 1.511
+Fixed Avg: 0.0082 %
+Exit Avg: 0.0082 %
+5m trades: 55
+15m fallback: 288
+
+============================================================
+ANNUAL EXIT RESULTS
+============================================================
+ test_year  test_auc  threshold session_policy exit_policy  trades  five_min_trades  fifteen_min_trades  fixed_avg  fixed_pf  fixed_dd  exit_avg  exit_pf   exit_dd  ambiguous_rate
+      2020  0.528396       0.55      UTC_13_24   TP15_SL10     801                0                 801   0.000067  1.314537 -0.015508  0.000044 1.212222 -0.013912        0.006242
+      2021  0.531984       0.56      UTC_21_24    BASE_30M     231                0                 231   0.000044  1.415138 -0.005242  0.000044 1.415138 -0.005242        0.000000
+      2022  0.525257       0.58  EXCLUDE_08_13    BASE_30M     219                0                 219   0.000141  1.600169 -0.005052  0.000141 1.600169 -0.005052        0.000000
+      2023  0.522440       0.56      UTC_21_24    BASE_30M     230                0                 230   0.000063  1.409155 -0.008082  0.000063 1.409155 -0.008082        0.000000
+      2024  0.521192       0.58  EXCLUDE_08_13    BASE_30M     158                0                 158   0.000084  1.419433 -0.010366  0.000084 1.419433 -0.010366        0.000000
+      2025  0.521673       0.56            ALL    BASE_30M     362               10                 352   0.001658  3.768250 -0.093124  0.001658 3.768250 -0.093124        0.000000
+      2026  0.536853       0.56            ALL    BASE_30M     343               55                 288   0.000082  1.511368 -0.007835  0.000082 1.511368 -0.007835        0.000000
+
+============================================================
+OVERALL OOS EXIT
+============================================================
+FIXED 30M
+{'trades': 2344, 'win_rate': np.float64(0.5819112627986348), 'avg_return': np.float64(0.0003203721579166834), 'median_return': np.float64(7.524289754299977e-05), 'profit_factor': np.float64(2.280600486622941), 'max_dd': np.float64(-0.09312382932580465), 'growth': np.float64(1.0426914385643724)}
+
+SELECTED EXIT
+{'trades': 2344, 'win_rate': np.float64(0.5772184300341296), 'avg_return': np.float64(0.00031235648022382887), 'median_return': np.float64(7.318080390310126e-05), 'profit_factor': np.float64(2.26101485583063), 'max_dd': np.float64(-0.09312382932580465), 'growth': np.float64(1.0048892152777293)}
+
+============================================================
+EXECUTION SOURCE
+============================================================
+execution_source
+15M    2279
+5M       65
+Name: count, dtype: int64
+
+5m使用率: 2.773037542662116 %
+
+============================================================
+EXIT REASONS
+============================================================
+exit_reason
+TIMEOUT     2208
+SL            84
+TP            47
+AMBIG_SL       5
+Name: count, dtype: int64
+
+Ambiguous rate: 0.21331058020477817 %
+
+MFE
+10%: 0.005609679023202974 %
+25%: 0.01669063465215559 %
+50%: 0.03553296553542862 %
+75%: 0.06765343452281303 %
+90%: 0.11966889380502947 %
+
+MAE
+10%: -0.09750113146377637 %
+25%: -0.04683881562645986 %
+50%: -0.01900966183056574 %
+75%: -0.00574467782737953 %
+90%: -0.0009130886050989772 %
+
+============================================================
+EXIT COST STRESS
+============================================================
+     strategy  cost_pct  trades  win_rate  avg_return  median_return  profit_factor    max_dd   growth
+    FIXED_30M     0.004    2344  0.581911    0.000320       0.000075       2.280600 -0.093124 1.042691
+    FIXED_30M     0.006    2344  0.559727    0.000300       0.000055       2.160818 -0.093144 0.949166
+    FIXED_30M     0.008    2344  0.537969    0.000280       0.000035       2.046936 -0.093164 0.859920
+    FIXED_30M     0.010    2344  0.518771    0.000260       0.000015       1.939209 -0.093184 0.774759
+    FIXED_30M     0.012    2344  0.495307    0.000240      -0.000005       1.837266 -0.093204 0.693496
+SELECTED_EXIT     0.004    2344  0.577218    0.000312       0.000073       2.261015 -0.093124 1.004889
+SELECTED_EXIT     0.006    2344  0.555461    0.000292       0.000053       2.140342 -0.093144 0.913093
+SELECTED_EXIT     0.008    2344  0.534130    0.000272       0.000033       2.025831 -0.093164 0.825499
+SELECTED_EXIT     0.010    2344  0.514932    0.000252       0.000013       1.917669 -0.093184 0.741913
+SELECTED_EXIT     0.012    2344  0.491468    0.000232      -0.000007       1.815455 -0.093204 0.662154
+
+============================================================
+EXIT VALUE
+============================================================
+PF improved: 0 / 7
+Avg improved: 0 / 7
+DD improved: 1 / 7
+
+============================================================
+AUTOMATIC DECISION
+============================================================
+Fixed PF: 2.280600486622941
+Exit PF: 2.26101485583063
+Fixed Avg: 0.032037215791668336 %
+Exit Avg: 0.03123564802238289 %
+
+判定: TP/SL DOES NOT YET ADD CLEAR OOS VALUE
+30分固定Exitを維持し、MFE/MAEからExit候補を再設計します。
+
+============================================================
+FINISHED
+============================================================
+[USER_HOME]\nested_exit_v2_20260908_150602
+
+今回見てほしいもの:
+1. ANNUAL EXIT RESULTS
+2. OVERALL OOS EXIT
+3. EXECUTION SOURCE
+4. EXIT REASONS
+5. MFE / MAE
+6. EXIT COST STRESS
+7. EXIT VALUE
+8. AUTOMATIC DECISION

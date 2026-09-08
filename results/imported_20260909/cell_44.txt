@@ -1,0 +1,332 @@
+
+======================================================================
+POSITION SIZING TEST YEAR 2020
+======================================================================
+Calibration: RAW
+Threshold: 0.55
+Session: UTC_13_24
+
+VALIDATION SIZING CANDIDATES
+  policy  mean_size  avg_return  profit_factor    growth    max_dd  return_to_dd
+   FIXED   1.000000    0.000015       1.071239  0.010321 -0.022018      0.468765
+  GENTLE   1.000000    0.000007       1.030647  0.004371 -0.027613      0.158310
+MODERATE   0.999329   -0.000003       0.986530 -0.002843 -0.035411     -0.080287
+  STRONG   0.992599   -0.000013       0.948814 -0.009601 -0.041813     -0.229612
+
+Selected Sizing: FIXED
+Validation Scale: 1.0
+
+TEST RESULT
+Trades: 801
+Mean Size: 1.0
+
+FIXED PF: 1.3145373658588628
+SIZED PF: 1.3145373658588628
+
+FIXED Avg: 0.006739278304538464 %
+SIZED Avg: 0.006739278304538464 %
+
+FIXED Growth: 5.518871333423081 %
+SIZED Growth: 5.518871333423081 %
+
+FIXED Max DD: -1.550769916181971 %
+SIZED Max DD: -1.550769916181971 %
+
+======================================================================
+POSITION SIZING TEST YEAR 2021
+======================================================================
+Calibration: RAW
+Threshold: 0.56
+Session: UTC_21_24
+
+VALIDATION SIZING CANDIDATES
+  policy  mean_size  avg_return  profit_factor   growth    max_dd  return_to_dd
+   FIXED        1.0    0.000174       2.825951 0.022275 -0.002028     10.981916
+  GENTLE        1.0    0.000171       2.782772 0.021965 -0.002089     10.512358
+MODERATE        1.0    0.000169       2.734995 0.021627 -0.002147     10.072023
+  STRONG        1.0    0.000166       2.678318 0.021234 -0.002201      9.645848
+
+Selected Sizing: FIXED
+Validation Scale: 1.0
+
+TEST RESULT
+Trades: 231
+Mean Size: 1.0
+
+FIXED PF: 1.4151382670827293
+SIZED PF: 1.4151382670827293
+
+FIXED Avg: 0.004366264593106255 %
+SIZED Avg: 0.004366264593106255 %
+
+FIXED Growth: 1.0121817276116607 %
+SIZED Growth: 1.0121817276116607 %
+
+FIXED Max DD: -0.5242410391363195 %
+SIZED Max DD: -0.5242410391363195 %
+
+======================================================================
+POSITION SIZING TEST YEAR 2022
+======================================================================
+Calibration: RAW
+Threshold: 0.58
+Session: EXCLUDE_08_13
+
+VALIDATION SIZING CANDIDATES
+  policy  mean_size  avg_return  profit_factor   growth    max_dd  return_to_dd
+   FIXED        1.0    0.000089       1.888188 0.013794 -0.002229      6.188049
+  GENTLE        1.0    0.000089       1.878143 0.013733 -0.002376      5.779757
+MODERATE        1.0    0.000088       1.863842 0.013623 -0.002533      5.378473
+  STRONG        1.0    0.000087       1.849215 0.013518 -0.002720      4.969785
+
+Selected Sizing: FIXED
+Validation Scale: 1.0
+
+TEST RESULT
+Trades: 219
+Mean Size: 1.0
+
+FIXED PF: 1.6001688061851702
+SIZED PF: 1.6001688061851702
+
+FIXED Avg: 0.014102204736562101 %
+SIZED Avg: 0.014102204736562101 %
+
+FIXED Growth: 3.1266683786445038 %
+SIZED Growth: 3.1266683786445038 %
+
+FIXED Max DD: -0.5052070027396605 %
+SIZED Max DD: -0.5052070027396605 %
+
+======================================================================
+POSITION SIZING TEST YEAR 2023
+======================================================================
+Calibration: ISOTONIC
+Threshold: 0.56
+Session: UTC_21_24
+
+VALIDATION SIZING CANDIDATES
+  policy  mean_size  avg_return  profit_factor   growth    max_dd  return_to_dd
+   FIXED        1.0    0.000263       2.472449 0.073806 -0.005454     13.532151
+  GENTLE        1.0    0.000250       2.384877 0.070075 -0.006151     11.391594
+MODERATE        1.0    0.000238       2.301803 0.066577 -0.006869      9.692484
+  STRONG        1.0    0.000228       2.238085 0.063731 -0.007582      8.405201
+
+Selected Sizing: FIXED
+Validation Scale: 1.0
+
+TEST RESULT
+Trades: 289
+Mean Size: 1.0
+
+FIXED PF: 1.2589430389220182
+SIZED PF: 1.2589430389220182
+
+FIXED Avg: 0.004191050603717746 %
+SIZED Avg: 0.004191050603717746 %
+
+FIXED Growth: 1.21155724151647 %
+SIZED Growth: 1.21155724151647 %
+
+FIXED Max DD: -0.8097436450230533 %
+SIZED Max DD: -0.8097436450230533 %
+
+======================================================================
+POSITION SIZING TEST YEAR 2024
+======================================================================
+Calibration: ISOTONIC
+Threshold: 0.58
+Session: ALL
+
+VALIDATION SIZING CANDIDATES
+  policy  mean_size  avg_return  profit_factor   growth    max_dd  return_to_dd
+   FIXED        1.0    0.000072       1.355240 0.017422 -0.011273      1.545507
+  GENTLE        1.0    0.000069       1.334336 0.016673 -0.011337      1.470620
+MODERATE        1.0    0.000067       1.322995 0.016276 -0.011319      1.437888
+  STRONG        1.0    0.000065       1.305695 0.015642 -0.011362      1.376638
+
+Selected Sizing: FIXED
+Validation Scale: 1.0
+
+TEST RESULT
+Trades: 262
+Mean Size: 1.0
+
+FIXED PF: 1.586782131985795
+SIZED PF: 1.586782131985795
+
+FIXED Avg: 0.01157186815478048 %
+SIZED Avg: 0.01157186815478048 %
+
+FIXED Growth: 3.067599468516091 %
+SIZED Growth: 3.067599468516091 %
+
+FIXED Max DD: -1.0426102777992718 %
+SIZED Max DD: -1.0426102777992718 %
+
+======================================================================
+POSITION SIZING TEST YEAR 2025
+======================================================================
+Calibration: ISOTONIC
+Threshold: 0.58
+Session: EXCLUDE_08_13
+
+VALIDATION SIZING CANDIDATES
+  policy  mean_size  avg_return  profit_factor   growth    max_dd  return_to_dd
+   FIXED        1.0    0.000119       1.614676 0.031297 -0.010426      3.001811
+  GENTLE        1.0    0.000126       1.659026 0.033065 -0.010774      3.068956
+MODERATE        1.0    0.000127       1.666793 0.033401 -0.011061      3.019746
+  STRONG        1.0    0.000128       1.676609 0.033820 -0.011491      2.943156
+
+Selected Sizing: GENTLE
+Validation Scale: 0.8559670781893004
+
+TEST RESULT
+Trades: 185
+Mean Size: 1.0315560004448894
+
+FIXED PF: 1.4655131427618222
+SIZED PF: 1.5068884165153336
+
+FIXED Avg: 0.008864754201421729 %
+SIZED Avg: 0.009665858106277595 %
+
+FIXED Growth: 1.6489932381528627 %
+SIZED Growth: 1.7996678335810312 %
+
+FIXED Max DD: -0.5731042526478491 %
+SIZED Max DD: -0.5067199964630009 %
+
+======================================================================
+POSITION SIZING TEST YEAR 2026
+======================================================================
+Calibration: ISOTONIC
+Threshold: 0.56
+Session: ALL
+
+VALIDATION SIZING CANDIDATES
+  policy  mean_size  avg_return  profit_factor   growth    max_dd  return_to_dd
+   FIXED        1.0    0.000113       1.562177 0.048827 -0.012053      4.050868
+  GENTLE        1.0    0.000113       1.572461 0.048849 -0.011642      4.195816
+MODERATE        1.0    0.000113       1.582463 0.049075 -0.011360      4.319839
+  STRONG        1.0    0.000114       1.594266 0.049476 -0.011210      4.413587
+
+Selected Sizing: STRONG
+Validation Scale: 1.1480280929227447
+
+TEST RESULT
+Trades: 367
+Mean Size: 1.1148697883315155
+
+FIXED PF: 1.5396799809971744
+SIZED PF: 1.7472263741642506
+
+FIXED Avg: 0.00855532848761012 %
+SIZED Avg: 0.01190984795542285 %
+
+FIXED Growth: 3.1766910178101515 %
+SIZED Growth: 4.45322120767524 %
+
+FIXED Max DD: -0.8221052144766428 %
+SIZED Max DD: -0.7950877736537909 %
+
+================================================================================
+ANNUAL POSITION SIZING RESULTS
+================================================================================
+ test_year calibration  threshold       session sizing_policy  trades  mean_size  fixed_avg  sized_avg  fixed_pf  sized_pf  fixed_growth  sized_growth  fixed_dd  sized_dd  fixed_sharpe  sized_sharpe  fixed_return_dd  sized_return_dd
+      2020         RAW       0.55     UTC_13_24         FIXED     801   1.000000   0.006739   0.006739  1.314537  1.314537      5.518871      5.518871 -1.550770 -1.550770      2.364577      2.364577         3.558794         3.558794
+      2021         RAW       0.56     UTC_21_24         FIXED     231   1.000000   0.004366   0.004366  1.415138  1.415138      1.012182      1.012182 -0.524241 -0.524241      1.842329      1.842329         1.930756         1.930756
+      2022         RAW       0.58 EXCLUDE_08_13         FIXED     219   1.000000   0.014102   0.014102  1.600169  1.600169      3.126668      3.126668 -0.505207 -0.505207      2.249633      2.249633         6.188886         6.188886
+      2023    ISOTONIC       0.56     UTC_21_24         FIXED     289   1.000000   0.004191   0.004191  1.258943  1.258943      1.211557      1.211557 -0.809744 -0.809744      1.027788      1.027788         1.496223         1.496223
+      2024    ISOTONIC       0.58           ALL         FIXED     262   1.000000   0.011572   0.011572  1.586782  1.586782      3.067599      3.067599 -1.042610 -1.042610      2.122845      2.122845         2.942230         2.942230
+      2025    ISOTONIC       0.58 EXCLUDE_08_13        GENTLE     185   1.031556   0.008865   0.009666  1.465513  1.506888      1.648993      1.799668 -0.573104 -0.506720      1.750777      1.893740         2.877301         3.551602
+      2026    ISOTONIC       0.56           ALL        STRONG     367   1.114870   0.008555   0.011910  1.539680  1.747226      3.176691      4.453221 -0.822105 -0.795088      1.988653      2.628953         3.864093         5.600918
+
+================================================================================
+SIZING POLICY SELECTION FREQUENCY
+================================================================================
+sizing_policy
+FIXED     5
+GENTLE    1
+STRONG    1
+Name: count, dtype: int64
+
+================================================================================
+POSITION SIZING YEAR STABILITY
+================================================================================
+Evaluated years: 7
+Avg Return better: 2 / 7
+PF better: 2 / 7
+Growth better: 2 / 7
+Max DD better: 2 / 7
+Return/DD better: 2 / 7
+
+================================================================================
+OVERALL OOS POSITION SIZING
+================================================================================
+
+FIXED
+{'trades': 2354, 'win_rate': np.float64(0.5802888700084962), 'avg_return': 7.866601547787936e-05, 'median_return': 7.373617621429633e-05, 'profit_factor': 1.421601849574021, 'growth': 0.20257403131613616, 'max_dd': -0.01550769916181971, 'trade_sharpe': 4.917517048272043, 'return_to_dd': 13.062803785546588}
+
+SIZED
+{'trades': 2354, 'win_rate': np.float64(0.5802888700084962), 'avg_return': 8.452545841367207e-05, 'median_return': 7.489505225376107e-05, 'profit_factor': 1.4526294583778792, 'growth': 0.21925723905359518, 'max_dd': -0.01550769916181971, 'trade_sharpe': 5.230514723533703, 'return_to_dd': 14.138605396306064}
+
+================================================================================
+CONFIDENCE x POSITION SIZE x PROFIT
+================================================================================
+confidence_band  trades  mean_confidence  mean_size  fixed_avg  sized_avg  fixed_pf  sized_pf
+          54-56     496        55.391515   1.000000   0.003937   0.003937  1.179127  1.179127
+          56-58     809        56.763052   0.930378   0.005665   0.005556  1.325808  1.346742
+          58-60     457        58.851462   0.994594   0.009854   0.010052  1.441799  1.455808
+          60-62     328        60.518484   1.083210   0.008701   0.009018  1.532793  1.518376
+          62-65     153        63.469629   1.213826   0.016972   0.021127  2.032469  2.073925
+          65-70      76        66.767445   1.503944   0.014232   0.020594  2.986946  2.966932
+            70+      35        90.128617   1.242341   0.027050   0.031449  3.729274  3.174543
+
+================================================================================
+POSITION SIZING BLOCK BOOTSTRAP
+================================================================================
+Observed mean daily improvement: 0.000566685647939854 %
+95% CI: 0.00015097163042799582 % ~ 0.0010126884803993768 %
+Probability improvement > 0: 99.78 %
+
+================================================================================
+AUTOMATIC DECISION
+================================================================================
+Fixed PF: 1.421601849574021
+Sized PF: 1.4526294583778792
+
+Fixed Avg Return: 0.007866601547787936 %
+Sized Avg Return: 0.008452545841367207 %
+
+Fixed Max DD: -1.550769916181971 %
+Sized Max DD: -1.550769916181971 %
+
+Avg better years: 2 / 7
+PF better years: 2 / 7
+Return/DD better years: 2 / 7
+Bootstrap P(delta > 0): 0.9978
+
+判定: POSITION SIZING VALUE IS NOT YET CLEAR
+
+→ FIXED 1.0xを維持します。
+→ Sizing候補を増やして無理に最適化しません。
+
+================================================================================
+FINISHED
+================================================================================
+[USER_HOME]\nested_position_sizing_20260908_181350
+
+次にスクショしてほしい場所:
+1. ANNUAL POSITION SIZING RESULTS
+2. SIZING POLICY SELECTION FREQUENCY
+3. POSITION SIZING YEAR STABILITY
+4. OVERALL OOS POSITION SIZING
+5. CONFIDENCE x POSITION SIZE x PROFIT
+6. POSITION SIZING BLOCK BOOTSTRAP
+7. AUTOMATIC DECISION
+
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\1197214154.py:3058: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\1197214154.py:3103: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()

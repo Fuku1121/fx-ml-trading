@@ -1,0 +1,356 @@
+
+==========================================================================================
+DATA SOURCE DETECTION
+==========================================================================================
+Source: notebook DataFrame
+Variable: bars5
+Rows: 275704
+
+==========================================================================================
+RAW DATA CHECK
+==========================================================================================
+Rows: 275704
+Period: 2016-01-03 22:00:00+00:00 -> 2026-09-07 01:30:00+00:00
+
+==========================================================================================
+ML DATASET
+==========================================================================================
+Usable rows: 260644
+Features: 30
+Target UP rate: 0.507059437393533
+Years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+
+==========================================================================================
+TOURNAMENT DESIGN
+==========================================================================================
+Model-selection OOS years: [2020, 2021, 2022, 2023, 2024, 2025]
+FINAL HOLDOUT YEAR: 2026
+IMPORTANT: Holdout is not used to choose the model.
+
+==========================================================================================
+MODEL TOURNAMENT
+2020-2025 OOS ONLY
+==========================================================================================
+
+======================================================================
+TEST YEAR: 2020
+======================================================================
+
+Running: RANDOM_FOREST
+AUC: 0.5284
+Threshold: 0.55
+Trades: 1573
+PF: 1.093
+Avg Return: 0.00228 %
+Max DD: -3.204 %
+
+Running: EXTRA_TREES
+AUC: 0.5281
+Threshold: 0.52
+Trades: 4667
+PF: 0.877
+Avg Return: -0.0035 %
+Max DD: -15.752 %
+
+Running: HIST_GRADIENT_BOOSTING
+AUC: 0.5304
+Threshold: 0.62
+Trades: 336
+PF: 1.629
+Avg Return: 0.0139 %
+Max DD: -0.674 %
+
+Running: LOGISTIC_REGRESSION
+AUC: 0.5238
+Threshold: 0.56
+Trades: 791
+PF: 1.023
+Avg Return: 0.001 %
+Max DD: -3.89 %
+
+======================================================================
+TEST YEAR: 2021
+======================================================================
+
+Running: RANDOM_FOREST
+AUC: 0.532
+Threshold: 0.56
+Trades: 654
+PF: 1.162
+Avg Return: 0.00221 %
+Max DD: -1.132 %
+
+Running: EXTRA_TREES
+AUC: 0.5283
+Threshold: 0.54
+Trades: 202
+PF: 1.288
+Avg Return: 0.00561 %
+Max DD: -0.33 %
+
+Running: HIST_GRADIENT_BOOSTING
+AUC: 0.5323
+Threshold: 0.62
+Trades: 307
+PF: 1.864
+Avg Return: 0.0083 %
+Max DD: -0.51 %
+
+Running: LOGISTIC_REGRESSION
+AUC: 0.526
+Threshold: 0.58
+Trades: 34
+PF: 0.579
+Avg Return: -0.01348 %
+Max DD: -0.869 %
+
+======================================================================
+TEST YEAR: 2022
+======================================================================
+
+Running: RANDOM_FOREST
+AUC: 0.5253
+Threshold: 0.58
+Trades: 232
+PF: 1.356
+Avg Return: 0.01064 %
+Max DD: -1.458 %
+
+Running: EXTRA_TREES
+AUC: 0.526
+Threshold: 0.54
+Trades: 400
+PF: 1.336
+Avg Return: 0.01515 %
+Max DD: -2.057 %
+
+Running: HIST_GRADIENT_BOOSTING
+AUC: 0.5296
+Threshold: 0.62
+Trades: 397
+PF: 1.78
+Avg Return: 0.01948 %
+Max DD: -0.901 %
+
+Running: LOGISTIC_REGRESSION
+AUC: 0.5199
+Threshold: 0.55
+Trades: 1714
+PF: 0.872
+Avg Return: -0.00616 %
+Max DD: -10.921 %
+
+======================================================================
+TEST YEAR: 2023
+======================================================================
+
+Running: RANDOM_FOREST
+AUC: 0.5224
+Threshold: 0.56
+Trades: 664
+PF: 1.124
+Avg Return: 0.00329 %
+Max DD: -2.037 %
+
+Running: EXTRA_TREES
+AUC: 0.5216
+Threshold: 0.54
+Trades: 239
+PF: 1.084
+Avg Return: 0.00352 %
+Max DD: -1.498 %
+
+Running: HIST_GRADIENT_BOOSTING
+AUC: 0.5279
+Threshold: 0.65
+Trades: 128
+PF: 1.027
+Avg Return: 0.00072 %
+Max DD: -1.317 %
+
+Running: LOGISTIC_REGRESSION
+AUC: 0.5164
+Threshold: 0.58
+Trades: 90
+PF: 1.32
+Avg Return: 0.02095 %
+Max DD: -1.665 %
+
+======================================================================
+TEST YEAR: 2024
+======================================================================
+
+Running: RANDOM_FOREST
+AUC: 0.5212
+Threshold: 0.58
+Trades: 158
+PF: 1.419
+Avg Return: 0.00842 %
+Max DD: -1.037 %
+
+Running: EXTRA_TREES
+AUC: 0.5188
+Threshold: 0.54
+Trades: 217
+PF: 1.089
+Avg Return: 0.00362 %
+Max DD: -2.248 %
+
+Running: HIST_GRADIENT_BOOSTING
+AUC: 0.5216
+Threshold: 0.58
+Trades: 1018
+PF: 1.152
+Avg Return: 0.00411 %
+Max DD: -2.75 %
+
+Running: LOGISTIC_REGRESSION
+AUC: 0.5149
+Threshold: 0.56
+Trades: 319
+PF: 0.912
+Avg Return: -0.00534 %
+Max DD: -2.733 %
+
+======================================================================
+TEST YEAR: 2025
+======================================================================
+
+Running: RANDOM_FOREST
+AUC: 0.5217
+Threshold: 0.56
+Trades: 351
+PF: 1.63
+Avg Return: 0.01241 %
+Max DD: -0.89 %
+
+Running: EXTRA_TREES
+AUC: 0.5181
+Threshold: 0.54
+Trades: 138
+PF: 1.073
+Avg Return: 0.00288 %
+Max DD: -2.064 %
+
+Running: HIST_GRADIENT_BOOSTING
+AUC: 0.5259
+Threshold: 0.65
+Trades: 112
+PF: 1.978
+Avg Return: 0.01625 %
+Max DD: -0.574 %
+
+Running: LOGISTIC_REGRESSION
+AUC: 0.5126
+Threshold: 0.55
+Trades: 620
+PF: 0.834
+Avg Return: -0.00729 %
+Max DD: -6.624 %
+
+==========================================================================================
+MODEL-SELECTION SUMMARY
+==========================================================================================
+                 model  evaluated_years  mean_auc  median_auc  mean_direction_accuracy  positive_return_years  pf_above_1_years  mean_year_rank  aggregate_trades  aggregate_avg_return  aggregate_pf  aggregate_growth  aggregate_max_dd  aggregate_return_dd
+HIST_GRADIENT_BOOSTING                6  0.527955    0.528747                 0.625786                      6                 6        1.500000              2298              0.000092      1.395794          0.232513         -0.027504             8.453827
+         RANDOM_FOREST                6  0.525158    0.523848                 0.616360                      6                 6        2.166667              3632              0.000042      1.187399          0.164735         -0.032035             5.142352
+           EXTRA_TREES                6  0.523488    0.523767                 0.578529                      5                 5        2.833333              5863             -0.000012      0.960250         -0.071453         -0.157524            -0.453601
+   LOGISTIC_REGRESSION                6  0.518933    0.518158                 0.519060                      2                 2        3.500000              3568             -0.000041      0.914710         -0.138965         -0.187659            -0.740518
+
+==========================================================================================
+PAIRED BLOCK BOOTSTRAP VS RANDOM FOREST
+==========================================================================================
+
+EXTRA_TREES
+Observed daily alpha: -0.01586576475971711 %
+95% CI: -0.03217367863093732 % ~ -0.0014332162623462543 %
+P(alpha > 0): 1.6 %
+
+HIST_GRADIENT_BOOSTING
+Observed daily alpha: 0.003616749127813982 %
+95% CI: -0.0044109860326581865 % ~ 0.013075939796733233 %
+P(alpha > 0): 81.13333333333334 %
+
+LOGISTIC_REGRESSION
+Observed daily alpha: -0.01871760193831622 %
+95% CI: -0.02980036451273198 % ~ -0.008863226558807063 %
+P(alpha > 0): 0.0 %
+
+==========================================================================================
+SELECTION-PERIOD WINNER
+==========================================================================================
+Leader: HIST_GRADIENT_BOOSTING
+Current Champion: RANDOM_FOREST
+
+==========================================================================================
+FINAL HOLDOUT
+YEAR: 2026
+==========================================================================================
+
+Testing: RANDOM_FOREST
+AUC: 0.5358707289983614
+Threshold: 0.56
+Trades: 276
+Accuracy: 65.21739130434783 %
+PF: 1.4255836522153278
+Avg Return: 0.006801945848963981 %
+Growth: 1.8875780279866694 %
+Max DD: -0.8506067289754005 %
+Return/DD: 2.2190960448436075
+
+Testing: HIST_GRADIENT_BOOSTING
+AUC: 0.5269314586747049
+Threshold: 0.58
+Trades: 414
+Accuracy: 67.14975845410628 %
+PF: 1.8048756346367225
+Avg Return: 0.01111435119915102 %
+Growth: 4.700216087911069 %
+Max DD: -0.771587623125658 %
+Return/DD: 6.09161674842678
+
+==========================================================================================
+HOLDOUT COMPARISON
+==========================================================================================
+                 model  test_auc  threshold  trades  direction_accuracy  avg_return  profit_factor   growth    max_dd  return_to_dd
+         RANDOM_FOREST  0.535871       0.56     276            0.652174    0.000068       1.425584 0.018876 -0.008506      2.219096
+HIST_GRADIENT_BOOSTING  0.526931       0.58     414            0.671498    0.000111       1.804876 0.047002 -0.007716      6.091617
+
+==========================================================================================
+FINAL MODEL TOURNAMENT DECISION
+==========================================================================================
+Holdout metrics won: 3 / 4
+AUC : False
+PF : True
+AVG_RETURN : True
+RETURN_DD : True
+
+RESULT:
+HIST_GRADIENT_BOOSTING PASSES THE BASE-MODEL HOLDOUT
+
+NEXT:
+HIST_GRADIENT_BOOSTINGをCalibration → Threshold → Session → 30m Exit → Adaptive Position Sizingの完全Champion Pipelineへ組み込み、Random Forestと最終比較します。
+
+==========================================================================================
+MODEL DIAGNOSTIC
+==========================================================================================
+Best Mean AUC: 0.5279553600426486
+Mean AUC spread: 0.009022081198560183
+
+Diagnosis:
+ALL MODELS ARE CLUSTERED NEAR THE SAME LOW AUC. FEATURE INFORMATION MAY BE THE BOTTLENECK.
+
+==========================================================================================
+FINISHED
+==========================================================================================
+Saved to:
+[USER_HOME]\ml_model_tournament_20260908_210934
+
+結果が出たら送ってほしい場所:
+1. MODEL-SELECTION SUMMARY
+2. PAIRED BLOCK BOOTSTRAP VS RANDOM FOREST
+3. SELECTION-PERIOD WINNER
+4. FINAL HOLDOUT
+5. HOLDOUT COMPARISON
+6. FINAL MODEL TOURNAMENT DECISION
+7. MODEL DIAGNOSTIC

@@ -1,0 +1,12 @@
+====================================================================================================
+CHAMPION REINTEGRATION TEST
+====================================================================================================
+Formal Champion features: 30
+Regime additions: 11
+Volatility additions: 13
+HGB config: {'learning_rate': 0.05, 'max_iter': 250, 'max_leaf_nodes': 15, 'min_samples_leaf': 30, 'l2_regularization': 1.0, 'early_stopping': False, 'random_state': 42}
+NO FALLBACK MODEL
+NO FALLBACK BASE FEATURE LIST
+[DATA] Using notebook DataFrame: bars (275,704 rows)
+
+ValueError: 15分グリッドでないtimestampがあります: [Timestamp('2025-01-05 15:05:00+0000', tz='UTC'), Timestamp('2025-01-05 15:10:00+0000', tz='UTC'), Timestamp('2025-01-05 15:20:00+0000', tz='UTC'), Timestamp('2025-01-05 15:25:00+0000', tz='UTC'), Timestamp('2025-01-05 15:35:00+0000', tz='UTC')]

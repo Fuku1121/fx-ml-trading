@@ -1,0 +1,241 @@
+====================================
+DATA
+====================================
+Rows: 265905
+Start: 2016-01-03 22:00:00+00:00
+End: 2026-09-01 00:00:00+00:00
+
+Usable rows after continuous-path check: 264629
+
+====================================
+CORRECTED TEST YEAR 2020
+====================================
+Threshold: 0.55
+Test AUC: 0.5284
+Trades: 1573
+Avg Return: 0.002282 %
+PF: 1.0932
+
+====================================
+CORRECTED TEST YEAR 2021
+====================================
+Threshold: 0.56
+Test AUC: 0.532
+Trades: 654
+Avg Return: 0.002207 %
+PF: 1.1623
+
+====================================
+CORRECTED TEST YEAR 2022
+====================================
+Threshold: 0.58
+Test AUC: 0.5253
+Trades: 232
+Avg Return: 0.010639 %
+PF: 1.3564
+
+====================================
+CORRECTED TEST YEAR 2023
+====================================
+Threshold: 0.56
+Test AUC: 0.5224
+Trades: 664
+Avg Return: 0.003286 %
+PF: 1.1241
+
+====================================
+CORRECTED TEST YEAR 2024
+====================================
+Threshold: 0.58
+Test AUC: 0.5212
+Trades: 158
+Avg Return: 0.008417 %
+PF: 1.4194
+
+====================================
+CORRECTED TEST YEAR 2025
+====================================
+Threshold: 0.56
+Test AUC: 0.5217
+Trades: 362
+Avg Return: 0.011617 %
+PF: 1.588
+
+====================================
+CORRECTED TEST YEAR 2026
+====================================
+Threshold: 0.56
+Test AUC: 0.5369
+Trades: 343
+Avg Return: 0.007735 %
+PF: 1.4771
+
+====================================
+CORRECTED NESTED BASELINE
+====================================
+ test_year  validation_year  threshold  test_auc  direction_accuracy  trades  net_win_rate  avg_return  median_return  profit_factor    max_dd   growth  sum_return
+      2020             2019       55.0  0.528396           55.371901    1573     51.811825    0.002282       0.001776       1.093166 -3.203504 3.599435    0.035896
+      2021             2020       56.0  0.531984           59.633028     654     53.363914    0.002207       0.002323       1.162283 -1.131596 1.447926    0.014435
+      2022             2021       58.0  0.525257           64.655172     232     62.500000    0.010639       0.016213       1.356369 -1.458057 2.481439    0.024682
+      2023             2022       56.0  0.522440           59.186747     664     54.668675    0.003286       0.005282       1.124098 -2.037195 2.178833    0.021818
+      2024             2023       58.0  0.521192           67.721519     158     64.556962    0.008417       0.011087       1.419433 -1.036621 1.333267    0.013299
+      2025             2024       56.0  0.521673           62.430939     362     58.011050    0.011617       0.009244       1.588037 -0.889972 4.282711    0.042052
+      2026             2025       56.0  0.536853           66.180758     343     58.309038    0.007735       0.005692       1.477142 -0.823487 2.676236    0.026532
+
+Overall OOS
+Trades: 3986
+Net win rate: 54.79177119919719 %
+Avg Return: 0.004483540410638436 %
+PF: 1.2035151967738562
+Max DD: -3.203503951691644 %
+Growth: 19.4100868564991 %
+
+====================================
+TREND REGIME
+====================================
+trend_regime  direction_accuracy  trades  net_win_rate  avg_return  median_return  profit_factor    max_dd   growth  sum_return
+    UP_TREND           62.911127    1429     57.522743    0.005616       0.005137       1.325445 -1.049467 8.324273    8.025677
+  DOWN_TREND           56.154910    1446     52.697095    0.004343       0.003588       1.165599 -2.386969 6.410513    6.280439
+       RANGE           58.775878    1111     54.005401    0.003209       0.004470       1.141326 -1.690976 3.593067    3.565276
+
+====================================
+VOLATILITY REGIME
+====================================
+vol_regime  direction_accuracy  trades  net_win_rate  avg_return  median_return  profit_factor    max_dd   growth  sum_return
+   LOW_VOL           62.692104    1887     56.438792    0.004781       0.004211       1.430319 -1.449940 9.425295    9.020991
+  HIGH_VOL           55.363322    1156     53.460208    0.006717       0.007280       1.164493 -1.952078 7.966355    7.764363
+   MID_VOL           57.370095     943     53.128314    0.001152       0.003632       1.055274 -2.118014 1.072928    1.086038
+
+====================================
+SESSION BLOCK
+====================================
+session_block  direction_accuracy  trades  net_win_rate  avg_return  median_return  profit_factor    max_dd    growth  sum_return
+    UTC_21_24           66.775244    1228     60.912052    0.009679       0.010331       1.651639 -0.996600 12.592574   11.886386
+    UTC_13_21           60.371517    1292     55.030960    0.005619       0.004153       1.282666 -1.512684  7.486148    7.260078
+    UTC_00_08           53.271028    1177     50.297366    0.000332       0.000614       1.012154 -3.265476  0.348689    0.390910
+    UTC_08_13           47.404844     289     46.020761   -0.005765      -0.005900       0.857922 -3.531338 -1.674296   -1.665982
+
+====================================
+BUY / SELL
+====================================
+direction  direction_accuracy  trades  net_win_rate  avg_return  median_return  profit_factor    max_dd    growth  sum_return
+      BUY           58.201357    1768     54.864253    0.006289       0.005820       1.252242 -2.185124 11.678394   11.119699
+     SELL           60.189360    2218     54.733995    0.003044       0.003768       1.154395 -1.271243  6.923177    6.751693
+
+====================================
+TREND × VOLATILITY
+====================================
+trend_regime vol_regime  direction_accuracy  trades  net_win_rate  avg_return  median_return  profit_factor    max_dd    growth  sum_return
+  DOWN_TREND   HIGH_VOL           54.316547     556     53.237410    0.008416       0.007167       1.198288 -1.458057  4.731113    4.679158
+  DOWN_TREND    LOW_VOL           59.449541     545     53.944954    0.004620       0.003654       1.383529 -0.791651  2.545356    2.518023
+  DOWN_TREND    MID_VOL           53.913043     345     49.855072   -0.002657      -0.000117       0.881900 -1.407215 -0.918443   -0.916742
+       RANGE   HIGH_VOL           55.855856     333     52.552553    0.000615       0.006228       1.013752 -2.611087  0.177524    0.204827
+       RANGE    LOW_VOL           60.693642     519     53.757225    0.003324       0.002242       1.300019 -0.855499  1.736747    1.725303
+       RANGE    MID_VOL           58.687259     259     56.370656    0.006313       0.005279       1.356848 -0.630148  1.644188    1.635146
+    UP_TREND   HIGH_VOL           56.928839     267     55.056180    0.010788       0.009607       1.330720 -1.047748  2.906410    2.880378
+    UP_TREND    LOW_VOL           66.099635     823     59.781288    0.005805       0.005000       1.552495 -0.389390  4.887535    4.777665
+    UP_TREND    MID_VOL           59.882006     339     53.982301    0.001084       0.003632       1.050335 -1.410922  0.359728    0.367634
+
+====================================
+TREND YEAR STABILITY
+====================================
+trend_regime  years_evaluated  positive_years  pf_above_1_years  median_year_pf  minimum_year_pf  median_year_return
+  DOWN_TREND                7               7                 7        1.127742         1.027486            0.000039
+       RANGE                7               5                 5        1.135057         0.808522            0.000019
+    UP_TREND                7               7                 7        1.298665         1.098761            0.000053
+
+====================================
+VOL YEAR STABILITY
+====================================
+vol_regime  years_evaluated  positive_years  pf_above_1_years  median_year_pf  minimum_year_pf  median_year_return
+  HIGH_VOL                7               4                 4        1.070362         0.741923            0.000033
+   LOW_VOL                7               6                 6        2.166880         0.991841            0.000099
+   MID_VOL                7               6                 6        1.214427         0.799333            0.000046
+
+====================================
+SESSION YEAR STABILITY
+====================================
+session_block  years_evaluated  positive_years  pf_above_1_years  median_year_pf  minimum_year_pf  median_year_return
+    UTC_00_08                7               4                 4        1.075305         0.449671            0.000011
+    UTC_08_13                3               0                 0        0.832393         0.641852           -0.000092
+    UTC_13_21                7               7                 7        1.253938         1.040714            0.000056
+    UTC_21_24                7               7                 7        1.599220         1.356174            0.000096
+
+====================================
+SIDE YEAR STABILITY
+====================================
+direction  years_evaluated  positive_years  pf_above_1_years  median_year_pf  minimum_year_pf  median_year_return
+      BUY                7               7                 7        1.268085         1.104922            0.000110
+     SELL                7               6                 6        1.141633         0.987726            0.000032
+
+====================================
+MOVING BLOCK BOOTSTRAP
+====================================
+    dimension      group  trades  bootstrap_mean    ci_2_5  ci_97_5  prob_mean_positive
+      OVERALL        ALL    3986        0.004484  0.002034 0.007088              100.00
+ trend_regime DOWN_TREND    1446        0.004343 -0.000548 0.009551               95.35
+ trend_regime      RANGE    1111        0.003209 -0.000723 0.007363               95.05
+ trend_regime   UP_TREND    1429        0.005616  0.002403 0.008908               99.95
+   vol_regime   HIGH_VOL    1156        0.006717 -0.000049 0.014054               97.40
+   vol_regime    LOW_VOL    1887        0.004781  0.002864 0.006799              100.00
+   vol_regime    MID_VOL     943        0.001152 -0.002281 0.005329               77.85
+session_block  UTC_00_08    1177        0.000332 -0.004071 0.004657               54.95
+session_block  UTC_08_13     289       -0.005765 -0.020171 0.006780               14.60
+session_block  UTC_13_21    1292        0.005619  0.001051 0.010376               99.00
+session_block  UTC_21_24    1228        0.009679  0.006237 0.013472              100.00
+    direction        BUY    1768        0.006289  0.002133 0.010710               99.75
+    direction       SELL    2218        0.003044  0.000334 0.005809               99.00
+
+====================================
+LEAVE ONE REGIME OUT
+====================================
+    dimension removed_group  trades  net_win_rate  avg_return  median_return  profit_factor    max_dd    growth  sum_return
+ trend_regime      UP_TREND    2557     53.265546    0.003850       0.004193       1.155903 -3.572373 10.233914    9.845715
+ trend_regime         RANGE    2875     55.095652    0.004976       0.004678       1.228582 -2.343981 15.268415   14.306116
+ trend_regime    DOWN_TREND    2540     55.984252    0.004563       0.004770       1.232340 -1.486673 12.216437   11.590953
+   vol_regime       LOW_VOL    2099     53.311101    0.004216       0.004972       1.132392 -2.978732  9.124757    8.850402
+   vol_regime       MID_VOL    3043     55.307263    0.005516       0.004809       1.246245 -1.704016 18.142503   16.785354
+   vol_regime      HIGH_VOL    2830     55.335689    0.003571       0.004183       1.248869 -2.755127 10.599350   10.107029
+session_block     UTC_00_08    2809     56.674973    0.006223       0.006116       1.314110 -1.619321 18.995163   17.480482
+session_block     UTC_13_21    2694     54.677060    0.003939       0.004743       1.170794 -3.840792 11.093465   10.611315
+session_block     UTC_21_24    2758     52.066715    0.002170       0.001728       1.086025 -4.184795  6.055029    5.985006
+session_block     UTC_08_13    3697     55.477414    0.005285       0.005000       1.256774 -2.606265 21.443410   19.537374
+    direction          SELL    1768     54.864253    0.006289       0.005820       1.252242 -2.185124 11.678394   11.119699
+    direction           BUY    2218     54.733995    0.003044       0.003768       1.154395 -1.271243  6.923177    6.751693
+
+====================================
+AUTOMATIC DIAGNOSTIC
+====================================
+Corrected evaluated years: 7
+Positive years: 7 / 7
+PF > 1 years: 7 / 7
+Corrected overall PF: 1.2035151967738562
+
+Corrected baseline still has PF > 1.
+次にRegime表を見て、
+利益が一部の市場状態だけに集中していないか確認します。
+
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\3218268168.py:3385: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\3218268168.py:3423: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\3218268168.py:3430: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(
+[USER_HOME]\AppData\Local\Temp\ipykernel_25008\3218268168.py:3461: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+
+
+====================================
+FINISHED
+====================================
+Results saved to:
+[USER_HOME]\corrected_nested_regime_20260908_141831
+
+最重要な確認順:
+1. CORRECTED NESTED BASELINE
+2. TREND REGIME
+3. VOLATILITY REGIME
+4. TREND × VOLATILITY
+5. YEAR STABILITY
+6. MOVING BLOCK BOOTSTRAP
+7. LEAVE ONE REGIME OUT

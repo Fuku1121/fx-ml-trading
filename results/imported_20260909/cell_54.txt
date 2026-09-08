@@ -1,0 +1,239 @@
+使用DataFrame: bars
+
+========================================
+DATA CHECK
+========================================
+Rows: 275704
+Start: 2016-01-03 22:00:00+00:00
+End: 2026-09-07 01:30:00+00:00
+Median interval: 15.0 minutes
+
+BASE features: 26
+Trend/Momentum features: 38
+
+========================================
+FEATURE SETS
+========================================
+BASE : 26
+BASE_PLUS_TREND : 64
+
+========================================
+BASE
+========================================
+
+TEST YEAR 2020
+AUC       : 0.5281
+Threshold : 0.6
+Session   : UTC_21_24
+Trades    : 165
+Win       : 66.06%
+Avg Return: 0.01896%
+PF        : 3.284
+Growth    : 3.176%
+Max DD    : -0.223%
+
+TEST YEAR 2021
+AUC       : 0.5290
+Threshold : 0.58
+Session   : UTC_21_24
+Trades    : 196
+Win       : 58.16%
+Avg Return: 0.00959%
+PF        : 1.878
+Growth    : 1.895%
+Max DD    : -0.725%
+
+TEST YEAR 2022
+AUC       : 0.5289
+Threshold : 0.6
+Session   : UTC_21_24
+Trades    : 74
+Win       : 70.27%
+Avg Return: 0.03862%
+PF        : 5.752
+Growth    : 2.897%
+Max DD    : -0.146%
+
+TEST YEAR 2023
+AUC       : 0.5273
+Threshold : 0.62
+Session   : UTC_21_24
+Trades    : 131
+Win       : 63.36%
+Avg Return: 0.00969%
+PF        : 1.452
+Growth    : 1.272%
+Max DD    : -0.931%
+
+TEST YEAR 2024
+AUC       : 0.5214
+Threshold : 0.6
+Session   : UTC_21_24
+Trades    : 221
+Win       : 65.16%
+Avg Return: 0.01795%
+PF        : 2.440
+Growth    : 4.041%
+Max DD    : -0.442%
+
+TEST YEAR 2025
+AUC       : 0.5200
+Threshold : 0.62
+Session   : UTC_21_24
+Trades    : 165
+Win       : 55.76%
+Avg Return: 0.13424%
+PF        : 7.301
+Growth    : 23.781%
+Max DD    : -0.879%
+
+TEST YEAR 2026
+AUC       : 0.5296
+Threshold : 0.56
+Session   : UTC_21_24
+Trades    : 644
+Win       : 54.19%
+Avg Return: 0.00263%
+PF        : 1.174
+Growth    : 1.700%
+Max DD    : -1.718%
+
+========================================
+BASE_PLUS_TREND
+========================================
+
+TEST YEAR 2020
+AUC       : 0.5296
+Threshold : 0.55
+Session   : UTC_13_24
+Trades    : 3207
+Win       : 50.92%
+Avg Return: 0.00071%
+PF        : 1.031
+Growth    : 2.167%
+Max DD    : -7.148%
+
+TEST YEAR 2021
+AUC       : 0.5322
+Threshold : 0.6
+Session   : EXCLUDE_08_13
+Trades    : 63
+Win       : 71.43%
+Avg Return: 0.01899%
+PF        : 2.606
+Growth    : 1.202%
+Max DD    : -0.375%
+
+TEST YEAR 2022
+AUC       : 0.5276
+Threshold : 0.62
+Session   : UTC_21_24
+Trades    : 107
+Win       : 71.03%
+Avg Return: 0.07363%
+PF        : 5.475
+Growth    : 8.151%
+Max DD    : -0.352%
+
+TEST YEAR 2023
+AUC       : 0.5268
+Threshold : 0.6
+Session   : UTC_21_24
+Trades    : 167
+Win       : 59.88%
+Avg Return: 0.00678%
+PF        : 1.313
+Growth    : 1.133%
+Max DD    : -1.071%
+
+TEST YEAR 2024
+AUC       : 0.5205
+Threshold : 0.62
+Session   : ALL
+Trades    : 323
+Win       : 60.37%
+Avg Return: 0.01474%
+PF        : 1.751
+Growth    : 4.860%
+Max DD    : -1.158%
+
+TEST YEAR 2025
+AUC       : 0.5242
+Threshold : 0.65
+Session   : UTC_21_24
+Trades    : 90
+Win       : 53.33%
+Avg Return: 0.23393%
+PF        : 9.806
+Growth    : 22.351%
+Max DD    : -0.812%
+
+TEST YEAR 2026
+AUC       : 0.5322
+Threshold : 0.55
+Session   : ALL
+Trades    : 2954
+Win       : 48.38%
+Avg Return: 0.00095%
+PF        : 1.054
+Growth    : 2.762%
+Max DD    : -4.449%
+
+
+========================================
+DEVELOPMENT SUMMARY 2020-2025
+========================================
+    feature_set  years  mean_auc  positive_years  pf_above_1_years  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+           BASE      6  0.525792               6                 6     952  0.623950    0.000370       3.672829 0.410852 -0.009313     44.113893
+BASE_PLUS_TREND      6  0.526817               6                 6    3957  0.529947    0.000097       1.429971 0.450904 -0.071484      6.307780
+
+
+========================================
+FINAL CONFIRMATION 2026
+========================================
+    feature_set      auc  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+           BASE 0.529622     644  0.541925    0.000026       1.174241 0.016996 -0.017180      0.989290
+BASE_PLUS_TREND 0.532201    2954  0.483751    0.000009       1.054126 0.027620 -0.044489      0.620833
+
+
+========================================
+COST STRESS
+========================================
+    feature_set  cost_x  trades  avg_return  profit_factor   growth    max_dd  return_to_dd
+           BASE     1.0     952    0.000370       3.672829 0.410852 -0.009313     44.113893
+           BASE     1.5     952    0.000350       3.396112 0.384252 -0.009373     40.995403
+           BASE     2.0     952    0.000330       3.141616 0.358154 -0.009503     37.687265
+BASE_PLUS_TREND     1.0    3957    0.000097       1.429971 0.450904 -0.071484      6.307780
+BASE_PLUS_TREND     1.5    3957    0.000077       1.327119 0.340514 -0.077130      4.414808
+BASE_PLUS_TREND     2.0    3957    0.000057       1.231867 0.238521 -0.113635      2.099007
+
+
+========================================
+AUTOMATIC FEATURE DECISION
+========================================
+Metric wins: 2 / 5
+AUC            : True
+PF             : False
+AVG_RETURN     : False
+RETURN_DD      : False
+POSITIVE_YEARS : True
+
+2026 confirmation: False
+2x cost PF > 1: True
+
+----------------------------------------
+RESULT:
+TREND / MOMENTUM VALUE IS NOT YET CLEAR
+
+次へ:
+Trend/MomentumはBASEへまだ統合せず、Volatility / Regime特徴量を別個に検証する。
+
+
+========================================
+FINISHED
+========================================
+保存されたNotebook変数:
+FEATURE_TOURNAMENT_1_ANNUAL
+FEATURE_TOURNAMENT_1_SUMMARY
+FEATURE_TOURNAMENT_1_CONFIRMATION
+FEATURE_TOURNAMENT_1_COST

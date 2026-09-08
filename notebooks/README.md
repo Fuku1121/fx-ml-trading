@@ -1,3 +1,16 @@
+# Notebook案内
+
+## 最新の入口（2026-09-09）
+
+- `10_research_review.ipynb`：保存済みの最新比較を読む。再学習しない。
+- `archive/27_hgb_reintegration.ipynb`：最新HGB比較の元コード。元セル56の失敗、57の再集約、58の評価を保管。
+- [今回の11段階・元セル対応表](../docs/RESEARCH_20260909.md#原本への対応)：履歴17–27、元セル36–58。
+
+全27段階の履歴は、原本の実行を監査済みの製品コードに置き換えたものではありません。
+最新HGBを動かすには監査済みの元価格データと必要なNotebook変数が必要です。結果を読むだけなら上記の閲覧Notebookを使います。
+
+## 前回までの入口
+
 # Notebook guide
 
 - **Current**: [09_confidence_nested.ipynb](09_confidence_nested.ipynb) — 15分足の年別Confidence検証。

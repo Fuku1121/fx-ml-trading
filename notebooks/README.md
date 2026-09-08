@@ -1,22 +1,29 @@
-# Notebook案内
+# Notebookと研究履歴の案内
 
-## 最新の入口（2026-09-09）
+## 最初に読むもの
 
-- `10_research_review.ipynb`：保存済みの最新比較を読む。再学習しない。
-- `archive/27_hgb_reintegration.ipynb`：最新HGB比較の元コード。元セル56の失敗、57の再集約、58の評価を保管。
-- [今回の11段階・元セル対応表](../docs/RESEARCH_20260909.md#原本への対応)：履歴17–27、元セル36–58。
+| 目的 | 入口 |
+|---|---|
+| 最新の処理をPythonコードで読む | [HGB年別評価](../src/fx_research/hgb/evaluation.py)と[コード解説](../docs/CODE_GUIDE.md) |
+| 最新の保存結果を表示する | [10_research_review.ipynb](10_research_review.ipynb)。モデルを再学習しない閲覧用 |
+| RFの比較基準を実行する | [09_confidence_nested.ipynb](09_confidence_nested.ipynb) |
+| 以前のQuality検証を実行する | [08_trade_quality.ipynb](08_trade_quality.ipynb) |
 
-全27段階の履歴は、原本の実行を監査済みの製品コードに置き換えたものではありません。
-最新HGBを動かすには監査済みの元価格データと必要なNotebook変数が必要です。結果を読むだけなら上記の閲覧Notebookを使います。
+## 全27段階の研究履歴
 
-## 前回までの入口
+`archive/` は試行錯誤を記録した原本の保管場所です。元のNotebook変数やデータに依存するコード、エラーになったコードも含みます。
+一括実行する入口ではありません。新しい実行入口は [再現手順](../docs/REPRODUCIBILITY.md) を参照してください。
 
-# Notebook guide
+| 段階 | 内容 |
+|---|---|
+| 01–07 | データ取得、方向予測、取引選別、Qualityモデル |
+| 08–16 | Quality再検証、取引量、予測期間、長期データ、年別Confidence |
+| 17–18 | 年境界の修正、市場状態、取引する時間帯 |
+| 19–21 | 決済方法、確率校正、取引量と配分 |
+| 22–24 | リスク制御、モデル比較、HGB統合 |
+| 25–27 | 特徴量比較、時間足再集約、最新HGB比較 |
 
-- **Current**: [09_confidence_nested.ipynb](09_confidence_nested.ipynb) — 15分足の年別Confidence検証。
-- **Previous**: [08_trade_quality.ipynb](08_trade_quality.ipynb) — 5分足のQuality検証。
-- **Archive**: archive/01〜16 — 探索・失敗・修正を残した研究履歴。セル間の依存やインストール操作を含むため、一括実行用ではありません。
+[前半の研究報告](../docs/RESEARCH.md) · [後半の原本セル対応表](../docs/RESEARCH_20260909.md#原本への対応)
 
-最新添付の0〜15セルは以前のコードとハッシュが一致したため重複保存せず、出典台帳から既存の履歴へ参照しています。
-36番の空セルを除く全36セルを追跡できます。コード中の個人フォルダ名は置換し、元と保存版のSHA-256を記録しました。
-保存出力はresults/imported_20260907/。HTML・埋込画像・実行メタデータは取り除いています。
+出典とコードのSHA-256は、[前回の記録](../results/imported_20260907/provenance.json)と[追加分の記録](../results/imported_20260909/provenance.json)にあります。
+今回の添付のセル0–35は前回と同一、36–58が追加、59は空です。個人フォルダ名・実行メタデータを除いた原本を保持しています。

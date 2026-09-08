@@ -1,38 +1,41 @@
-# 最新HGB研究のコード案内
+# コードの読み方
 
-[履歴27](../notebooks/archive/27_hgb_reintegration.ipynb) が最新です。[処理と実装上の注意](HGB_METHODOLOGY.md)に関数ごとの役割と監査項目をまとめています。以下は既存RF・Qualityパッケージの案内です。
+## 最新HGBコードを読む順序
 
-# 現在のコードを読む順序
+まず [evaluation.py](../src/fx_research/hgb/evaluation.py) の `evaluate_year` を読むと、研究の手順を追えます。
+過去で確率を補正し、前年で取引条件を選び、その条件を固定して翌年を評価する処理です。
 
-`confidence_features.py`で過去特徴を作り、`confidence.py`のprepare_pricesでラベルの判明時刻を付けます。annual_splitsは年の境界、choose_thresholdは前年の候補比較、runは再学習・Test・保存を担当します。
+| ファイル | 担当すること | 主な関数 |
+|---|---|---|
+| [config.py](../src/fx_research/hgb/config.py) | モデル・コスト・比較候補を固定する | 定数一覧 |
+| [features.py](../src/fx_research/hgb/features.py) | 価格から入力情報と将来の正解を作る | `make_all_features`, `prepare_dataset` |
+| [calibration.py](../src/fx_research/hgb/calibration.py) | モデルを学習し、予測確率のずれを補正する | `expanding_oof`, `choose_calibration` |
+| [trading.py](../src/fx_research/hgb/trading.py) | 取引の選別、量、コスト、成績を計算する | `select_trades`, `choose_sizing`, `stats_of_returns` |
+| [evaluation.py](../src/fx_research/hgb/evaluation.py) | 年の境界を決め、翌年の評価までをつなぐ | `make_split`, `evaluate_year` |
+| [runner.py](../src/fx_research/hgb/runner.py) | 指定CSVを読み、年別評価と結果保存を行う | `run`, `main` |
 
-Settingsは実験条件を固定するdataclassです。label_endによる比較は「いつ正解を知ることができたか」をコードで表します。net_win_rateとdirection_accuracyの違いはMETHODOLOGY.mdで説明しています。
+## 整理によって変えたこと
 
-以下は以前の5分足Quality系の読み方です。
+元Notebookのセル58から、21個の関数・クラスと設定を役割別に抽出しました。日本語の説明を加え、短い処理の不要な改行を整理しています。
+設定と関数の計算内容は、元の構文木（AST）との比較テストで一致を確認します。
+元コードは [履歴27](../notebooks/archive/27_hgb_reintegration.ipynb) に保存しています。
 
-# Pythonコードの読み方
+実行入口は新しく追加したものです。Notebook内の変数を自動探索せず、CSVを引数で指定します。
+既存の入力検査で時刻・重複・価格の不整合を拒否し、新しいフォルダへ取引・設定・データのSHA-256を保存します。
+入力を自動修復しないため、元Notebookで受理していたデータが検査で止まる場合があります。
 
-## まず読む順序
+`summary.csv` は指定した全評価年の集計です。元の開発期間表（2020–2025年）と同じ集計範囲とは限りません。
+`CHAMPION` などの元の候補名は、保存結果との対応を維持するため残しています。
 
-1. `config.py`：horizon、コスト、確率閾値の候補。パーセント表示と小数を区別します。
-2. `data.py` → `features.py` → `labels.py`：価格を読み、過去だけの特徴と将来の正解を別に作ります。
-3. `splits.py`：学習・Validation・Testの順序と間隔を定義します。
-4. `models.py` → `quality.py`：BaseとQualityを学習します。
-5. `backtest.py` → `metrics.py`：予測を取引に変え、実行ルールに従って純損益を評価します。
-6. `pipeline.py`：上記を順に呼び出し、条件選択と結果保存を行います。
+## 動作確認の範囲
 
-## 重要なPythonと設計
+[HGBのテスト](../tests/test_hgb.py)では、元の計算との一致、未来価格を変えた場合の特徴量、欠測・年境界、校正、非重複とコスト、人工データによる実行を確認します。
+人工データのテスト成功は、実市場の収益性を証明するものではありません。実価格での再評価と、[監査項目](HGB_METHODOLOGY.md)への対応は今後の作業です。
 
-- **関数と明示的な引数**：`make_features(bars)` はコピーを作り、元データを変更しません。
-  Notebookで後のセルが前のdfを上書きする問題を減らします。
-- **allowlist**：`feature_sets.py` でモデルに渡す列を限定します。dfに正解ラベルがあっても学習特徴へ入りません。
-- **shift(-6)**：6本先の価格を現在行へ対応づけるため、ラベル生成だけで使います。特徴へ入れると未来情報になります。
-- **rolling(14)**：過去14行の窓。`center=True`を使わず、現在行より先を参照しません。
-- **dataclass**：Foldを番号・学習・検証・テストのひとまとまりとして扱い、区間を取り違えにくくします。
-- **OOF**：過去Aで学習して次のBを予測し、そのBの予測をQualityの教材にします。
-  Baseが覚えた学習行そのものへの予測を教材にすると、実運用より簡単な問題になります。
-- **早期return**：取引期間が区間外へ出る場合やデータ不足時に処理を止めます。欠けたデータを成功扱いしません。
-- **unittest**：期待値が手計算できる小さな価格系列を使い、モデルの成績と独立に計算を確認します。
+## 以前の比較基準
 
-モデル部分は元コードのASTから抽出して整形しました。既存のコメントはアーカイブに残し、
-新しいモジュールは役割単位に整理しています。アーカイブの巨大セルは履歴保存用で、現在の実行入口ではありません。
+- RFの年別Confidence検証：[confidence.py](../src/fx_research/confidence.py)、[方法](METHODOLOGY.md)。
+- 5分足Quality検証：[pipeline.py](../src/fx_research/pipeline.py)、[旧ベースライン](QUALITY_BASELINE.md)。
+- 試行錯誤の原本：[Notebook一覧](../notebooks/README.md)。
+
+最新HGB、以前のRF、5分足Qualityは異なる実験です。コードと保存成績を取り違えないよう、入口を分けています。

@@ -1,3 +1,11 @@
+# Readability and reference-code update
+
+- Rewrite the overview for nontechnical readers; add a research introduction and glossary.
+- Replace conflicting current/previous navigation with a single code guide.
+- Extract the latest HGB calculations into configuration, features, calibration, trading and evaluation modules; preserve original function bodies computationally.
+- Add explicit CSV execution and tracked result output, plus six HGB regression/integration checks.
+- Keep original notebooks and published financial metrics unchanged.
+
 # 2026-09-09 — HGB research update
 
 - Import 23 additional code cells as archive stages17–27, retaining failed experiments and sanitized saved outputs.

@@ -1,5 +1,9 @@
 # 2026-09-09 更新の検証範囲
 
+- ローカルの既存30件のテストが成功。保存結果閲覧Notebookも実行確認済み。
+- [GitHub Actions run #3](https://github.com/Fuku1121/fx-ml-trading/actions/runs/34246832622) はPython 3.11・3.12でテストと構文確認に成功。対象commit: `a0e215057da30971101c2e451b4a1b247fd61c47`。
+- READMEのMermaid図・結果SVGのGitHub表示を確認済み。
+
 今回追加したのは研究履歴・保存結果・説明・閲覧Notebookです。最新HGBの実価格再実行・全処理の自動テストは行っていません。既存30件のテストの対象はRF・Quality系です。取り込み時に前回36セルのコード一致、新規23セルのPython構文、出典ハッシュ、14行の年別表を確認しました。
 
 # Verification record

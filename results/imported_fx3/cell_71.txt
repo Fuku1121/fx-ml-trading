@@ -1,0 +1,55 @@
+====================================================================================================
+FAILED TIMESTAMP FEATURE DIAGNOSTIC
+====================================================================================================
+Timestamp: 2026-06-11 02:45:00+00:00
+History rows: 250
+
+
+                       research  sequential_250      diff  abs_diff
+slope_alignment_score  0.333333        0.666667  0.333333  0.333333
+
+====================================================================================================
+HISTORY LENGTH SENSITIVITY
+====================================================================================================
+
+   history_bars  actual_rows          worst_feature  max_abs_diff  passed_1e10
+0           150          150  slope_alignment_score      0.333333        False
+1           200          200  slope_alignment_score      0.333333        False
+2           250          250  slope_alignment_score      0.333333        False
+3           300          300  slope_alignment_score      0.333333        False
+4           500          500  slope_alignment_score      0.333333        False
+5          1000         1000  slope_alignment_score      0.333333        False
+
+====================================================================================================
+ALIGNMENT / SLOPE FEATURES
+====================================================================================================
+
+                                research  sequential_250          diff
+ma20_slope                 -2.220446e-16        0.000000  2.220446e-16
+ma50_slope                  1.221186e-05        0.000012 -2.220446e-16
+ma100_slope                 8.351572e-06        0.000008  0.000000e+00
+ma_alignment_score          1.000000e+00        1.000000  0.000000e+00
+slope_alignment_score       3.333333e-01        0.666667  3.333333e-01
+directional_persistence_16  0.000000e+00        0.000000  0.000000e+00
+
+====================================================================================================
+RAW MOVING-AVERAGE SLOPE DIAGNOSTIC
+====================================================================================================
+
+   period    full_ma   short_ma  ma_diff  full_prev_ma  short_prev_ma  prev_ma_diff    full_slope  short_slope    slope_diff  full_sign  short_sign
+0      20  160.51215  160.51215      0.0     160.51215      160.51215 -2.842171e-14 -2.220446e-16     0.000000  2.220446e-16       -1.0         0.0
+1      50  160.50172  160.50172      0.0     160.49976      160.49976  2.842171e-14  1.221186e-05     0.000012 -2.220446e-16        1.0         1.0
+2     100  160.45018  160.45018      0.0     160.44884      160.44884  0.000000e+00  8.351572e-06     0.000008  0.000000e+00        1.0         1.0
+
+====================================================================================================
+DIAGNOSTIC SUMMARY
+====================================================================================================
+Number of differing features: 1
+Worst feature: slope_alignment_score
+Worst absolute difference: 0.3333333333333333
+
+Differing feature names:
+ - slope_alignment_score
+
+Do NOT change the strategy yet.
+Next action depends on the exact feature shown above.

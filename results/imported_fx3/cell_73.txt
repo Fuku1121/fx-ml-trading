@@ -1,0 +1,101 @@
+==============================================================================================================
+PRIOR PRODUCTION VALIDATION
+==============================================================================================================
+single_bar_live_parity: True
+historical_policy: True
+full_frame_features: True
+probabilities: True
+trade_timestamps: True
+trade_details: True
+integrity: True
+performance_reproduction: True
+canonical_full_prefix_sequential: True
+
+ALL PRIOR VALIDATION: PASS
+====================================================================================================
+CANONICAL HISTORY CHECK
+====================================================================================================
+canonical_start: 2016-01-03 22:00:00+00:00
+latest_bar: 2026-09-01 00:00:00+00:00
+total_rows: 265905
+frozen_prefix_rows: 265905
+forward_rows: 0
+frozen_prefix_hash: cf1c35c1f9c606d55abdc6f20e54ce8f90ed194badaaa2ece3806b6418a41512
+frozen_prefix_hash_ok: True
+canonical_history_ok: True
+
+==============================================================================================================
+HARDENED LIVE INFERENCE SMOKE TEST
+==============================================================================================================
+signal_time: 2026-09-01 00:00:00+00:00
+signal_bar_close_time: 2026-09-01 00:15:00+00:00
+raw_p_up: 0.5677249330651749
+calibrated_p_up: 0.5510846166583871
+confidence: 0.5510846166583871
+threshold: 0.58
+threshold_allowed: False
+session: ALL
+session_allowed: True
+action: NO_TRADE
+reason: LOW_CONFIDENCE
+position_size: 0.0
+canonical_history_ok: True
+canonical_history_rows: 265905
+frozen_prefix_hash_ok: True
+forward_rows: 0
+runtime_mode: CANONICAL_FULL_HISTORY
+
+==============================================================================================================
+HARDENING REGRESSION CHECK
+==============================================================================================================
+signal_time: True
+raw_p_up: True
+calibrated_p_up: True
+confidence: True
+threshold_allowed: True
+session_allowed: True
+action: True
+position_size: True
+canonical_hash: True
+
+REGRESSION PASSED: True
+
+==============================================================================================================
+TRUNCATED HISTORY SAFETY TEST
+==============================================================================================================
+tail(1000) rejected: True
+
+==============================================================================================================
+LIVE ENGINE HARDENING FINAL REPORT
+==============================================================================================================
+Champion: BASE_PLUS_REGIME
+Version: champion_v1_base_plus_regime_20260909
+Canonical rows: 265,905
+Canonical start: 2016-01-03 22:00:00+00:00
+Canonical latest: 2026-09-01 00:00:00+00:00
+
+Runtime contract:
+production_champion\champion_v1_base_plus_regime_20260909\runtime\live_runtime_contract.json
+
+==============================================================================================================
+FINAL CHECKS
+==============================================================================================================
+all_prior_validation: True
+canonical_history_valid: True
+frozen_prefix_hash: True
+full_prefix_parity: True
+live_regression: True
+truncated_history_rejected: True
+runtime_contract_saved: True
+
+LIVE ENGINE HARDENING PASSED: True
+
+FINAL DECISION: PASS_READY_FOR_PAPER_EXECUTION_ENGINE
+
+Frozen Champion is now protected by a Production runtime contract.
+Truncated-history inference is prohibited.
+Frozen historical data integrity is verified by SHA256.
+Canonical full-history inference is mandatory.
+
+NEXT STEP:
+BUILD PAPER EXECUTION ENGINE.

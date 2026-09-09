@@ -1,0 +1,33 @@
+==========================================================================================
+FORWARD PAPER TRADING SYSTEM BUILD
+==========================================================================================
+Champion: BASE_PLUS_REGIME
+Version: champion_v1_base_plus_regime_20260909
+Frozen rows: 265,905
+Frozen latest: 2026-09-01 00:00:00+00:00
+Live engine: run_hardened_live_inference
+Smoke signal: 2026-09-01 00:00:00+00:00
+Smoke action: NO_TRADE
+
+==========================================================================================
+FORWARD PAPER SYSTEM BUILD PASSED
+==========================================================================================
+Champion: BASE_PLUS_REGIME
+Version: champion_v1_base_plus_regime_20260909
+Feature count: 41
+Frozen history protected: True
+Overlap prohibited: True
+Paper only: True
+Real broker orders: False
+State persistence: True
+Signal log: True
+Trade log: True
+Fail-safe: True
+
+FORWARD_PAPER_READY: True
+
+Feed file:
+production_champion\champion_v1_base_plus_regime_20260909\runtime\paper_forward\usdjpy_15m_forward_feed.csv
+
+NEXT COMMAND:
+run_forward_paper()

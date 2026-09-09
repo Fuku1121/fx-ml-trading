@@ -1,0 +1,4 @@
+feature_set,feature_count,years,positive_years,pf_above_1_years,mean_auc,trades,win_rate,avg_return,profit_factor,growth,max_dd,return_to_dd
+BASE,30,6,6,6,0.527292,1556,0.587404,0.000126,1.686292,0.21513,-0.021667,9.928763
+BASE_PLUS_REGIME,41,6,6,6,0.527085,1391,0.567937,0.000128,1.733627,0.194281,-0.011027,17.619346
+BASE_PLUS_VOL_REGIME,54,6,6,6,0.527894,3469,0.553185,6.4e-05,1.29357,0.245364,-0.029139,8.420456

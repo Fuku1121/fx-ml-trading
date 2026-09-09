@@ -1,29 +1,22 @@
 # Notebookと研究履歴の案内
 
-## 最初に読むもの
+最新の説明は [固定モデルと仮想売買の構成](../docs/FROZEN_SYSTEM.md) から読めます。
+保存結果の閲覧入口は [11_forward_paper_review.ipynb](11_forward_paper_review.ipynb) です。学習やAPI接続は行いません。
 
-| 目的 | 入口 |
+| 履歴番号 | 内容 |
 |---|---|
-| 最新の処理をPythonコードで読む | [HGB年別評価](../src/fx_research/hgb/evaluation.py)と[コード解説](../docs/CODE_GUIDE.md) |
-| 最新の保存結果を表示する | [10_research_review.ipynb](10_research_review.ipynb)。モデルを再学習しない閲覧用 |
-| RFの比較基準を実行する | [09_confidence_nested.ipynb](09_confidence_nested.ipynb) |
-| 以前のQuality検証を実行する | [08_trade_quality.ipynb](08_trade_quality.ipynb) |
+| 01–16 | 方向予測、Quality、年別Confidenceまで |
+| 17–27 | 時間帯・校正・取引量・モデル・特徴量の比較 |
+| 28–30 | 混在データの調査、年別CSV再構築、再評価 |
+| 31–32 | 41特徴量のモデル固定、全履歴での計算一致 |
+| 33–34 | 約定時刻・価格・費用と300取引の再現 |
+| 35–36 | 仮想売買基盤、新しい確定足の入力、市場API接続 |
 
-## 全27段階の研究履歴
+[追加分の元セル対応表](../docs/RESEARCH_FX3.md#出典とコードの案内) · [前回の対応表](../docs/RESEARCH_20260909.md#原本への対応)
 
-`archive/` は試行錯誤を記録した原本の保管場所です。元のNotebook変数やデータに依存するコード、エラーになったコードも含みます。
-一括実行する入口ではありません。新しい実行入口は [再現手順](../docs/REPRODUCIBILITY.md) を参照してください。
+archiveは研究原本です。Notebook変数や外部ファイルへの依存、失敗したコードも保存しており、一括実行する入口ではありません。
+特に元セル82は構文エラーのまま履歴として保持し、その後のセル83に成功出力があります。
+自動判定のPASSやREADYは保存時点の検査結果です。現在も接続中・稼働中であるという意味ではありません。
 
-| 段階 | 内容 |
-|---|---|
-| 01–07 | データ取得、方向予測、取引選別、Qualityモデル |
-| 08–16 | Quality再検証、取引量、予測期間、長期データ、年別Confidence |
-| 17–18 | 年境界の修正、市場状態、取引する時間帯 |
-| 19–21 | 決済方法、確率校正、取引量と配分 |
-| 22–24 | リスク制御、モデル比較、HGB統合 |
-| 25–27 | 特徴量比較、時間足再集約、最新HGB比較 |
-
-[前半の研究報告](../docs/RESEARCH.md) · [後半の原本セル対応表](../docs/RESEARCH_20260909.md#原本への対応)
-
-出典とコードのSHA-256は、[前回の記録](../results/imported_20260907/provenance.json)と[追加分の記録](../results/imported_20260909/provenance.json)にあります。
-今回の添付のセル0–35は前回と同一、36–58が追加、59は空です。個人フォルダ名・実行メタデータを除いた原本を保持しています。
+旧結果の閲覧は [10_research_review.ipynb](10_research_review.ipynb)、旧RFは [09_confidence_nested.ipynb](09_confidence_nested.ipynb) を参照してください。
+旧HGB結果は混在データを含む履歴として扱います。最新の特徴定義は `src/fx_research/frozen/`、以前の30/50比較は `src/fx_research/hgb/` です。

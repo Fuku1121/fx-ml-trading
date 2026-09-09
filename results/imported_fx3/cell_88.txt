@@ -1,0 +1,23 @@
+========================================================================================
+USDJPY 15m MARKET DATA ADAPTER BUILD
+========================================================================================
+Champion: champion_v1_base_plus_regime_20260909
+Champion directory: production_champion\champion_v1_base_plus_regime_20260909
+Paper directory: production_champion\champion_v1_base_plus_regime_20260909\runtime\paper_forward
+Incoming CSV: production_champion\champion_v1_base_plus_regime_20260909\runtime\paper_forward\incoming_usdjpy_15m.csv
+Frozen latest: 2026-09-01 00:00:00+00:00
+run_forward_paper_once loaded: True
+Paper only: True
+Real orders enabled: False
+
+========================================================================================
+MARKET DATA ADAPTER
+========================================================================================
+STATUS: WAITING_FOR_MARKET_DATA
+No real USDJPY 15m bars supplied.
+No fake prices were generated.
+
+========================================================================================
+CELL COMPLETE
+========================================================================================
+Result: {'passed': True, 'reason': 'WAITING_FOR_MARKET_DATA', 'processed': 0}

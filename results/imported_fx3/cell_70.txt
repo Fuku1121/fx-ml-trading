@@ -1,0 +1,195 @@
+==============================================================================================================
+HISTORICAL REPLAY PARITY TEST
+==============================================================================================================
+Replay year: 2026
+Champion: BASE_PLUS_REGIME
+Features: 41
+
+IMPORTANT:
+Production model is NOT used for historical replay.
+The historical walk-forward model is reconstructed
+using only information available before the replay year.
+
+Bars: 265,905
+Period: 2016-01-03 22:00:00+00:00 -> 2026-09-01 00:00:00+00:00
+
+==============================================================================================================
+REPLAY DATASET
+==============================================================================================================
+Rows: 264,629
+Signal period: 2016-01-04 23:00:00+00:00 -> 2026-08-31 23:30:00+00:00
+
+==============================================================================================================
+EXPECTED FROZEN BACKTEST
+==============================================================================================================
+Calibration: ISOTONIC
+Threshold: 0.58
+Session: ALL
+Sizing: STRONG
+Trades: 300
+PF: 1.825282251120899
+
+==============================================================================================================
+HISTORICAL POLICY REPRODUCTION
+==============================================================================================================
+calibration: True
+threshold: True
+session: True
+sizing: True
+
+POLICY PARITY PASSED: True
+
+==============================================================================================================
+FULL-FRAME FEATURE PARITY
+==============================================================================================================
+Rows checked: 16,453
+Features checked: 41
+Max absolute difference: 0.0
+Tolerance: 1e-10
+PASSED: True
+
+==============================================================================================================
+SEQUENTIAL FEATURE PARITY
+==============================================================================================================
+Replay timestamps: 418
+Checked 100 / 418
+Checked 200 / 418
+Checked 300 / 418
+Checked 400 / 418
+
+Sequential rows checked: 418
+Max sequential feature diff: 0.3333333333333333
+PASSED: False
+
+==============================================================================================================
+PROBABILITY PARITY
+==============================================================================================================
+Rows checked: 16,453
+Max RAW p_up diff: 0.0
+Max calibrated p_up diff: 0.0
+Tolerance: 1e-10
+PASSED: True
+
+==============================================================================================================
+TRADE TIMESTAMP PARITY
+==============================================================================================================
+Expected trades: 300
+Replay trades: 300
+Missing trades: 0
+Unexpected trades: 0
+PASSED: True
+
+==============================================================================================================
+TOP FEATURE DIFFERENCES
+==============================================================================================================
+
+                       feature  max_abs_diff
+0                     return_1           0.0
+1                     return_2           0.0
+2                     return_4           0.0
+3                     return_8           0.0
+4                    return_16           0.0
+5                        vol_4           0.0
+6                        vol_8           0.0
+7                       vol_16           0.0
+8                       vol_32           0.0
+9                 ma5_distance           0.0
+10                   ma5_slope           0.0
+11               ma10_distance           0.0
+12                  ma10_slope           0.0
+13               ma20_distance           0.0
+14                  ma20_slope           0.0
+15               ma50_distance           0.0
+16                  ma50_slope           0.0
+17              ma100_distance           0.0
+18                 ma100_slope           0.0
+19                        body           0.0
+20                  upper_wick           0.0
+21                  lower_wick           0.0
+22                   range_pct           0.0
+23                       rsi14           0.0
+24                       atr14           0.0
+25            distance_high_16           0.0
+26             distance_low_16           0.0
+27                    hour_sin           0.0
+28                    hour_cos           0.0
+29                     weekday           0.0
+30                       adx14           0.0
+31                       adx28           0.0
+32              ma20_50_spread           0.0
+33             ma50_100_spread           0.0
+34           trend_strength_20           0.0
+35           trend_strength_50           0.0
+36                price_pos_20           0.0
+37                price_pos_50           0.0
+38          ma_alignment_score           0.0
+39       slope_alignment_score           0.0
+40  directional_persistence_16           0.0
+
+==============================================================================================================
+FAILED SEQUENTIAL FEATURE ROWS
+==============================================================================================================
+
+                  signal_time  max_feature_diff  passed
+266 2026-06-11 02:45:00+00:00          0.333333   False
+
+==============================================================================================================
+HISTORICAL REPLAY FINAL REPORT
+==============================================================================================================
+Replay year: 2026
+Champion: BASE_PLUS_REGIME
+
+Expected trades: 300
+Replay trades: 300
+
+Max full-frame feature diff: 0.0
+Max sequential feature diff: 0.3333333333333333
+Max RAW probability diff: 0.0
+Max calibrated probability diff: 0.0
+
+Missing trades: 0
+Unexpected trades: 0
+Duplicate trades: 0
+Overlapping trades: 0
+
+EXPECTED PERFORMANCE
+PF: 1.825282251120899
+Avg: 0.00011777082708124947
+Growth: 0.03588118888467018
+Max DD: -0.0051943106534220185
+
+REPLAY PERFORMANCE
+PF: 1.825282251120899
+Avg: 0.00011777082708124947
+Growth: 0.03588118888467018
+Max DD: -0.0051943106534220185
+
+==============================================================================================================
+FINAL CHECKS
+==============================================================================================================
+historical_policy: True
+full_frame_features: True
+sequential_features: False
+probabilities: True
+trade_timestamps: True
+trade_details: True
+integrity: True
+performance_reproduction: True
+
+HISTORICAL REPLAY PARITY PASSED: False
+
+FINAL DECISION: FAIL_DO_NOT_START_PAPER_TRADING
+
+STOP.
+Do not start Paper Trading until every failed parity
+check has been diagnosed and corrected.
+
+==============================================================================================================
+REPLAY TEST COMPLETE
+==============================================================================================================
+Saved variables:
+HISTORICAL_REPLAY_LIVE_TRADES
+HISTORICAL_REPLAY_FEATURE_DIFF
+HISTORICAL_REPLAY_TRADE_DETAIL_PARITY
+HISTORICAL_REPLAY_FINAL_CHECKS
+HISTORICAL_REPLAY_DECISION

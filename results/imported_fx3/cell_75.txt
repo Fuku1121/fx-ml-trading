@@ -1,0 +1,1 @@
+AttributeError: 'DatetimeIndex' object has no attribute 'dt'

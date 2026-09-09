@@ -1,3 +1,11 @@
+# FX (3): clean-data validation and paper-system evidence
+
+- Preserve31 additional cells as archive stages28–36, including failed attempts.
+- Supersede contaminated-data headline metrics with clean-yearly-data comparisons.
+- Document the41-feature freeze,418-point prefix parity,300-trade historical replay and API-armed/zero-processed state.
+- Extract pure current feature calculations for review; preserve previous reference implementations as historical.
+- Add result tables, a non-executing contract snapshot, a reading notebook and current system guide.
+
 # Readability and reference-code update
 
 - Rewrite the overview for nontechnical readers; add a research introduction and glossary.

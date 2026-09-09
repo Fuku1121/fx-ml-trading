@@ -1,0 +1,40 @@
+====================================================================================================
+FULL-HISTORY PREFIX SEQUENTIAL PARITY
+====================================================================================================
+Timestamps to check: 418
+Mode: ALL canonical historical bars up to each timestamp
+
+Checked 100 / 418
+Checked 200 / 418
+Checked 300 / 418
+Checked 400 / 418
+
+====================================================================================================
+RESULT
+====================================================================================================
+Rows checked: 418
+Passed: 418
+Failed: 0
+Maximum feature difference: 0.0
+
+FULL PREFIX PARITY PASSED: True
+
+====================================================================================================
+ORIGINAL FAILURE TIMESTAMP
+====================================================================================================
+
+                  signal_time  history_rows worst_feature  max_feature_diff  passed
+266 2026-06-11 02:45:00+00:00        260348      return_1               0.0    True
+
+====================================================================================================
+FINAL DECISION
+====================================================================================================
+PASS_CANONICAL_FULL_HISTORY_SOLVES_PARITY
+
+The frozen strategy does NOT need to be changed.
+Production rule:
+Never calculate live features from an arbitrary tail(N) history.
+Maintain the canonical clean historical series and append each newly closed 15m bar.
+
+NEXT:
+Harden Live Inference Engine to enforce canonical history, then proceed to Paper Execution Engine.

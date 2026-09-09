@@ -1,0 +1,67 @@
+==============================================================================================================
+2026 HISTORICAL PAPER EXECUTION REPLAY
+==============================================================================================================
+Champion: BASE_PLUS_REGIME
+Year: 2026
+Expected trades: 300
+Base cost: 4e-05
+Holding period: 30 minutes
+
+==============================================================================================================
+HISTORICAL SIGNAL SOURCE SEARCH
+==============================================================================================================
+
+                        variable  exists  raw_rows  2026_trade_rows
+0  HISTORICAL_REPLAY_LIVE_TRADES    True       300              300
+1        FINAL_TOURNAMENT_TRADES    True      7222              300
+2  CHAMPION_REINTEGRATION_TRADES    True      3259              372
+3              CLEAN_BASE_TRADES    True      1881              325
+
+SELECTED SOURCE: HISTORICAL_REPLAY_LIVE_TRADES
+2026 Trades: 300
+SOURCE CHECK PASSED: True
+
+==============================================================================================================
+CANONICAL PRICE DATA
+==============================================================================================================
+Rows: 265,905
+Period: 2016-01-03 22:00:00+00:00 -> 2026-09-01 00:00:00+00:00
+
+==============================================================================================================
+EXECUTION PRICE CONVENTION DIAGNOSTIC
+==============================================================================================================
+
+           convention  entries  exits  trades  engine_errors  flat_at_end  max_entry_price_diff  max_exit_price_diff  max_gross_return_diff  max_net_return_diff  trade_level_pass
+0  PREVIOUS_BAR_CLOSE      300    300     300              0         True                   NaN                  NaN               0.000378             0.000466             False
+1    OPEN_AT_BOUNDARY       39     38      38            524        False                   NaN                  NaN                    NaN                  NaN             False
+
+==============================================================================================================
+EXECUTION PRICE PARITY FAILED
+==============================================================================================================
+Neither execution-price convention reproduced the historical Frozen trades.
+
+OPEN_AT_BOUNDARY errors:
+
+                   timestamp                   error  trade_id  open_trade_id  expected_trade_id
+0  2026-01-30 22:00:00+00:00      MISSING_EXIT_PRICE      39.0            NaN                NaN
+1  2026-02-01 22:30:00+00:00           OVERLAP_ENTRY      40.0           39.0                NaN
+2  2026-02-01 23:00:00+00:00  WRONG_POSITION_AT_EXIT       NaN           39.0               40.0
+3  2026-02-03 20:30:00+00:00           OVERLAP_ENTRY      41.0           39.0                NaN
+4  2026-02-03 21:00:00+00:00  WRONG_POSITION_AT_EXIT       NaN           39.0               41.0
+5  2026-02-03 21:45:00+00:00           OVERLAP_ENTRY      42.0           39.0                NaN
+6  2026-02-03 22:15:00+00:00  WRONG_POSITION_AT_EXIT       NaN           39.0               42.0
+7  2026-02-04 20:30:00+00:00           OVERLAP_ENTRY      43.0           39.0                NaN
+8  2026-02-04 21:00:00+00:00  WRONG_POSITION_AT_EXIT       NaN           39.0               43.0
+9  2026-02-04 21:00:00+00:00           OVERLAP_ENTRY      44.0           39.0                NaN
+10 2026-02-04 21:30:00+00:00  WRONG_POSITION_AT_EXIT       NaN           39.0               44.0
+11 2026-02-04 21:30:00+00:00           OVERLAP_ENTRY      45.0           39.0                NaN
+12 2026-02-04 22:00:00+00:00  WRONG_POSITION_AT_EXIT       NaN           39.0               45.0
+13 2026-02-05 20:45:00+00:00           OVERLAP_ENTRY      46.0           39.0                NaN
+14 2026-02-05 21:15:00+00:00  WRONG_POSITION_AT_EXIT       NaN           39.0               46.0
+15 2026-02-05 21:15:00+00:00           OVERLAP_ENTRY      47.0           39.0                NaN
+16 2026-02-05 21:45:00+00:00  WRONG_POSITION_AT_EXIT       NaN           39.0               47.0
+17 2026-02-05 21:45:00+00:00           OVERLAP_ENTRY      48.0           39.0                NaN
+18 2026-02-05 22:15:00+00:00  WRONG_POSITION_AT_EXIT       NaN           39.0               48.0
+19 2026-02-06 20:30:00+00:00           OVERLAP_ENTRY      49.0           39.0                NaN
+RuntimeError: Execution price semantics could not be reproduced.
+STOP before Forward Paper Trading.

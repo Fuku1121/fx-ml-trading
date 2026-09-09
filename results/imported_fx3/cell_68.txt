@@ -1,0 +1,130 @@
+==============================================================================================================
+CHAMPION DECISION VERIFIED
+==============================================================================================================
+Champion: BASE_PLUS_REGIME
+Tournament decision: FREEZE_BASE_PLUS_REGIME
+
+==============================================================================================================
+FEATURE FREEZE
+==============================================================================================================
+Feature count: 41
+01. return_1
+02. return_2
+03. return_4
+04. return_8
+05. return_16
+06. vol_4
+07. vol_8
+08. vol_16
+09. vol_32
+10. ma5_distance
+11. ma5_slope
+12. ma10_distance
+13. ma10_slope
+14. ma20_distance
+15. ma20_slope
+16. ma50_distance
+17. ma50_slope
+18. ma100_distance
+19. ma100_slope
+20. body
+21. upper_wick
+22. lower_wick
+23. range_pct
+24. rsi14
+25. atr14
+26. distance_high_16
+27. distance_low_16
+28. hour_sin
+29. hour_cos
+30. weekday
+31. adx14
+32. adx28
+33. ma20_50_spread
+34. ma50_100_spread
+35. trend_strength_20
+36. trend_strength_50
+37. price_pos_20
+38. price_pos_50
+39. ma_alignment_score
+40. slope_alignment_score
+41. directional_persistence_16
+
+==============================================================================================================
+CHAMPION DATASET
+==============================================================================================================
+Rows: 264,629
+Signal period: 2016-01-04 23:00:00+00:00 -> 2026-08-31 23:30:00+00:00
+Last label end: 2026-09-01 00:15:00+00:00
+
+==============================================================================================================
+FROZEN LIVE POLICY
+==============================================================================================================
+Policy source validation year: 2025
+Calibration: ISOTONIC
+Threshold: 0.58
+Session: ALL
+Sizing: STRONG
+Sizing scale: 1.7451299836342953
+Exit: FIXED_30_MINUTES
+Overlap: PROHIBITED
+Base cost: 4e-05
+
+Policy reproduction: {'calibration': True, 'threshold': np.True_, 'session': True, 'sizing': True}
+
+==============================================================================================================
+TRAINING PRODUCTION HGB
+==============================================================================================================
+Building expanding OOF predictions...
+Production HGB trained.
+Training rows: 264,629
+Calibration OOF rows: 215,088
+
+==============================================================================================================
+CHAMPION FREEZE COMPLETE
+==============================================================================================================
+Champion: BASE_PLUS_REGIME
+Version: champion_v1_base_plus_regime_20260909
+Features: 41
+Calibration: ISOTONIC
+Threshold: 0.58
+Session: ALL
+Sizing: STRONG
+Sizing scale: 1.7451299836342953
+Exit: 30 minutes
+Overlap: PROHIBITED
+
+Training rows: 264,629
+Clean data SHA256: cf1c35c1f9c606d55abdc6f20e54ce8f90ed194badaaa2ece3806b6418a41512
+
+Saved directory:
+production_champion\champion_v1_base_plus_regime_20260909
+
+Model:
+production_champion\champion_v1_base_plus_regime_20260909\hgb_model.joblib
+
+Manifest:
+production_champion\champion_v1_base_plus_regime_20260909\champion_manifest.json
+
+Calibrator:
+production_champion\champion_v1_base_plus_regime_20260909\calibrator.joblib
+
+==============================================================================================================
+DRY-RUN INFERENCE
+==============================================================================================================
+signal_time: 2026-09-01 00:00:00+00:00
+raw_p_up: 0.5677249330651749
+calibrated_p_up: 0.5510846166583871
+confidence: 0.5510846166583871
+session_allowed: True
+threshold_allowed: False
+action: NO_TRADE
+position_size: 0.0
+
+==============================================================================================================
+NEXT STEP
+==============================================================================================================
+Champion is now frozen.
+Do NOT perform additional feature/parameter optimization.
+Next: build the LIVE INFERENCE ENGINE that loads
+this frozen model and processes one newly closed 15m bar.

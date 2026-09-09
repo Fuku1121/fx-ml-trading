@@ -1,0 +1,41 @@
+
+========================================================================================
+USDJPY REAL MARKET DATA -> FORWARD PAPER
+========================================================================================
+Champion: champion_v1_base_plus_regime_20260909
+Symbol: USD/JPY
+Interval: 15min
+Paper only: True
+Real broker orders: False
+Historical backfill: False
+Detected Paper Engine: run_market_data_adapter_once
+
+[Credential-related output omitted]
+
+[Credential-related output omitted]
+
+========================================================================================
+REAL MARKET DATA CHECK
+========================================================================================
+Rows fetched: 100
+Closed rows: 99
+First: 2026-09-08 13:00:00+00:00
+Latest: 2026-09-09 13:30:00+00:00
+15m grid: True
+OHLC integrity: True
+
+========================================================================================
+FORWARD PAPER ARMED
+========================================================================================
+Connection: PASS
+Historical bars sent: 0
+Activation cutoff: 2026-09-09 13:30:00+00:00
+State persistence: True
+
+次に確定する15分足からForward Paperを開始します。
+
+========================================================================================
+CELL COMPLETE
+========================================================================================
+MARKET_CONNECTOR_RESULT:
+{'passed': True, 'reason': 'ARMED_WAITING_FOR_NEXT_BAR', 'processed': 0, 'activation_cutoff': Timestamp('2026-09-09 13:30:00+0000', tz='UTC')}

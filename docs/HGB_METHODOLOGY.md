@@ -1,3 +1,5 @@
+> **履歴資料**：これはセル58の旧30/50特徴量比較です。その後データ混在を調査し再構築しています。[最新の研究報告](RESEARCH_FX3.md)と[固定仕様](FROZEN_SYSTEM.md)を参照してください。
+
 # 最新HGB実験の処理と実装上の注意
 
 対象：[履歴27](../notebooks/archive/27_hgb_reintegration.ipynb)の元セル58。

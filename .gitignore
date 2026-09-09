@@ -18,3 +18,12 @@ data/raw/*
 !data/raw/.gitkeep
 results/runs/*
 !results/runs/.gitkeep
+
+# Local models, canonical prices and live/paper state
+production_champion/
+clean_dataset_rebuild/
+data_integrity_audit/
+csv_source_audit/
+*.joblib
+*.pkl
+*.pickle

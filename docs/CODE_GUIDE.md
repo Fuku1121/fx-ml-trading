@@ -1,41 +1,34 @@
 # コードの読み方
 
-## 最新HGBコードを読む順序
+## 現在の入口
 
-まず [evaluation.py](../src/fx_research/hgb/evaluation.py) の `evaluate_year` を読むと、研究の手順を追えます。
-過去で確率を補正し、前年で取引条件を選び、その条件を固定して翌年を評価する処理です。
+現在の候補は41特徴量の `BASE_PLUS_REGIME` です。[固定モデル・仮想売買の構成](FROZEN_SYSTEM.md)から、各段階の元コードへ進めます。
 
-| ファイル | 担当すること | 主な関数 |
-|---|---|---|
-| [config.py](../src/fx_research/hgb/config.py) | モデル・コスト・比較候補を固定する | 定数一覧 |
-| [features.py](../src/fx_research/hgb/features.py) | 価格から入力情報と将来の正解を作る | `make_all_features`, `prepare_dataset` |
-| [calibration.py](../src/fx_research/hgb/calibration.py) | モデルを学習し、予測確率のずれを補正する | `expanding_oof`, `choose_calibration` |
-| [trading.py](../src/fx_research/hgb/trading.py) | 取引の選別、量、コスト、成績を計算する | `select_trades`, `choose_sizing`, `stats_of_returns` |
-| [evaluation.py](../src/fx_research/hgb/evaluation.py) | 年の境界を決め、翌年の評価までをつなぐ | `make_split`, `evaluate_year` |
-| [runner.py](../src/fx_research/hgb/runner.py) | 指定CSVを読み、年別評価と結果保存を行う | `run`, `main` |
+今回、純粋な特徴量計算を次の2ファイルへ抽出しました。原本の6関数と定数の計算内容・特徴順を一致テストで確認しています。
 
-## 整理によって変えたこと
+| ファイル | 内容 |
+|---|---|
+| [frozen/base_features.py](../src/fx_research/frozen/base_features.py) | セル66の基本30特徴量。価格変化、変動性、移動平均、ローソク足など |
+| [frozen/features.py](../src/fx_research/frozen/features.py) | セル67の相場状態の追加特徴。41特徴量の順序は `FEATURE_SETS["BASE_PLUS_REGIME"]` |
+| [test_frozen_features.py](../tests/test_frozen_features.py) | 原本一致、未来データの影響、全履歴の接頭部分、取り込み資料の整合性 |
 
-元Notebookのセル58から、21個の関数・クラスと設定を役割別に抽出しました。日本語の説明を加え、短い処理の不要な改行を整理しています。
-設定と関数の計算内容は、元の構文木（AST）との比較テストで一致を確認します。
-元コードは [履歴27](../notebooks/archive/27_hgb_reintegration.ipynb) に保存しています。
+`make_final_tournament_features` に正規の全価格履歴を渡して計算します。この関数は学習やAPI接続を行いません。
+返される表には比較候補の他の特徴もあるため、固定モデルへ渡す列は上記41特徴量の順に限定する必要があります。
+直近250本などへ履歴を切り詰める変更は、元研究で見つかった符号特徴の不一致を再発させる可能性があります。
 
-実行入口は新しく追加したものです。Notebook内の変数を自動探索せず、CSVを引数で指定します。
-既存の入力検査で時刻・重複・価格の不整合を拒否し、新しいフォルダへ取引・設定・データのSHA-256を保存します。
-入力を自動修復しないため、元Notebookで受理していたデータが検査で止まる場合があります。
+## 実行状態を扱うコード
 
-`summary.csv` は指定した全評価年の集計です。元の開発期間表（2020–2025年）と同じ集計範囲とは限りません。
-`CHAMPION` などの元の候補名は、保存結果との対応を維持するため残しています。
+モデル固定、推論エンジン、仮想売買、データ受信は [履歴31–36の案内](FROZEN_SYSTEM.md#説明とコードを対応させる) にまとめています。
+これらはNotebook変数・モデルファイル・runtime状態に依存する原本です。必要な実体が添付されていないため、今回の整理では起動していません。
+エラーになった試行も残し、その後の修正と保存結果を追えるようにしています。
 
-## 動作確認の範囲
+## 以前の比較用コード
 
-[HGBのテスト](../tests/test_hgb.py)では、元の計算との一致、未来価格を変えた場合の特徴量、欠測・年境界、校正、非重複とコスト、人工データによる実行を確認します。
-人工データのテスト成功は、実市場の収益性を証明するものではありません。実価格での再評価と、[監査項目](HGB_METHODOLOGY.md)への対応は今後の作業です。
+| 場所 | 対応する実験 |
+|---|---|
+| [hgb/evaluation.py](../src/fx_research/hgb/evaluation.py) | セル58の旧30/50特徴量比較。固定済み41特徴量とは別 |
+| [confidence.py](../src/fx_research/confidence.py) | 以前のRF年別Confidence比較 |
+| [pipeline.py](../src/fx_research/pipeline.py) | 5分足Quality比較 |
 
-## 以前の比較基準
-
-- RFの年別Confidence検証：[confidence.py](../src/fx_research/confidence.py)、[方法](METHODOLOGY.md)。
-- 5分足Quality検証：[pipeline.py](../src/fx_research/pipeline.py)、[旧ベースライン](QUALITY_BASELINE.md)。
-- 試行錯誤の原本：[Notebook一覧](../notebooks/README.md)。
-
-最新HGB、以前のRF、5分足Qualityは異なる実験です。コードと保存成績を取り違えないよう、入口を分けています。
+各参照実装のテスト成功は、そのモデルの保存成績や将来収益の保証ではありません。
+旧HGBの高い成績は、その後のデータ混在調査によって現在の性能根拠から外しています。

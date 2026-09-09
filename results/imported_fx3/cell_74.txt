@@ -1,0 +1,84 @@
+==============================================================================================================
+PAPER ENGINE MECHANICS UNIT TEST
+==============================================================================================================
+BUY accounting: True
+SELL accounting: True
+
+==============================================================================================================
+INITIAL PAPER ENGINE STATE
+==============================================================================================================
+not_halted: True
+flat: True
+no_pending_order: True
+no_entries: True
+no_exits: True
+equity_intact: True
+
+INITIAL STATE PASSED: True
+
+==============================================================================================================
+PAPER -> LIVE ENGINE CONNECTION TEST
+==============================================================================================================
+canonical_history: True
+frozen_hash: True
+runtime_mode: True
+feature_count: True
+
+Latest signal time: 2026-09-01 00:00:00+00:00
+Latest action: NO_TRADE
+Latest reason: LOW_CONFIDENCE
+Latest confidence: 0.5510846166583871
+
+==============================================================================================================
+PAPER EXECUTION ENGINE BUILD REPORT
+==============================================================================================================
+Champion: BASE_PLUS_REGIME
+Version: champion_v1_base_plus_regime_20260909
+Starting equity: 1,000,000.00
+Current equity: 1,000,000.00
+Canonical rows: 265,905
+Canonical latest: 2026-09-01 00:00:00+00:00
+Cost: 4e-05
+Holding period: 30 minutes
+Open position: None
+Pending order: None
+
+Paper contract:
+production_champion\champion_v1_base_plus_regime_20260909\runtime\paper\paper_execution_contract.json
+
+==============================================================================================================
+FINAL CHECKS
+==============================================================================================================
+live_hardening_passed: True
+buy_return_accounting: True
+sell_return_accounting: True
+engine_initial_state: True
+live_engine_connection: True
+flat_start: True
+no_pending_order: True
+paper_only: True
+overlap_prohibited: True
+fixed_30m_exit: True
+canonical_history_required: True
+contract_saved: True
+
+PAPER EXECUTION ENGINE BUILD PASSED: True
+
+FINAL DECISION: PASS_READY_FOR_EXECUTION_REPLAY_TEST
+
+Paper Execution Engine is constructed successfully.
+No real orders can be sent.
+The Frozen Champion has not been modified.
+
+NEXT STEP:
+2026 HISTORICAL PAPER EXECUTION REPLAY TEST.
+
+The next test will feed historical 15m boundaries
+through this exact PaperExecutionEngine and verify:
+300 expected trades,
+300 executed trades,
+0 missing,
+0 unexpected,
+0 duplicate,
+0 overlap,
+and matching entry/exit/return/equity behavior.

@@ -1,0 +1,58 @@
+==============================================================================================================
+FROZEN COST ACCOUNTING SEMANTICS DIAGNOSTIC
+==============================================================================================================
+Historical rows: 300
+
+==============================================================================================================
+CANDIDATE COST ACCOUNTING
+==============================================================================================================
+
+           accounting_mode  valid_rows  exact_matches_1e-12  max_abs_diff  mean_abs_diff
+0         SIZE_SCALED_COST         300                  300  0.000000e+00   0.000000e+00
+1     EXPOSURE_SCALED_COST         300                  300  8.673617e-19   1.908753e-20
+2  FIXED_COST_AFTER_SIZING         300                    0  3.913813e-05   6.364014e-06
+3       UNSIZED_FIXED_COST         300                    0  1.379950e-03   5.701622e-05
+
+==============================================================================================================
+IMPLIED COST DIAGNOSTIC
+==============================================================================================================
+Frozen base cost: 4e-05
+Median implied UNIT cost: 3.9999999999999996e-05
+Max UNIT cost difference: 1.1519648082658485e-19
+
+Median position size: 0.947823579392935
+Min position size: 0.8848763144530157
+Max position size: 1.9784532232044483
+
+Median total portfolio cost: 3.7912943175717403e-05
+Max total-cost reproduction diff: 5.082197683525802e-19
+
+==============================================================================================================
+FROZEN COST CONTRACT
+==============================================================================================================
+Accounting mode: SIZE_SCALED_COST
+Formula:
+net_return = position_size * (gross_return - 4e-05)
+
+Base cost @ 1.0x: 4e-05
+Exact matches: 300/300
+Max difference: 0.0
+
+==============================================================================================================
+FINAL DECISION
+==============================================================================================================
+COST ACCOUNTING SEMANTICS PASSED: True
+FINAL DECISION: PASS_SIZE_SCALED_COST_CONTRACT_FROZEN
+
+Champion/model/features were NOT modified.
+Execution accounting semantics only has been reconstructed.
+
+NEXT STEP:
+Rerun FINAL 2026 PAPER EXECUTION REPLAY using:
+net_return = position_size * (gross_return - FROZEN_BASE_COST)
+
+==============================================================================================================
+CELL COMPLETE
+==============================================================================================================
+Passed: True
+Mode: SIZE_SCALED_COST

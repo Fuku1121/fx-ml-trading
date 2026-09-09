@@ -1,0 +1,211 @@
+====================================================================================================
+CLEAN DATA PREFLIGHT
+====================================================================================================
+Rows: 265,905
+Period: 2016-01-03 22:00:00+00:00 -> 2026-09-01 00:00:00+00:00
+Duplicate timestamps: 0
+Bad 15m timestamps: 0
+Contiguous >5% gaps: 0
+
+====================================================================================================
+MODEL DATASET
+====================================================================================================
+Usable rows: 264,629
+Features: 30
+
+====================================================================================================
+CLEAN BASE HGB REVALIDATION
+====================================================================================================
+
+TEST YEAR 2020
+------------------------------------------------------------
+Calibration: PLATT
+Threshold: 0.56
+Session: EXCLUDE_08_13
+Sizing: STRONG
+AUC: 0.5316
+Trades: 394
+Win: 58.63%
+Avg Return: 0.01631%
+PF: 1.933
+Growth: 6.621%
+Max DD: -0.784%
+Return/DD: 8.448
+
+TEST YEAR 2021
+------------------------------------------------------------
+Calibration: ISOTONIC
+Threshold: 0.6
+Session: ALL
+Sizing: STRONG
+AUC: 0.5316
+Trades: 271
+Win: 56.09%
+Avg Return: 0.00605%
+PF: 1.446
+Growth: 1.650%
+Max DD: -0.834%
+Return/DD: 1.978
+
+TEST YEAR 2022
+------------------------------------------------------------
+Calibration: RAW
+Threshold: 0.65
+Session: UTC_13_24
+Sizing: STRONG
+AUC: 0.5308
+Trades: 81
+Win: 71.60%
+Avg Return: 0.08342%
+PF: 10.463
+Growth: 6.944%
+Max DD: -0.328%
+Return/DD: 21.195
+
+TEST YEAR 2023
+------------------------------------------------------------
+Calibration: PLATT
+Threshold: 0.6
+Session: UTC_13_24
+Sizing: FIXED
+AUC: 0.5270
+Trades: 72
+Win: 68.06%
+Avg Return: 0.02571%
+PF: 2.474
+Growth: 1.863%
+Max DD: -0.662%
+Return/DD: 2.814
+
+TEST YEAR 2024
+------------------------------------------------------------
+Calibration: ISOTONIC
+Threshold: 0.55
+Session: UTC_13_24
+Sizing: FIXED
+AUC: 0.5209
+Trades: 615
+Win: 56.91%
+Avg Return: 0.00237%
+PF: 1.108
+Growth: 1.452%
+Max DD: -2.167%
+Return/DD: 0.670
+
+TEST YEAR 2025
+------------------------------------------------------------
+Calibration: ISOTONIC
+Threshold: 0.62
+Session: EXCLUDE_08_13
+Sizing: GENTLE
+AUC: 0.5218
+Trades: 123
+Win: 60.16%
+Avg Return: 0.01172%
+PF: 1.572
+Growth: 1.447%
+Max DD: -0.973%
+Return/DD: 1.488
+
+TEST YEAR 2026
+------------------------------------------------------------
+Calibration: ISOTONIC
+Threshold: 0.58
+Session: ALL
+Sizing: MODERATE
+AUC: 0.5283
+Trades: 325
+Win: 62.46%
+Avg Return: 0.00800%
+PF: 1.561
+Growth: 2.628%
+Max DD: -0.960%
+Return/DD: 2.737
+
+====================================================================================================
+ANNUAL OOS RESULTS
+====================================================================================================
+
+   test_year  validation_year calibration  threshold        session    sizing       auc     brier       ece  trades  win_rate  avg_return  profit_factor    growth    max_dd  return_to_dd
+0       2020             2019       PLATT       0.56  EXCLUDE_08_13    STRONG  0.531559  0.249098  0.009863     394  0.586294    0.000163       1.932628  0.066208 -0.007837      8.447838
+1       2021             2020    ISOTONIC       0.60            ALL    STRONG  0.531594  0.249303  0.017848     271  0.560886    0.000060       1.446254  0.016496 -0.008340      1.977922
+2       2022             2021         RAW       0.65      UTC_13_24    STRONG  0.530835  0.249314  0.017527      81  0.716049    0.000834      10.462803  0.069440 -0.003276     21.195140
+3       2023             2022       PLATT       0.60      UTC_13_24     FIXED  0.527034  0.249126  0.004516      72  0.680556    0.000257       2.473979  0.018631 -0.006621      2.814088
+4       2024             2023    ISOTONIC       0.55      UTC_13_24     FIXED  0.520900  0.249021  0.005520     615  0.569106    0.000024       1.108227  0.014522 -0.021667      0.670234
+5       2025             2024    ISOTONIC       0.62  EXCLUDE_08_13    GENTLE  0.521831  0.249278  0.003023     123  0.601626    0.000117       1.571978  0.014473 -0.009727      1.487912
+6       2026             2025    ISOTONIC       0.58            ALL  MODERATE  0.528253  0.247932  0.020849     325  0.624615    0.000080       1.561194  0.026285 -0.009604      2.736878
+
+====================================================================================================
+DEVELOPMENT OOS 2020-2025
+====================================================================================================
+
+   years  positive_years  pf_above_1_years  mean_auc  mean_brier  mean_ece  trades  win_rate  avg_return  profit_factor   growth    max_dd  return_to_dd
+0      6               6                 6  0.527292     0.24919  0.009716    1556  0.587404    0.000126       1.686292  0.21513 -0.021667      9.928763
+
+====================================================================================================
+2026 CONFIRMATION
+====================================================================================================
+
+   test_year  validation_year calibration  threshold session    sizing       auc     brier       ece  trades  win_rate  avg_return  profit_factor    growth    max_dd  return_to_dd
+6       2026             2025    ISOTONIC       0.58     ALL  MODERATE  0.528253  0.247932  0.020849     325  0.624615     0.00008       1.561194  0.026285 -0.009604      2.736878
+
+====================================================================================================
+COST STRESS
+====================================================================================================
+
+   cost_x  trades  win_rate  avg_return  profit_factor    growth    max_dd  return_to_dd
+0     1.0    1556  0.587404    0.000126       1.686292  0.215130 -0.021667      9.928763
+1     1.5    1556  0.559126    0.000105       1.548716  0.177106 -0.022333      7.930305
+2     2.0    1556  0.537918    0.000085       1.422032  0.140272 -0.024594      5.703584
+
+====================================================================================================
+2022 / 2025 OUTLIER AUDIT
+====================================================================================================
+
+   year  trades  win_rate  avg_return  profit_factor    growth    max_dd  return_to_dd  largest_trade  worst_trade  top1_profit_share  top5_profit_share  top10_profit_share
+0  2022      81  0.716049    0.000834      10.462803  0.069440 -0.007121      9.751257       0.022476    -0.003276           0.300841           0.629248            0.719590
+1  2025     123  0.601626    0.000117       1.571978  0.014473 -0.024897      0.581305       0.003533    -0.004049           0.089197           0.292815            0.436389
+
+====================================================================================================
+EXTREME 30M TRADES >2%
+====================================================================================================
+
+                           test_year  side  confidence  position_size  future_return  gross_return  net_return
+timestamp
+2022-10-23 23:00:00+00:00       2022  SELL     0.66921       0.932953      -0.024131      0.024131    0.022476
+
+====================================================================================================
+FINAL CLEAN REVALIDATION DIAGNOSIS
+====================================================================================================
+Development positive years: 6 / 6
+Development PF > 1 years: 6 / 6
+Development aggregate PF: 1.6863
+Development Avg Return: 0.01258%
+2026 confirmation: True
+2x cost survives: True
+Duplicate signals: 0
+Overlapping positions: 0
+Extreme >2% 30m trades: 1
+
+FINAL DECISION: CLEAN_BASE_PIPELINE_PASSES_REVALIDATION
+
+WARNINGS:
+ - PF > 5 の年が 1 件あります。
+ - 2022/2025で上位10取引が総利益の50%以上を占める年があります。
+ - 30分future returnが±2%超の取引が 1 件あります。
+
+次の段階:
+BASE vs BASE+REGIME vs BASE+VOL+REGIME
+FINAL FEATURE TOURNAMENTへ進む。
+
+====================================================================================================
+REVALIDATION COMPLETE
+====================================================================================================
+Saved variables:
+CLEAN_BASE_ANNUAL
+CLEAN_BASE_TRADES
+CLEAN_BASE_DEVELOPMENT
+CLEAN_BASE_CONFIRMATION
+CLEAN_BASE_COST_STRESS
+CLEAN_BASE_OUTLIER_AUDIT
+CLEAN_BASE_FINAL_DECISION

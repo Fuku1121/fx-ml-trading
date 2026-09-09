@@ -1,0 +1,44 @@
+
+================================================================================
+FORWARD PAPER INGESTION BRIDGE
+================================================================================
+Bridge ready: True
+Champion: champion_v1_base_plus_regime_20260909
+Frozen latest: 2026-09-01 00:00:00+00:00
+Paper directory: production_champion\champion_v1_base_plus_regime_20260909\runtime\paper_forward
+Forward feed: production_champion\champion_v1_base_plus_regime_20260909\runtime\paper_forward\usdjpy_15m_forward_feed.csv
+Incoming file: production_champion\champion_v1_base_plus_regime_20260909\runtime\paper_forward\incoming_usdjpy_15m.csv
+Audit log: production_champion\champion_v1_base_plus_regime_20260909\runtime\paper_forward\forward_ingestion_audit.csv
+run_forward_paper exists: True
+
+================================================================================
+FINAL BRIDGE CHECK
+================================================================================
+champion_directory: True
+paper_directory: True
+frozen_cutoff: True
+paper_engine: True
+paper_only: True
+real_orders: False
+
+FORWARD_INGESTION_READY: False
+
+================================================================================
+READY — WAITING FOR NEW 15M BARS
+================================================================================
+No market bars were invented or generated.
+
+Incoming CSV template:
+production_champion\champion_v1_base_plus_regime_20260909\runtime\paper_forward\incoming_usdjpy_15m.csv
+
+Required columns:
+['timestamp', 'open', 'high', 'low', 'close']
+
+When real closed 15m bars are supplied, run:
+run_forward_paper_once(your_dataframe)
+
+================================================================================
+CELL COMPLETE
+================================================================================
+Bridge passed: False
+Result: {'passed': False, 'reason': 'WAITING_FOR_MARKET_DATA'}

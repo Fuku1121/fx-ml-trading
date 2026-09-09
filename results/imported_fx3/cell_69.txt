@@ -1,0 +1,73 @@
+====================================================================================================
+LIVE ENGINE ARTIFACT CHECK
+====================================================================================================
+Directory: production_champion\champion_v1_base_plus_regime_20260909
+Champion: BASE_PLUS_REGIME
+Version: champion_v1_base_plus_regime_20260909
+Feature count: 41
+Model: HistGradientBoostingClassifier
+Calibration: ISOTONIC
+Threshold: 0.58
+Session: ALL
+Sizing: STRONG
+Sizing scale: 1.7451299836342953
+Overlap: PROHIBITED
+
+====================================================================================================
+LIVE ENGINE SMOKE TEST
+====================================================================================================
+
+==========================================================================================
+FROZEN CHAMPION LIVE SIGNAL
+==========================================================================================
+Champion: BASE_PLUS_REGIME
+Version: champion_v1_base_plus_regime_20260909
+Signal bar: 2026-09-01 00:00:00+00:00
+Bar closed: 2026-09-01 00:15:00+00:00
+
+Raw p_up: 0.56772493
+Calibrated p_up: 0.55108462
+Confidence: 0.55108462
+Threshold: 0.58
+
+Proposed side: BUY
+Threshold allowed: False
+Session allowed: True
+Existing position: False
+
+ACTION: NO_TRADE
+Reason: LOW_CONFIDENCE
+Position size: 0.0
+
+====================================================================================================
+FREEZE DRY-RUN PARITY CHECK
+====================================================================================================
+signal_time: True
+raw_p_up: True
+calibrated_p_up: True
+confidence: True
+session_allowed: True
+threshold_allowed: True
+action: True
+position_size: True
+
+PARITY PASSED: True
+
+====================================================================================================
+LIVE INFERENCE ENGINE READY
+====================================================================================================
+Champion: BASE_PLUS_REGIME
+Features: 41
+Frozen model loaded: YES
+Frozen calibrator loaded: YES
+Previous Dry-run parity: PASS
+
+No training was performed.
+No optimization was performed.
+No future prices were used in feature construction.
+
+NEXT STEP:
+Historical Replay Parity Test.
+We will feed historical 15m bars to this exact
+Live Engine sequentially and verify that its
+signals match the frozen backtest behavior.

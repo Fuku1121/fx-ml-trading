@@ -1,0 +1,31 @@
+[Unit]
+Description=Frozen FX paper comparison (no real orders)
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=600
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=fxpaper
+Group=fxpaper
+WorkingDirectory=/opt/fx-paper/app
+StateDirectory=fx-paper
+LoadCredential=finnhub_api_key:/etc/fx-paper/finnhub_api_key
+ExecStartPre=/opt/fx-paper/venv/bin/python /opt/fx-paper/app/runner.py preflight
+ExecStart=/opt/fx-paper/venv/bin/python /opt/fx-paper/app/runner.py run --state-dir /var/lib/fx-paper
+Restart=on-failure
+RestartSec=60
+RestartPreventExitStatus=42
+TimeoutStopSec=45
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OMP_NUM_THREADS=2
+Environment=OPENBLAS_NUM_THREADS=2
+
+[Install]
+WantedBy=multi-user.target

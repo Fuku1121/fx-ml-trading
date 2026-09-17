@@ -1,0 +1,17 @@
+[
+  {
+    "name": "USDJPY_120m_cross_cost_filtered",
+    "pair": "USDJPY",
+    "predictions": 815,
+    "market_days": 12,
+    "promotion_eligible": false,
+    "trades": 6,
+    "trades_per_day": 0.5,
+    "return_pct": 0.06820461829826208,
+    "stress_return_pct": 0.03959050500659256,
+    "profit_factor": 1.143306923034438,
+    "win_rate": 0.5,
+    "closed_drawdown_pct": -0.3273393241518874,
+    "mean_net_bps": 1.158827468460438
+  }
+]

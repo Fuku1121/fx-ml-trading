@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+model/
+runtime/
+state/
+backups/
+*.sqlite*
+*.db*
+*.jsonl
+.env*
+*.key
+*.pem
+finnhub_api_key

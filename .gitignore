@@ -27,3 +27,14 @@ csv_source_audit/
 *.joblib
 *.pkl
 *.pickle
+
+# Research inputs and live state are not repository artifacts
+.venv-paper/
+research/**/data/
+research/**/runs/
+research/**/*.joblib
+research/**/*.sqlite*
+paper_trading/model/
+*.sqlite*
+*.jsonl
+finnhub_api_key

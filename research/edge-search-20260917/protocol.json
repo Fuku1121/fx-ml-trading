@@ -1,0 +1,32 @@
+{
+  "pairs": [
+    "USDJPY",
+    "EURUSD",
+    "GBPUSD",
+    "AUDUSD"
+  ],
+  "horizons_minutes": [
+    60,
+    120,
+    240
+  ],
+  "feature_sets": [
+    "base41",
+    "base41_plus_other_pair_lag_returns"
+  ],
+  "policies": [
+    "probability",
+    "cost_filtered",
+    "expected_return"
+  ],
+  "classifier_threshold": 0.58,
+  "return_threshold": "1.5x cost estimate known at decision",
+  "models": "HGB classifier plus ATR-scaled HGB regressor; smaller leaves constrained by min 100 samples and L2=10",
+  "split": "2025: train2021-23/cal2024H1/validate2024H2; 2026: train2022-24/cal2025H1/validate2025H2",
+  "cost": "actual bid/ask + 0.2 pip + 0.00005 roundtrip; stress double spread +0.5pip+same commission",
+  "quality": "150 observed bars; expected weekend closure allowed without filling; intramarket gaps restart anchor; future gaps excluded from scoring",
+  "positions": "next bar entry, one position per pair, no NY17 rollover crossing, fixed1x",
+  "selection": "Exploratory 72 policies per year. Candidate must have >=30 trades and positive base/stress in BOTH 2025 and 2026; rank by minimum stress return, at most one per pair. Freeze before acquiring Sept holdout.",
+  "holdout": "Do not download or inspect 2026-09-01 through 2026-09-16 quotes until candidates and model files are frozen. Evaluate selected candidates once; too short to prove future profitability.",
+  "warning": "2025/2026 Jan-Aug have already been explored. Positive research results are not confirmation. Expected-return policy is a different signal definition, not a 58% probability claim."
+}

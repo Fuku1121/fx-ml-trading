@@ -1,0 +1,10 @@
+# Versions already installed and used for the saved Champion on this PC.
+# Python 3.13.9. Prefer the existing miniconda3 interpreter; do not upgrade blindly.
+numpy==2.4.4
+pandas==3.0.3
+scikit-learn==1.9.0
+joblib==1.5.3
+websocket-client==1.9.0
+tzdata==2026.1
+scipy==1.17.1
+threadpoolctl==3.6.0

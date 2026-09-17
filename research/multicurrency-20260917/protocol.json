@@ -1,0 +1,72 @@
+{
+  "pairs": [
+    "USDJPY",
+    "EURUSD",
+    "GBPUSD",
+    "AUDUSD"
+  ],
+  "test_years": [
+    2025,
+    2026
+  ],
+  "2026_end_exclusive": "2026-09-01",
+  "training": "3 years before calibration year; purged chronological split",
+  "calibration": "preceding full year, isotonic",
+  "models": [
+    "HGB",
+    "standardized logistic"
+  ],
+  "horizons_minutes": [
+    30,
+    60
+  ],
+  "threshold": 0.58,
+  "features": [
+    "return_1",
+    "return_2",
+    "return_4",
+    "return_8",
+    "return_16",
+    "vol_4",
+    "vol_8",
+    "vol_16",
+    "vol_32",
+    "ma5_distance",
+    "ma5_slope",
+    "ma10_distance",
+    "ma10_slope",
+    "ma20_distance",
+    "ma20_slope",
+    "ma50_distance",
+    "ma50_slope",
+    "ma100_distance",
+    "ma100_slope",
+    "body",
+    "upper_wick",
+    "lower_wick",
+    "range_pct",
+    "rsi14",
+    "atr14",
+    "distance_high_16",
+    "distance_low_16",
+    "hour_sin",
+    "hour_cos",
+    "weekday",
+    "adx14",
+    "adx28",
+    "ma20_50_spread",
+    "ma50_100_spread",
+    "trend_strength_20",
+    "trend_strength_50",
+    "price_pos_20",
+    "price_pos_50",
+    "ma_alignment_score",
+    "slope_alignment_score",
+    "directional_persistence_16"
+  ],
+  "execution": "next bar open at ask/bid; exit bid/ask at horizon close; nonoverlap per pair",
+  "cost": "observed spread + 0.2 pip + 0.00005 commission per roundtrip; stress spread doubled + 0.5 pip + same commission",
+  "quality": "150 consecutive positive-volume bars and 4 future bars; no fill",
+  "position_size": "1x per independent pair; portfolio fixed 1/4 capital each",
+  "limits": "No actual orders; observed quote OHLC not guaranteed fills; no swaps or intratrade drawdown; exploration across 32 conditions"
+}

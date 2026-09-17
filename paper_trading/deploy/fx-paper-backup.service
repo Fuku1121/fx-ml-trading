@@ -1,0 +1,14 @@
+[Unit]
+Description=Consistent individual SQLite snapshots of FX paper state
+
+[Service]
+Type=oneshot
+User=fxpaper
+Group=fxpaper
+StateDirectory=fx-paper
+ExecStart=/opt/fx-paper/venv/bin/python /opt/fx-paper/app/backup.py --state-dir /var/lib/fx-paper --destination /var/lib/fx-paper/backups
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true

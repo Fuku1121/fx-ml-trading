@@ -1,5 +1,8 @@
 # Current project context — FX (3)
 
+> この文書は9月9日までの構成・研究の記録です。9月17日までの追加検証とクラウド運転は [最新の研究案内](research/README.md) を参照してください。旧APIや待機状態の説明は当時の記録です。
+
+
 - Latest source: FX (3).ipynb. Original cells0–58 unchanged; new59–89; empty90.
 - Data contamination was investigated. Yearly15m-only rebuild:265,905 rows. Old cell58 PF2.950 is superseded, not current evidence.
 - Clean tournament cell67: BASE30 vs BASE_PLUS_REGIME41 vs BASE_PLUS_VOL_REGIME54. Selected41-feature candidate; definitions differ from old50-feature experiment.

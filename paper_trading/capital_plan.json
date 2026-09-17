@@ -1,0 +1,15 @@
+{
+  "mode": "paper_capital_replay_only",
+  "initial_capital_jpy": 30000.0,
+  "monthly_deposit_jpy": 30000.0,
+  "deposit_schedule": "Monthly anniversary of common comparison start in Asia/Tokyo; missing day uses month end; no deposit at time zero",
+  "leverage_on_allocated_margin": 25.0,
+  "switch_above_equity_jpy": 100000.0,
+  "after_threshold": "confidence_margin_fraction",
+  "sizing_scale": 1.7451299836342953,
+  "threshold": 0.58,
+  "max_original_size": 2.0,
+  "margin_stop_ratio_assumption": 0.5,
+  "margin_stop_note": "Illustrative 50% maintenance stop, NOT a selected broker rule. Continuous intratick prices and executable bid/ask unavailable.",
+  "real_orders": false
+}

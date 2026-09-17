@@ -1,0 +1,20 @@
+class_accuracy,multiclass_brier,rows,market_days,qualifying_predictions,trades,trades_per_day,days_without_trade,net_win_rate,mean_net_bps,profit_factor,return_pct,closed_equity_max_drawdown_pct,name,phase
+0.4528301886792453,0.5012694064071981,53,1,0,0,0.0,1,,,,0.0,0.0,2026_15m_1_binary,Exploratory inspected forward slice; no deployment
+0.4528301886792453,0.6045068116930712,53,1,0,0,0.0,1,,,,0.0,0.0,2026_15m_1_ternary,Exploratory inspected forward slice; no deployment
+0.5660377358490566,0.4983191721590461,53,1,0,0,0.0,1,,,,0.0,0.0,2026_15m_3_binary,Exploratory inspected forward slice; no deployment
+0.4528301886792453,0.6088907848682695,53,1,0,0,0.0,1,,,,0.0,0.0,2026_15m_3_ternary,Exploratory inspected forward slice; no deployment
+0.5283018867924528,0.49634689534482423,53,1,0,0,0.0,1,,,,0.0,0.0,2026_15m_all_binary,Exploratory inspected forward slice; no deployment
+0.49056603773584906,0.5980964780376279,53,1,0,0,0.0,1,,,,0.0,0.0,2026_15m_all_ternary,Exploratory inspected forward slice; no deployment
+0.5283018867924528,0.49830198638507067,53,1,0,0,0.0,1,,,,0.0,0.0,2026_30m_1_binary,Exploratory inspected forward slice; no deployment
+0.4528301886792453,0.5002314944337672,53,1,0,0,0.0,1,,,,0.0,0.0,2026_30m_1_binary_calendar,Exploratory inspected forward slice; no deployment
+0.5094339622641509,0.52183100791155,53,1,0,0,0.0,1,,,,0.0,0.0,2026_30m_1_ternary,Exploratory inspected forward slice; no deployment
+0.5094339622641509,0.5003645136646754,53,1,0,0,0.0,1,,,,0.0,0.0,2026_30m_3_binary,Exploratory inspected forward slice; no deployment
+0.41509433962264153,0.5204083196726278,53,1,0,0,0.0,1,,,,0.0,0.0,2026_30m_3_ternary,Exploratory inspected forward slice; no deployment
+0.41509433962264153,0.5020664307968493,53,1,1,1,1.0,0,1.0,2.340529857268026,,0.02340529857267626,0.0,2026_30m_all_binary,Exploratory inspected forward slice; no deployment
+0.49056603773584906,0.52129856130501,53,1,0,0,0.0,1,,,,0.0,0.0,2026_30m_all_ternary,Exploratory inspected forward slice; no deployment
+0.6037735849056604,0.4962779581857755,53,1,0,0,0.0,1,,,,0.0,0.0,2026_60m_1_binary,Exploratory inspected forward slice; no deployment
+0.4528301886792453,0.5516782423212533,53,1,0,0,0.0,1,,,,0.0,0.0,2026_60m_1_ternary,Exploratory inspected forward slice; no deployment
+0.5094339622641509,0.49214882269168125,53,1,0,0,0.0,1,,,,0.0,0.0,2026_60m_3_binary,Exploratory inspected forward slice; no deployment
+0.5849056603773585,0.5440325605828599,53,1,0,0,0.0,1,,,,0.0,0.0,2026_60m_3_ternary,Exploratory inspected forward slice; no deployment
+0.5283018867924528,0.49991967836682016,53,1,0,0,0.0,1,,,,0.0,0.0,2026_60m_all_binary,Exploratory inspected forward slice; no deployment
+0.5094339622641509,0.5495107627695813,53,1,0,0,0.0,1,,,,0.0,0.0,2026_60m_all_ternary,Exploratory inspected forward slice; no deployment

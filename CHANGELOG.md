@@ -1,5 +1,13 @@
 # FX (3): clean-data validation and paper-system evidence
 
+## 2026-09-17
+
+- READMEを更新し、研究・過去再現・仮想運転の成績を分離。
+- 9月12〜17日の品質監査、モデル比較、複数通貨と72候補探索を整理。
+- 仮想売買コード、資金シナリオ、オフラインテスト、専用CIを追加。
+- EC2での履歴準備開始と未設定の運用項目を記録。実注文なし。
+
+
 - Preserve31 additional cells as archive stages28–36, including failed attempts.
 - Supersede contaminated-data headline metrics with clean-yearly-data comparisons.
 - Document the41-feature freeze,418-point prefix parity,300-trade historical replay and API-armed/zero-processed state.

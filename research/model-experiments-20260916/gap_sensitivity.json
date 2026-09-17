@@ -1,0 +1,42 @@
+{
+  "signal_count": 57,
+  "scenarios": [
+    {
+      "position": "middle",
+      "seconds": 20,
+      "bar_experiments": 199,
+      "ohlc_changed": 2,
+      "max_probability_difference": 0.0,
+      "experiments_changing_direction": 0,
+      "experiments_changing_threshold58": 0
+    },
+    {
+      "position": "middle",
+      "seconds": 60,
+      "bar_experiments": 199,
+      "ohlc_changed": 13,
+      "max_probability_difference": 0.008412776557403578,
+      "experiments_changing_direction": 1,
+      "experiments_changing_threshold58": 0
+    },
+    {
+      "position": "start",
+      "seconds": 20,
+      "bar_experiments": 199,
+      "ohlc_changed": 193,
+      "max_probability_difference": 0.010203515043508471,
+      "experiments_changing_direction": 4,
+      "experiments_changing_threshold58": 0
+    },
+    {
+      "position": "end",
+      "seconds": 20,
+      "bar_experiments": 199,
+      "ohlc_changed": 184,
+      "max_probability_difference": 0.02124908257735414,
+      "experiments_changing_direction": 6,
+      "experiments_changing_threshold58": 0
+    }
+  ],
+  "scope": "Each experiment removes observations from ONE originally clean bar; hypothetical sensitivity, not reconstruction of actual missing prices"
+}

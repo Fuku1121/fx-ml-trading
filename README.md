@@ -4,7 +4,7 @@
 
 予測モデルを作るだけでなく、データの欠損、取引費用、通信断、再起動によって結果がどう変わるかを確認しています。目的は、利益を約束することではなく、判断の根拠と検証の限界を追える仕組みを作ることです。
 
-[研究の全体像と結果](research/README.md) · [クラウド運転の記録](docs/CLOUD_PAPER_20260917.md) · [コードの読み方](paper_trading/README.md) · [用語集](docs/GLOSSARY.md)
+[採用担当者向け・3分ガイド](docs/REVIEW_GUIDE.md) · [研究の全体像と結果](research/README.md) · [クラウド運転の記録](docs/CLOUD_PAPER_20260917.md) · [コードの読み方](paper_trading/README.md) · [用語集](docs/GLOSSARY.md)
 
 ## 現在の到達点
 
@@ -52,6 +52,11 @@ flowchart LR
 使用技術：Python、pandas、scikit-learn、SQLite、WebSocket、systemd、AWS EC2、GitHub Actions。
 
 ## 手元で確認する
+
+APIキー・学習済みモデルなしで挙動を確認する [合成データのデモ](docs/REVIEW_GUIDE.md#10分で動きを確認する) を用意しています。人工価格によるソフトウェアの説明で、予測性能や収益性の実績ではありません。
+
+[改善計画](docs/ROADMAP.md) · [30日間の最終報告様式](docs/FORWARD_REPORT_TEMPLATE.md)
+
 
 既存の研究コード：
 

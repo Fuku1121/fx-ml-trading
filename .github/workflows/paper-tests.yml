@@ -16,4 +16,5 @@ jobs:
       - run: python -m unittest discover -s paper_trading -p 'test_*.py' -v
       - run: python -m unittest discover -s research/multicurrency-20260917 -p 'test_*.py' -v
       - run: python -m unittest discover -s research/edge-search-20260917 -p 'test_*.py' -v
+      - run: python paper_trading/demo.py
       - run: python -m compileall -q paper_trading research/multicurrency-20260917 research/edge-search-20260917

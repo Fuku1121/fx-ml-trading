@@ -3,3 +3,6 @@
 *.md text eol=lf
 *.ipynb text eol=lf
 *.csv text eol=lf
+
+# Keep research notebooks accessible; exclude saved outputs from language statistics.
+*.ipynb linguist-detectable=false

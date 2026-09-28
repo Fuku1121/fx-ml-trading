@@ -49,3 +49,7 @@ USD/JPYの時系列予測を題材に、データの検査、モデル比較、�
 [構成](docs/ARCHITECTURE.md) / [評価方法](docs/METHODOLOGY.md) / [実行・再現範囲](docs/REPRODUCIBILITY.md) / [研究履歴](docs/archive/README.md)
 
 生データ・学習済みモデルは非公開のため、公開物だけで全実験は再現できません。小標本の予測精度や途中損益だけでは優位性を判断できません。AI支援と本人の判断・検証の分担は [3分ガイド](docs/REVIEW_GUIDE.md#ai支援と判断の責任) に記載しています。
+
+## License
+
+本リポジトリのオリジナルコード・ドキュメントは [MIT License](LICENSE) で公開しています。Dukascopy・Finnhub等の第三者データやサービスの権利・利用条件は対象外です。非公開のモデル・認証情報・クラウド状態も、このライセンスの提供対象には含みません。

@@ -1,3 +1,5 @@
+> **historical / superseded — not current performance evidence.** 当時の判断・検査記録です。本文の「現在」「最新」は記録時点を指します。現在の位置付けは [RESULTS](../RESULTS.md)、履歴の分類は [一覧](README.md) を参照してください。
+
 # PROJECT_CONTEXT.md
 
 # USD/JPY Machine-Learning Trading Research --- Project Context

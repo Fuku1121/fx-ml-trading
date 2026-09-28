@@ -1,3 +1,5 @@
+> **historical / superseded — not current performance evidence.** 当時の判断・検査記録です。本文の「現在」「最新」は記録時点を指します。現在の位置付けは [RESULTS](../RESULTS.md)、履歴の分類は [一覧](README.md) を参照してください。
+
 # FX (3) 取り込み・参照コードの確認
 
 - 前回のセル0–58はコード・保存出力とも同一。新規セル59–89を31件として保存しました。

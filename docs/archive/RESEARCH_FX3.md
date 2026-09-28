@@ -1,3 +1,5 @@
+> **historical / superseded — not current performance evidence.** 当時の判断・検査記録です。本文の「現在」「最新」は記録時点を指します。現在の位置付けは [RESULTS](../RESULTS.md)、履歴の分類は [一覧](README.md) を参照してください。
+
 # データ再構築から仮想売買の接続確認まで
 
 ## 今回分かったこと
@@ -35,7 +37,7 @@
 41特徴量候補は、基本モデルよりPFと下落率の点で良い値を示しました。一方、期間全体の複利成長率は基本モデル21.5130%、41特徴量19.4281%で、すべての指標が改善したわけではありません。
 年を一つ除いた比較、大きな取引を除いた感度確認、日単位の再標本化などを経て、元実験はFREEZE_BASE_PLUS_REGIMEと判定しています。
 
-[開発期間CSV](../results/published/clean_development_saved.csv) · [年別CSV](../results/published/clean_annual_saved.csv) · [コストCSV](../results/published/clean_cost_saved.csv) · [元出力](../results/imported_fx3/cell_67.txt)
+[開発期間CSV](../../results/published/clean_development_saved.csv) · [年別CSV](../../results/published/clean_annual_saved.csv) · [コストCSV](../../results/published/clean_cost_saved.csv) · [元出力](../../results/imported_fx3/cell_67.txt)
 
 2026途中の41特徴量候補は300取引・PF 1.825282でした。2026年は既に研究で繰り返し見ており、未使用の最終評価期間とは扱いません。
 
@@ -82,16 +84,16 @@ APIは価格データの取得窓口であり、この接続はブローカー�
 
 | 履歴 | 内容 | 元セルindex |
 |---|---|---|
-| 28 | [異常利益と混在データの調査](../notebooks/archive/28_data_contamination_audit.ipynb) | 59, 60, 61, 62 |
-| 29 | [年別CSVからのデータ再構築](../notebooks/archive/29_clean_dataset_rebuild.ipynb) | 63, 64, 65 |
-| 30 | [再構築データでのモデル再評価](../notebooks/archive/30_clean_feature_tournament.ipynb) | 66, 67 |
-| 31 | [41特徴量モデルの仕様固定と推論](../notebooks/archive/31_champion_freeze.ipynb) | 68, 69 |
-| 32 | [全履歴による特徴量の一致確認](../notebooks/archive/32_history_prefix_parity.ipynb) | 70, 71, 72, 73 |
-| 33 | [仮想売買と約定時刻・価格の照合](../notebooks/archive/33_paper_price_semantics.ipynb) | 74, 75, 76, 77, 78, 79 |
-| 34 | [コスト計算と300取引の再現](../notebooks/archive/34_paper_cost_replay.ipynb) | 80, 81, 82, 83 |
-| 35 | [新しい足を受ける仮想売買基盤](../notebooks/archive/35_forward_paper_runner.ipynb) | 84, 85, 86 |
-| 36 | [市場データの検査とAPI接続](../notebooks/archive/36_market_data_connection.ipynb) | 87, 88, 89 |
+| 28 | [異常利益と混在データの調査](../../notebooks/archive/28_data_contamination_audit.ipynb) | 59, 60, 61, 62 |
+| 29 | [年別CSVからのデータ再構築](../../notebooks/archive/29_clean_dataset_rebuild.ipynb) | 63, 64, 65 |
+| 30 | [再構築データでのモデル再評価](../../notebooks/archive/30_clean_feature_tournament.ipynb) | 66, 67 |
+| 31 | [41特徴量モデルの仕様固定と推論](../../notebooks/archive/31_champion_freeze.ipynb) | 68, 69 |
+| 32 | [全履歴による特徴量の一致確認](../../notebooks/archive/32_history_prefix_parity.ipynb) | 70, 71, 72, 73 |
+| 33 | [仮想売買と約定時刻・価格の照合](../../notebooks/archive/33_paper_price_semantics.ipynb) | 74, 75, 76, 77, 78, 79 |
+| 34 | [コスト計算と300取引の再現](../../notebooks/archive/34_paper_cost_replay.ipynb) | 80, 81, 82, 83 |
+| 35 | [新しい足を受ける仮想売買基盤](../../notebooks/archive/35_forward_paper_runner.ipynb) | 84, 85, 86 |
+| 36 | [市場データの検査とAPI接続](../../notebooks/archive/36_market_data_connection.ipynb) | 87, 88, 89 |
 
-[取込記録](../results/imported_fx3/provenance.json)に原本・コード・保存出力のハッシュを記載しています。
+[取込記録](../../results/imported_fx3/provenance.json)に原本・コード・保存出力のハッシュを記載しています。
 添付HTMLは補足説明として読み、他の会話名やアカウント情報、認証関連の出力は転記していません。
 HTML内の将来の作業指示を、今回実施済みの検証として扱っていません。

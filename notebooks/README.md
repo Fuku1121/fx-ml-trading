@@ -1,6 +1,8 @@
+> この資料の計画・保存出力と、現在の採用状態は別です。現在の正本は [RESULTS](../docs/RESULTS.md) です。
+
 # Notebookと研究履歴の案内
 
-最新の説明は [固定モデルと仮想売買の構成](../docs/FROZEN_SYSTEM.md) から読めます。
+最新の説明は [固定モデルと仮想売買の構成](../docs/archive/FROZEN_SYSTEM.md) から読めます。
 保存結果の閲覧入口は [11_forward_paper_review.ipynb](11_forward_paper_review.ipynb) です。学習やAPI接続は行いません。
 
 | 履歴番号 | 内容 |
@@ -12,7 +14,7 @@
 | 33–34 | 約定時刻・価格・費用と300取引の再現 |
 | 35–36 | 仮想売買基盤、新しい確定足の入力、市場API接続 |
 
-[追加分の元セル対応表](../docs/RESEARCH_FX3.md#出典とコードの案内) · [前回の対応表](../docs/RESEARCH_20260909.md#原本への対応)
+[追加分の元セル対応表](../docs/archive/RESEARCH_FX3.md#出典とコードの案内) · [前回の対応表](../docs/archive/RESEARCH_20260909.md#原本への対応)
 
 archiveは研究原本です。Notebook変数や外部ファイルへの依存、失敗したコードも保存しており、一括実行する入口ではありません。
 特に元セル82は構文エラーのまま履歴として保持し、その後のセル83に成功出力があります。

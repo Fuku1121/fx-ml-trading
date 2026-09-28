@@ -1,6 +1,8 @@
+> **historical / superseded — not current performance evidence.** 当時の判断・検査記録です。本文の「現在」「最新」は記録時点を指します。現在の位置付けは [RESULTS](../RESULTS.md)、履歴の分類は [一覧](README.md) を参照してください。
+
 # コードの読み方
 
-> この文書は9月9日までの構成・研究の記録です。9月17日までの追加検証とクラウド運転は [最新の研究案内](../research/README.md) を参照してください。旧APIや待機状態の説明は当時の記録です。
+> この文書は9月9日までの構成・研究の記録です。9月17日までの追加検証とクラウド運転は [最新の研究案内](../../research/README.md) を参照してください。旧APIや待機状態の説明は当時の記録です。
 
 
 ## 現在の入口
@@ -11,9 +13,9 @@
 
 | ファイル | 内容 |
 |---|---|
-| [frozen/base_features.py](../src/fx_research/frozen/base_features.py) | セル66の基本30特徴量。価格変化、変動性、移動平均、ローソク足など |
-| [frozen/features.py](../src/fx_research/frozen/features.py) | セル67の相場状態の追加特徴。41特徴量の順序は `FEATURE_SETS["BASE_PLUS_REGIME"]` |
-| [test_frozen_features.py](../tests/test_frozen_features.py) | 原本一致、未来データの影響、全履歴の接頭部分、取り込み資料の整合性 |
+| [frozen/base_features.py](../../src/fx_research/frozen/base_features.py) | セル66の基本30特徴量。価格変化、変動性、移動平均、ローソク足など |
+| [frozen/features.py](../../src/fx_research/frozen/features.py) | セル67の相場状態の追加特徴。41特徴量の順序は `FEATURE_SETS["BASE_PLUS_REGIME"]` |
+| [test_frozen_features.py](../../tests/test_frozen_features.py) | 原本一致、未来データの影響、全履歴の接頭部分、取り込み資料の整合性 |
 
 `make_final_tournament_features` に正規の全価格履歴を渡して計算します。この関数は学習やAPI接続を行いません。
 返される表には比較候補の他の特徴もあるため、固定モデルへ渡す列は上記41特徴量の順に限定する必要があります。
@@ -29,9 +31,9 @@
 
 | 場所 | 対応する実験 |
 |---|---|
-| [hgb/evaluation.py](../src/fx_research/hgb/evaluation.py) | セル58の旧30/50特徴量比較。固定済み41特徴量とは別 |
-| [confidence.py](../src/fx_research/confidence.py) | 以前のRF年別Confidence比較 |
-| [pipeline.py](../src/fx_research/pipeline.py) | 5分足Quality比較 |
+| [hgb/evaluation.py](../../src/fx_research/hgb/evaluation.py) | セル58の旧30/50特徴量比較。固定済み41特徴量とは別 |
+| [confidence.py](../../src/fx_research/confidence.py) | 以前のRF年別Confidence比較 |
+| [pipeline.py](../../src/fx_research/pipeline.py) | 5分足Quality比較 |
 
 各参照実装のテスト成功は、そのモデルの保存成績や将来収益の保証ではありません。
 旧HGBの高い成績は、その後のデータ混在調査によって現在の性能根拠から外しています。

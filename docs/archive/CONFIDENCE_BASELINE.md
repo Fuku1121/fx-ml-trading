@@ -1,10 +1,12 @@
+> **historical / superseded — not current performance evidence.** 当時の判断・検査記録です。本文の「現在」「最新」は記録時点を指します。現在の位置付けは [RESULTS](../RESULTS.md)、履歴の分類は [一覧](README.md) を参照してください。
+
 # USD/JPY Machine Learning Research
 
 **予測をすべて取引するのではなく、選別した取引にコスト控除後の優位性があるかを検証する時系列機械学習プロジェクト。**
 
 Python · pandas · scikit-learn · Random Forest · Nested Walk-Forward · Backtesting
 
-[研究の経緯](../docs/RESEARCH.md) · [検証方法](../docs/METHODOLOGY.md) · [コード監査](../docs/CONFIDENCE_AUDIT.md) · [実行方法](../docs/REPRODUCIBILITY.md)
+[研究の経緯](RESEARCH.md) · [検証方法](RF_METHODOLOGY.md) · [コード監査](CONFIDENCE_AUDIT.md) · [実行方法](REPRODUCIBILITY_20260924.md)
 
 ## まず知ってほしいこと
 
@@ -46,9 +48,9 @@ Confidenceはモデルの予測スコアであり、校正された実勝率で�
 
 **保存集計**：平均純損益 **+0.005452% / 取引**、統合PF **1.237896**、決済ベース最大DD **−3.045907%**。7評価区間で平均純損益・PFともにプラス側ですが、2026年は9月1日までの部分期間です。原本の「Accuracy」はここでは純利益の出た割合を表します。
 
-![Saved annual profit factor and trade count](../results/figures/nested_annual_saved.svg)
+![Saved annual profit factor and trade count](../../results/figures/nested_annual_saved.svg)
 
-[年別表のCSV](../results/published/nested_annual_saved.csv) · [元の保存出力](../results/imported_20260907/cell_35.txt)
+[年別表のCSV](../../results/published/nested_annual_saved.csv) · [元の保存出力](../../results/imported_20260907/cell_35.txt)
 
 PFは利益合計÷損失合計です。年別PFの平均1.460と、全取引を統合したPF 1.238は異なる集計です。資産の成長率を将来の予想収益には使いません。
 
@@ -64,7 +66,7 @@ PFは利益合計÷損失合計です。年別PFの平均1.460と、全取引を
 | モデルが覚えただけではないか | RF・Logistic Regression・Shuffle比較 | RF平均Test AUC約0.530、Shuffle約0.501。全件売買ではコストに負ける |
 | 高Confidenceの成績は後付けではないか | 年別Nested検証で閾値選択も過去へ限定 | 保存結果は前向き。ただし境界修正後の再評価が必要 |
 
-各行は異なる条件の実験です。単純な性能ランキングにはできません。[研究報告と出典一覧](../docs/RESEARCH.md)
+各行は異なる条件の実験です。単純な性能ランキングにはできません。[研究報告と出典一覧](RESEARCH.md)
 
 ## 実装として確認できること
 
@@ -84,9 +86,9 @@ python -m unittest discover -s tests -v
 python -m fx_research.confidence --csv data/raw/usdjpy_15m_2016_2026.csv --out results/runs/confidence-001
 ```
 
-CSVはUTC offset付きの足開始時刻と、小文字の `open, high, low, close` 列が必要です。[データ仕様と手順](../docs/REPRODUCIBILITY.md)
+CSVはUTC offset付きの足開始時刻と、小文字の `open, high, low, close` 列が必要です。[データ仕様と手順](REPRODUCIBILITY_20260924.md)
 
-Notebookで読む場合は [09_confidence_nested.ipynb](../notebooks/09_confidence_nested.ipynb) が現在の入口です。GitHubから結果表まで読むだけなら、Python環境の準備は不要です。
+Notebookで読む場合は [09_confidence_nested.ipynb](../../notebooks/09_confidence_nested.ipynb) が現在の入口です。GitHubから結果表まで読むだけなら、Python環境の準備は不要です。
 
 ## リポジトリの案内
 
@@ -100,7 +102,7 @@ Notebookで読む場合は [09_confidence_nested.ipynb](../notebooks/09_confiden
 | `results/published/`・`results/figures/` | 読みやすく再構成した保存結果表と図 |
 | `tests/` | 人工データによる計算・境界・統合テスト |
 
-以前の5分足Quality系は [旧ベースライン](../docs/QUALITY_BASELINE.md) に説明を残し、`fx_research.pipeline` から引き続き実行できます。
+以前の5分足Quality系は [旧ベースライン](QUALITY_BASELINE.md) に説明を残し、`fx_research.pipeline` から引き続き実行できます。
 
 ## 次に確認すること
 

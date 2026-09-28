@@ -1,8 +1,10 @@
+> **historical / superseded — not current performance evidence.** 当時の判断・検査記録です。本文の「現在」「最新」は記録時点を指します。現在の位置付けは [RESULTS](../RESULTS.md)、履歴の分類は [一覧](README.md) を参照してください。
+
 > **履歴資料**：これはセル58の旧30/50特徴量比較です。その後データ混在を調査し再構築しています。[最新の研究報告](RESEARCH_FX3.md)と[固定仕様](FROZEN_SYSTEM.md)を参照してください。
 
 # 最新HGB実験の処理と実装上の注意
 
-対象：[履歴27](../notebooks/archive/27_hgb_reintegration.ipynb)の元セル58。
+対象：[履歴27](../../notebooks/archive/27_hgb_reintegration.ipynb)の元セル58。
 元の実験はNotebookで作成しました。現在は [役割別のHGB参照実装](CODE_GUIDE.md) もあります。`fx_research.confidence` のテスト済みRF実装とはモデル・処理が異なります。
 
 ## 入力から取引まで

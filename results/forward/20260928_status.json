@@ -1,0 +1,18 @@
+{
+  "observed_at_utc": "2026-09-28T07:23:55.873657+00:00",
+  "source": "Selected fields transcribed from read-only AWS console status observation; not a full database export",
+  "paper_only": true,
+  "real_orders": false,
+  "scope": "USDJPY-only deployed experiment, distinct from public four-input reference code",
+  "phase": "RUNNING",
+  "start_utc": "2026-09-21T16:00:05.693751+00:00",
+  "scheduled_end_utc": "2026-10-21T16:00:05.693751+00:00",
+  "base_fixed": {
+    "initial_equity": 1000000,
+    "equity": 999789.0574466937,
+    "stress_equity": 999623.9463462319,
+    "trades": 2,
+    "position": null,
+    "pending": null
+  }
+}

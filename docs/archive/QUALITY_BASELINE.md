@@ -1,3 +1,5 @@
+> **historical / superseded — not current performance evidence.** 当時の判断・検査記録です。本文の「現在」「最新」は記録時点を指します。現在の位置付けは [RESULTS](../RESULTS.md)、履歴の分類は [一覧](README.md) を参照してください。
+
 # USD/JPY Machine Learning Research
 
 **短期為替取引の候補選別を、時系列検証と取引コストを含めて評価するPython研究プロジェクト。**
@@ -46,7 +48,7 @@ flowchart LR
 
 **解釈：現在のQuality仮説は、集計期待値の改善を支持していません。** foldごとの改善も一様ではありません。下記の監査で旧計算の問題も判明しており、元の期間・価格データを確保した再評価が必要です。
 
-→ [実験の流れと考察](RESEARCH.md) · [コード監査と修正点](AUDIT.md) · [出典ログ](../results/legacy/cell_15.txt)
+→ [実験の流れと考察](RESEARCH.md) · [コード監査と修正点](AUDIT.md) · [出典ログ](../../results/legacy/cell_15.txt)
 
 ## 実行方法
 
@@ -65,7 +67,7 @@ python -m unittest discover -s tests -v
 python -m fx_research.pipeline --csv data/raw/usdjpy_5m.csv --out results/runs/quality-001
 ```
 
-実価格データは同梱していません。[データ形式](../data/README.md)に沿った固定CSVが必要です。出力先には未作成のディレクトリを指定してください。全foldで複数回RandomForestを学習するため、実行時間はデータ量とCPUに依存します。
+実価格データは同梱していません。[データ形式](../../data/README.md)に沿った固定CSVが必要です。出力先には未作成のディレクトリを指定してください。全foldで複数回RandomForestを学習するため、実行時間はデータ量とCPUに依存します。
 
 Notebookから使う場合：
 
@@ -117,4 +119,4 @@ jupyter lab notebooks/08_trade_quality.ipynb
 2. Qualityスコア帯と実損益の関係、期間・売買方向ごとの安定性を診断する。
 3. 独立した将来期間と厳しいコスト条件で仮説を再評価する。
 
-[Pythonコードの読み方](CODE_GUIDE.md) · [変更履歴](../CHANGELOG.md)
+[Pythonコードの読み方](CODE_GUIDE.md) · [変更履歴](../../CHANGELOG.md)

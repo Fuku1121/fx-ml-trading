@@ -1,6 +1,8 @@
+> **historical / superseded — not current performance evidence.** 当時の判断・検査記録です。本文の「現在」「最新」は記録時点を指します。現在の位置付けは [RESULTS](../RESULTS.md)、履歴の分類は [一覧](README.md) を参照してください。
+
 # 固定モデルと仮想売買の構成
 
-> この文書は9月9日までの構成・研究の記録です。9月17日までの追加検証とクラウド運転は [最新の研究案内](../research/README.md) を参照してください。旧APIや待機状態の説明は当時の記録です。
+> この文書は9月9日までの構成・研究の記録です。9月17日までの追加検証とクラウド運転は [最新の研究案内](../../research/README.md) を参照してください。旧APIや待機状態の説明は当時の記録です。
 
 
 現在の候補は `BASE_PLUS_REGIME`、41特徴量です。以前の `hgb/` はセル58の30/50特徴量の参照実装で、固定モデルを起動するものではありません。
@@ -9,12 +11,12 @@
 
 | 処理 | 読む場所 | 必要なもの |
 |---|---|---|
-| 元の30特徴量 | [frozen/base_features.py](../src/fx_research/frozen/base_features.py) | 正規の価格履歴 |
-| 41特徴量の定義と計算 | [frozen/features.py](../src/fx_research/frozen/features.py) | 全履歴。`FEATURE_SETS["BASE_PLUS_REGIME"]` の順序を維持 |
-| データの再構築・比較 | [履歴29](../notebooks/archive/29_clean_dataset_rebuild.ipynb)、[履歴30](../notebooks/archive/30_clean_feature_tournament.ipynb) | 年別元CSV |
-| モデル固定・推論 | [履歴31](../notebooks/archive/31_champion_freeze.ipynb)、[履歴32](../notebooks/archive/32_history_prefix_parity.ipynb) | モデル・校正器・manifest・正規履歴 |
-| 時刻・価格・コストの照合 | [履歴33](../notebooks/archive/33_paper_price_semantics.ipynb)、[履歴34](../notebooks/archive/34_paper_cost_replay.ipynb) | 過去取引と正規価格履歴 |
-| 新しいデータを処理する | [履歴35](../notebooks/archive/35_forward_paper_runner.ipynb)、[履歴36](../notebooks/archive/36_market_data_connection.ipynb) | runtime状態・入力足・本人のAPI設定 |
+| 元の30特徴量 | [frozen/base_features.py](../../src/fx_research/frozen/base_features.py) | 正規の価格履歴 |
+| 41特徴量の定義と計算 | [frozen/features.py](../../src/fx_research/frozen/features.py) | 全履歴。`FEATURE_SETS["BASE_PLUS_REGIME"]` の順序を維持 |
+| データの再構築・比較 | [履歴29](../../notebooks/archive/29_clean_dataset_rebuild.ipynb)、[履歴30](../../notebooks/archive/30_clean_feature_tournament.ipynb) | 年別元CSV |
+| モデル固定・推論 | [履歴31](../../notebooks/archive/31_champion_freeze.ipynb)、[履歴32](../../notebooks/archive/32_history_prefix_parity.ipynb) | モデル・校正器・manifest・正規履歴 |
+| 時刻・価格・コストの照合 | [履歴33](../../notebooks/archive/33_paper_price_semantics.ipynb)、[履歴34](../../notebooks/archive/34_paper_cost_replay.ipynb) | 過去取引と正規価格履歴 |
+| 新しいデータを処理する | [履歴35](../../notebooks/archive/35_forward_paper_runner.ipynb)、[履歴36](../../notebooks/archive/36_market_data_connection.ipynb) | runtime状態・入力足・本人のAPI設定 |
 
 ## 保存出力に記録された固定仕様
 
@@ -30,7 +32,7 @@
 | 正規履歴 | 265,905行。任意のtail(N)に短縮しない |
 | 最新接続状態 | 次の確定足を待機、処理0件、実注文なし |
 
-[固定仕様の転記JSON](../results/published/frozen_contract_saved.json)は説明用であり、実際のモデルmanifestの代わりに読み込むファイルではありません。
+[固定仕様の転記JSON](../../results/published/frozen_contract_saved.json)は説明用であり、実際のモデルmanifestの代わりに読み込むファイルではありません。
 元データのハッシュも保存出力からの転記です。この更新で元CSVの実体との一致を検証したわけではありません。
 
 ## 再現のために必要なファイル

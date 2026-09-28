@@ -1,16 +1,5 @@
-# Current project context — FX (3)
+# 現在の作業情報
 
-> この文書は9月9日までの構成・研究の記録です。9月17日までの追加検証とクラウド運転は [最新の研究案内](research/README.md) を参照してください。旧APIや待機状態の説明は当時の記録です。
+現在の概要は [README](README.md)、採用候補と評価結果の正本は [RESULTS](docs/RESULTS.md) です。構成・評価方法・再現範囲への入口もREADMEに集約しています。
 
-
-- Latest source: FX (3).ipynb. Original cells0–58 unchanged; new59–89; empty90.
-- Data contamination was investigated. Yearly15m-only rebuild:265,905 rows. Old cell58 PF2.950 is superseded, not current evidence.
-- Clean tournament cell67: BASE30 vs BASE_PLUS_REGIME41 vs BASE_PLUS_VOL_REGIME54. Selected41-feature candidate; definitions differ from old50-feature experiment.
-- Frozen version: champion_v1_base_plus_regime_20260909. Isotonic, threshold.58, ALL, STRONG, sizing scale1.7451299836342953,30-minute hold, no overlap.
-- Reference entry nextOpen, exit previous-barClose at exit boundary; net=size*(gross-.00004).
-- Saved cell83 historical replay300 trades, gross/net diff0. This is imported evidence, not independently rerun here.
-- Saved cell89 Twelve Data connection fetched100/closed99, historical sent0, processed0, ARMED_WAITING_FOR_NEXT_BAR. No claim of forward performance or current ongoing operation.
-- Actual model/calibrator/manifest/canonical CSV/runtime states were not supplied with notebook. Do not start background loops or API requests as part of repository organization.
-- Keep frozen logic intact. Read docs/RESEARCH_FX3.md and docs/FROZEN_SYSTEM.md.
-- Pure current feature reference: src/fx_research/frozen/. Previous cell58 reference: src/fx_research/hgb/.
-- Repository private. No credentials, model binaries, live states or raw market data in Git.
+以前の作業背景は [履歴](docs/archive/PROJECT_CONTEXT_20260909.md) に保存しました。古い「最新」の記述を現在の性能根拠として使わないでください。2026-09-28の整理では研究データ・モデル・クラウドの運転条件を変更していません。
